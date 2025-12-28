@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Candidature Partenaire - My Pretty Family</title>
+  <meta name="description" content="Déposez votre candidature pour devenir partenaire My Pretty Family. Rejoignez un réseau sélectif de partenaires terrain.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="candidature.css">
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="./index.html" class="nav-logo">
+        <img src="./assets/logo_blue.png" alt="My Pretty Family">
+      </a>
+      
+      <div class="nav-links">
+        <a href="./index.html#concept" class="nav-link">Le Concept</a>
+        <a href="./index.html#configurateur" class="nav-link">L'Outil</a>
+        <a href="./index.html#partenaire" class="nav-link">Devenir Partenaire</a>
+        <a href="#formulaire" class="nav-cta">Candidater</a>
+      </div>
+      
+      <button class="nav-mobile-toggle" aria-label="Menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+    
+    <div class="nav-mobile">
+      <div class="nav-mobile-links">
+        <a href="./index.html#concept" class="nav-mobile-link">Le Concept</a>
+        <a href="./index.html#configurateur" class="nav-mobile-link">L'Outil</a>
+        <a href="./index.html#partenaire" class="nav-mobile-link">Devenir Partenaire</a>
+        <a href="#formulaire" class="nav-mobile-cta">Candidater</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO CANDIDATURE ==================== -->
+  <section class="candidature-hero">
+    <div class="candidature-hero-inner">
+      <a href="./index.html" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i>
+        Retour à l'accueil
+      </a>
+      <h1 class="candidature-title">Déposer ma candidature</h1>
+      <p class="candidature-subtitle">
+        Vous souhaitez proposer My Pretty Family sur votre point de vente ?<br>
+        Prenez quelques minutes pour nous présenter votre projet.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== RAPPEL CADRE ==================== -->
+  <section class="section">
+    <div class="section-inner section-narrow">
+      
+      <!-- Rappel important -->
+      <div class="cadre-rappel">
+        <div class="cadre-rappel-icon">
+          <i class="fa-solid fa-circle-info"></i>
+        </div>
+        <div class="cadre-rappel-content">
+          <h3>Avant de candidater</h3>
+          <p>
+            My Pretty Family est un réseau <strong>volontairement sélectif</strong>. 
+            Nous recherchons des partenaires autonomes, impliqués, et à l'aise avec le contact client.
+          </p>
+          <ul class="cadre-rappel-list">
+            <li><i class="fa-solid fa-check"></i> Aucun chiffre d'affaires n'est garanti</li>
+            <li><i class="fa-solid fa-check"></i> Les résultats dépendent de votre implication</li>
+            <li><i class="fa-solid fa-check"></i> Ce n'est pas un "revenu passif"</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ==================== FORMULAIRE ==================== -->
+      <div class="form-container" id="formulaire">
+        <form class="candidature-form" id="candidatureForm" action="#" method="POST">
+          
+          <!-- Section 1 : Informations personnelles -->
+          <div class="form-section">
+            <h3 class="form-section-title">
+              <span class="form-section-number">1</span>
+              Vos informations
+            </h3>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="prenom" class="form-label">Prénom <span class="required">*</span></label>
+                <input type="text" id="prenom" name="prenom" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label for="nom" class="form-label">Nom <span class="required">*</span></label>
+                <input type="text" id="nom" name="nom" class="form-input" required>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email" class="form-label">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label for="telephone" class="form-label">Téléphone <span class="required">*</span></label>
+                <input type="tel" id="telephone" name="telephone" class="form-input" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="ville" class="form-label">Ville / Zone géographique <span class="required">*</span></label>
+              <input type="text" id="ville" name="ville" class="form-input" placeholder="Ex: Biarritz, Côte Basque" required>
+            </div>
+          </div>
+
+          <!-- Section 2 : Votre projet -->
+          <div class="form-section">
+            <h3 class="form-section-title">
+              <span class="form-section-number">2</span>
+              Votre projet
+            </h3>
+            
+            <div class="form-group">
+              <label for="type_point_vente" class="form-label">Type de point de vente envisagé <span class="required">*</span></label>
+              <select id="type_point_vente" name="type_point_vente" class="form-select" required>
+                <option value="" disabled selected>Sélectionnez une option</option>
+                <option value="boutique">Boutique existante</option>
+                <option value="stand">Stand / Corner</option>
+                <option value="marche">Marché / Foire</option>
+                <option value="tourisme">Lieu touristique</option>
+                <option value="evenementiel">Événementiel</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="lieu_precisez" class="form-label">Précisez votre lieu d'implantation</label>
+              <input type="text" id="lieu_precisez" name="lieu_precisez" class="form-input" placeholder="Ex: Centre commercial, zone piétonne, camping...">
+            </div>
+            
+            <div class="form-group">
+              <label for="disponibilite" class="form-label">Disponibilité prévue <span class="required">*</span></label>
+              <select id="disponibilite" name="disponibilite" class="form-select" required>
+                <option value="" disabled selected>Sélectionnez une option</option>
+                <option value="temps_plein">Temps plein (toute l'année)</option>
+                <option value="saison">Activité saisonnière</option>
+                <option value="complement">En complément d'une autre activité</option>
+                <option value="weekend">Weekends et vacances uniquement</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="experience" class="form-label">Expérience en vente / relation client <span class="required">*</span></label>
+              <select id="experience" name="experience" class="form-select" required>
+                <option value="" disabled selected>Sélectionnez une option</option>
+                <option value="aucune">Aucune expérience</option>
+                <option value="debutant">Quelques expériences</option>
+                <option value="confirme">Expérience confirmée</option>
+                <option value="expert">Expert (plusieurs années)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Section 3 : Motivation -->
+          <div class="form-section">
+            <h3 class="form-section-title">
+              <span class="form-section-number">3</span>
+              Votre motivation
+            </h3>
+            
+            <div class="form-group">
+              <label for="motivation" class="form-label">
+                Pourquoi souhaitez-vous proposer My Pretty Family ? <span class="required">*</span>
+              </label>
+              <textarea 
+                id="motivation" 
+                name="motivation" 
+                class="form-textarea" 
+                rows="5" 
+                placeholder="Parlez-nous de votre projet, de ce qui vous attire dans ce concept, de votre vision..."
+                required
+              ></textarea>
+              <p class="form-hint">Minimum 100 caractères. Prenez le temps de bien vous présenter.</p>
+            </div>
+            
+            <div class="form-group">
+              <label for="decouverte" class="form-label">Comment avez-vous découvert My Pretty Family ?</label>
+              <select id="decouverte" name="decouverte" class="form-select">
+                <option value="" disabled selected>Sélectionnez une option</option>
+                <option value="google">Recherche Google</option>
+                <option value="reseaux">Réseaux sociaux</option>
+                <option value="bouche_oreille">Bouche à oreille</option>
+                <option value="vu_terrain">Vu sur un point de vente</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Section 4 : Budget & Engagement -->
+          <div class="form-section">
+            <h3 class="form-section-title">
+              <span class="form-section-number">4</span>
+              Budget & Engagement
+            </h3>
+            
+            <div class="form-group">
+              <label class="form-label">Êtes-vous prêt à investir dans ce projet ? <span class="required">*</span></label>
+              <p class="form-hint" style="margin-bottom: 12px;">
+                Droit d'entrée : 790 € + Abonnement mensuel : 69 € HT
+              </p>
+              <div class="form-radio-group">
+                <label class="form-radio">
+                  <input type="radio" name="budget_pret" value="oui" required>
+                  <span class="radio-custom"></span>
+                  Oui, mon budget est prêt
+                </label>
+                <label class="form-radio">
+                  <input type="radio" name="budget_pret" value="bientot" required>
+                  <span class="radio-custom"></span>
+                  Bientôt (dans les 3 mois)
+                </label>
+                <label class="form-radio">
+                  <input type="radio" name="budget_pret" value="non" required>
+                  <span class="radio-custom"></span>
+                  Non, je me renseigne pour l'instant
+                </label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label">Quand souhaitez-vous démarrer ? <span class="required">*</span></label>
+              <div class="form-radio-group">
+                <label class="form-radio">
+                  <input type="radio" name="demarrage" value="immediat" required>
+                  <span class="radio-custom"></span>
+                  Dès que possible
+                </label>
+                <label class="form-radio">
+                  <input type="radio" name="demarrage" value="3mois" required>
+                  <span class="radio-custom"></span>
+                  Dans les 3 prochains mois
+                </label>
+                <label class="form-radio">
+                  <input type="radio" name="demarrage" value="6mois" required>
+                  <span class="radio-custom"></span>
+                  Dans les 6 prochains mois
+                </label>
+                <label class="form-radio">
+                  <input type="radio" name="demarrage" value="plus_tard" required>
+                  <span class="radio-custom"></span>
+                  Plus tard / Je ne sais pas encore
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 5 : Validation du cadre -->
+          <div class="form-section form-section-validation">
+            <h3 class="form-section-title">
+              <span class="form-section-number">5</span>
+              Validation du cadre
+            </h3>
+            
+            <p class="validation-intro">
+              Merci de confirmer que vous avez bien compris les points suivants :
+            </p>
+            
+            <div class="form-checkbox-group">
+              <label class="form-checkbox">
+                <input type="checkbox" name="validation_1" required>
+                <span class="checkbox-custom"></span>
+                <span class="checkbox-text">
+                  Je comprends qu'aucun chiffre d'affaires n'est garanti et que les résultats 
+                  dépendent de mon implication et de mon emplacement.
+                </span>
+              </label>
+              
+              <label class="form-checkbox">
+                <input type="checkbox" name="validation_2" required>
+                <span class="checkbox-custom"></span>
+                <span class="checkbox-text">
+                  Je comprends que My Pretty Family est une activité terrain qui nécessite 
+                  un contact direct avec les clients.
+                </span>
+              </label>
+              
+              <label class="form-checkbox">
+                <input type="checkbox" name="validation_3" required>
+                <span class="checkbox-custom"></span>
+                <span class="checkbox-text">
+                  Je comprends que le réseau est sélectif et que ma candidature sera étudiée 
+                  selon les critères actuels de My Pretty Family.
+                </span>
+              </label>
+              
+              <label class="form-checkbox">
+                <input type="checkbox" name="validation_4" required>
+                <span class="checkbox-custom"></span>
+                <span class="checkbox-text">
+                  J'accepte d'être contacté par email ou téléphone uniquement si mon profil 
+                  correspond aux critères recherchés.
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <div class="form-submit-section">
+            <button type="submit" class="btn-primary btn-large form-submit">
+              <span class="submit-text">Envoyer ma candidature</span>
+              <span class="submit-loading" style="display: none;">
+                <i class="fa-solid fa-spinner fa-spin"></i> Envoi en cours...
+              </span>
+            </button>
+            <p class="form-submit-note">
+              Nous étudions chaque candidature avec attention.<br>
+              Vous recevrez une réponse sous 7 jours ouvrés si votre profil est retenu.
+            </p>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Note finale -->
+      <div class="form-note-final">
+        <i class="fa-solid fa-lock"></i>
+        <p>
+          Vos données sont traitées de manière confidentielle et ne seront jamais partagées avec des tiers.
+          <a href="./confidentialite.html">Politique de confidentialité</a>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="./assets/logo_blue.png" alt="My Pretty Family" class="footer-logo">
+        <p class="footer-desc">
+          Expérience émotionnelle en point de vente.<br>
+          Concept terrain depuis +10 ans.
+        </p>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4 class="footer-column-title">Navigation</h4>
+          <a href="./index.html#concept" class="footer-link">Le Concept</a>
+          <a href="./index.html#configurateur" class="footer-link">L'Outil</a>
+          <a href="./index.html#partenaire" class="footer-link">Devenir Partenaire</a>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-column-title">Légal</h4>
+          <a href="./mentions-legales.html" class="footer-link">Mentions légales</a>
+          <a href="./confidentialite.html" class="footer-link">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="footer-copyright">© 2025 My Pretty Family. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+  <script src="candidature.js"></script>
+</body>
+</html>

@@ -3,24 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Pretty Family - Portraits de famille personnalisés</title>
-  <meta name="description" content="My Pretty Family - Portraits de famille personnalisés. Un concept éprouvé depuis plus de 10 ans.">
+  <title>My Pretty Family - Devenez partenaire</title>
+  <meta name="description" content="My Pretty Family - Expérience émotionnelle en point de vente. Rejoignez un réseau de partenaires qui font vivre des émotions chaque jour.">
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
-  <link rel="shortcut icon" href="./assets/favicon.ico">
   
   <!-- SEO & Open Graph -->
-  <meta name="author" content="My Pretty Family">
-  <meta name="keywords" content="portrait famille, portrait personnalisé, cadeau famille, souvenir famille, partenaire">
-  <meta property="og:title" content="My Pretty Family - Portraits de famille personnalisés">
-  <meta property="og:description" content="Plus qu'un portrait, un souvenir. Une émotion. Concept éprouvé depuis +10 ans.">
-  <meta property="og:image" content="https://theodevelop.github.io/assets/og-image.jpg">
-  <meta property="og:url" content="https://theodevelop.github.io/">
+  <meta property="og:title" content="My Pretty Family - Devenez partenaire">
+  <meta property="og:description" content="Offrez aux familles un souvenir qu'elles garderont toute leur vie. Rejoignez notre réseau.">
+  <meta property="og:image" content="./assets/og-image.jpg">
   <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +26,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <!-- Styles -->
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -42,833 +37,408 @@
         <img src="./assets/logo_blue.png" alt="My Pretty Family">
       </a>
       
-      <!-- Menu Desktop -->
       <div class="nav-links">
-        <a href="#produits" class="nav-link">Nos Produits</a>
-        <a href="#concept-mpf" class="nav-link">Le Concept</a>
-        <a href="#galerie" class="nav-link">Nos Points de Vente</a>
+        <a href="#concept" class="nav-link">Le Concept</a>
+        <a href="#configurateur" class="nav-link">L'Outil</a>
         <a href="#partenaire" class="nav-link">Devenir Partenaire</a>
-        <a href="#formulaire" class="nav-cta">Candidater</a>
+        <a href="#candidature" class="nav-cta">Candidater</a>
       </div>
       
-      <!-- Bouton Menu Mobile (Hamburger) -->
-      <button class="nav-mobile-toggle" aria-label="Menu" aria-expanded="false">
+      <button class="nav-mobile-toggle" aria-label="Menu">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
       </button>
     </div>
     
-    <!-- Menu Mobile Overlay -->
     <div class="nav-mobile">
       <div class="nav-mobile-links">
-        <a href="#produits" class="nav-mobile-link">Nos Produits</a>
-        <a href="#concept-mpf" class="nav-mobile-link">Le Concept</a>
-        <a href="#galerie" class="nav-mobile-link">Nos Points de Vente</a>
+        <a href="#concept" class="nav-mobile-link">Le Concept</a>
+        <a href="#configurateur" class="nav-mobile-link">L'Outil</a>
         <a href="#partenaire" class="nav-mobile-link">Devenir Partenaire</a>
-        <a href="#formulaire" class="nav-mobile-cta">Candidater</a>
+        <a href="#candidature" class="nav-mobile-cta">Candidater</a>
       </div>
     </div>
   </nav>
 
-  <!-- ==================== HERO ==================== -->
+  <!-- ==================== 1. HERO ==================== -->
   <section class="hero" id="accueil">
-    <div class="hero-deco-1"></div>
-    <div class="hero-deco-2"></div>
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-label">Portraits de famille personnalisés</p>
       <h1 class="hero-title">
-        Votre famille,<br>
-        <span>figée dans le temps</span>
+        Offrez aux familles un souvenir<br>
+        <span>qu'elles garderont toute leur vie</span>
       </h1>
       <p class="hero-subtitle">
-        Plus qu'un portrait, un souvenir. Une émotion. 
-        Un moment de vie capturé avec tendresse et simplicité.
+        My Pretty Family transforme une simple visite en moment inoubliable.<br>
+        Une expérience émotionnelle en point de vente, pensée pour les lieux touristiques et premium.
       </p>
       <div class="hero-buttons">
-        <a href="#video" class="btn-primary">Découvrir en vidéo</a>
+        <a href="#concept" class="btn-primary">Découvrir le concept</a>
         <a href="#partenaire" class="btn-secondary">Devenir partenaire</a>
       </div>
     </div>
   </section>
 
-  <!-- ==================== VIDEO PRESENTATION ==================== -->
-  <section class="video-section" id="video">
-    <div class="video-container">
+  <!-- ==================== 2. VIDÉO ==================== -->
+  <section class="section" id="video">
+    <div class="section-inner section-narrow">
+      <div class="section-header">
+        <h2 class="section-title">Découvrez My Pretty Family en 1 minute</h2>
+        <p class="section-subtitle">
+          Comprenez comment une rencontre devient un souvenir inoubliable.
+        </p>
+      </div>
       <div class="video-wrapper">
         <video controls poster="./assets/video-thumbnail.jpg">
           <source src="./assets/video_presentation_courte.mp4" type="video/mp4">
           Votre navigateur ne supporte pas la lecture vidéo.
         </video>
       </div>
-      <p class="video-caption">Découvrez My Pretty Family en 1 minute</p>
     </div>
   </section>
 
-  <!-- ==================== STATS ==================== -->
-  <section class="stats">
-    <div class="stats-inner">
-      <div class="stat-item">
-        <div class="stat-icon"><i class="fa-solid fa-palette"></i></div>
-        <div class="stat-number">INPI</div>
-        <div class="stat-label">Marque & modèles déposés</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-icon"><i class="fa-solid fa-handshake"></i></div>
-        <div class="stat-number">10+</div>
-        <div class="stat-label">années d'expérience terrain</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-icon"><i class="fa-solid fa-thumbs-up"></i></div>
-        <div class="stat-number">100%</div>
-        <div class="stat-label">clients satisfaits</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== NOS PRODUITS ==================== -->
-  <section class="section" id="produits">
+  <!-- ==================== 3. PREUVES TERRAIN ==================== -->
+  <section class="section section-alt" id="preuves">
     <div class="section-inner">
       <div class="section-header">
-        <p class="section-label">Ce que nous créons</p>
-        <h2 class="section-title">Nos produits</h2>
-        <p class="section-subtitle">
-          Des portraits personnalisés déclinés en plusieurs formats, 
-          pour tous les goûts et toutes les occasions.
-        </p>
+        <p class="section-label">Sur le terrain, chaque jour</p>
+        <h2 class="section-title">Ce n'est pas une idée.<br>C'est une expérience déjà vécue.</h2>
       </div>
       
-      <div class="products-grid">
-        <!-- Produit 1 : Affiches -->
-        <a href="./produits.html" class="product-card product-card-link">
-          <div class="product-image">
-            <img src="./assets/produits/affiches.jpg" alt="Affiches personnalisées My Pretty Family" loading="lazy">
-            <span class="product-badge">Nouveauté</span>
-          </div>
-          <div class="product-content">
-            <h3 class="product-title">Les Affiches personnalisées</h3>
-            <p class="product-tagline">Un produit dans l'air du temps, créatif et tendance.</p>
-            <ul class="product-features">
-              <li><strong>Tendance actuelle</strong> — Format moderne pour familles et jeunes générations</li>
-              <li><strong>Personnalisation totale</strong> — Personnages en entier avec fond personnalisé</li>
-              <li><strong>Souvenir facile</strong> — Produit accessible qui se vend naturellement</li>
-            </ul>
-            <span class="product-cta"><i class="fa-solid fa-square-arrow-up-right"></i> En savoir +</span>
-          </div>
-        </a>
-        
-        <!-- Produit 2 : Cadres -->
-        <a href="./produits.html" class="product-card product-card-link">
-          <div class="product-image">
-            <img src="./assets/produits/cadres.jpg" alt="Cadres personnalisés My Pretty Family" loading="lazy">
-            <span class="product-badge product-badge-classic">Emblématique</span>
-          </div>
-          <div class="product-content">
-            <h3 class="product-title">Les Cadres personnalisés</h3>
-            <p class="product-tagline">Le produit emblématique, l'ADN de la marque.</p>
-            <ul class="product-features">
-              <li><strong>Style unique</strong> — Personnages reconnus par le grand public</li>
-              <li><strong>Options intégrées</strong> — Trois fonds, prénoms et titre personnalisé</li>
-              <li><strong>Qualité premium</strong> — Cadre bois naturel ou noir, prêt à accrocher</li>
-            </ul>
-            <span class="product-cta"><i class="fa-solid fa-square-arrow-up-right"></i> En savoir +</span>
-          </div>
-        </a>
-        
-        <!-- Produit 3 : Thématiques -->
-        <a href="./produits.html" class="product-card product-card-link">
-          <div class="product-image">
-            <img src="./assets/produits/thematiques.jpg" alt="Portraits thématiques My Pretty Family" loading="lazy">
-          </div>
-          <div class="product-content">
-            <h3 class="product-title">Thématiques spécifiques</h3>
-            <p class="product-tagline">Des créations sur-mesure pour chaque moment de vie.</p>
-            <ul class="product-features">
-              <li><strong>Animaux de compagnie</strong> — Chien, chat ou NAC</li>
-              <li><strong>Métiers & passions</strong> — Pompier, boulanger, sportif…</li>
-              <li><strong>Occasions spéciales</strong> — Mariage, anniversaire, naissance…</li>
-            </ul>
-            <span class="product-cta"><i class="fa-solid fa-square-arrow-up-right"></i> En savoir +</span>
-          </div>
-        </a>
-      </div>
-      
-      <!-- Lien Configurateur -->
-      <div class="configurator-banner">
-        <div class="configurator-content">
-          <span class="configurator-icon"><i class="fa-solid fa-sliders"></i></span>
-          <div>
-            <h3 class="configurator-title">Découvrez notre configurateur</h3>
-            <p class="configurator-desc">L'outil numérique propriétaire au cœur du concept My Pretty Family</p>
-          </div>
+      <!-- Galerie -->
+      <div class="gallery-track-wrapper">
+        <div class="gallery-track">
+          <div class="gallery-item"><img src="./assets/gallery/1.jpg" alt="Point de vente MPF" loading="lazy"></div>
+          <div class="gallery-item"><img src="./assets/gallery/2.jpg" alt="Point de vente MPF" loading="lazy"></div>
+          <div class="gallery-item"><img src="./assets/gallery/3.jpg" alt="Point de vente MPF" loading="lazy"></div>
+          <div class="gallery-item"><img src="./assets/gallery/4.jpg" alt="Point de vente MPF" loading="lazy"></div>
+          <div class="gallery-item"><img src="./assets/gallery/5.jpg" alt="Point de vente MPF" loading="lazy"></div>
+          <div class="gallery-item"><img src="./assets/gallery/6.jpg" alt="Point de vente MPF" loading="lazy"></div>
+          <div class="gallery-item"><img src="./assets/gallery/7.jpg" alt="Point de vente MPF" loading="lazy"></div>
+          <div class="gallery-item"><img src="./assets/gallery/8.jpg" alt="Point de vente MPF" loading="lazy"></div>
+          <!-- Duplication pour boucle infinie -->
+          <div class="gallery-item"><img src="./assets/gallery/1.jpg" alt="Point de vente MPF" loading="lazy"></div>
+          <div class="gallery-item"><img src="./assets/gallery/2.jpg" alt="Point de vente MPF" loading="lazy"></div>
+          <div class="gallery-item"><img src="./assets/gallery/3.jpg" alt="Point de vente MPF" loading="lazy"></div>
+          <div class="gallery-item"><img src="./assets/gallery/4.jpg" alt="Point de vente MPF" loading="lazy"></div>
+          <div class="gallery-item"><img src="./assets/gallery/5.jpg" alt="Point de vente MPF" loading="lazy"></div>
+          <div class="gallery-item"><img src="./assets/gallery/6.jpg" alt="Point de vente MPF" loading="lazy"></div>
+          <div class="gallery-item"><img src="./assets/gallery/7.jpg" alt="Point de vente MPF" loading="lazy"></div>
+          <div class="gallery-item"><img src="./assets/gallery/8.jpg" alt="Point de vente MPF" loading="lazy"></div>
         </div>
-        <a href="./configurateur.html" class="configurator-btn"><i class="fa-solid fa-square-arrow-up-right"></i> Voir l'outil</a>
+      </div>
+      
+      <!-- Témoignage -->
+      <div class="testimonial">
+        <blockquote class="testimonial-quote">
+          "Les clients repartent avec le sourire. Certains reviennent l'année suivante pour compléter leur collection."
+        </blockquote>
+        <p class="testimonial-author">— Partenaire, Côte d'Azur</p>
       </div>
     </div>
   </section>
 
-  <!-- ==================== GALERIE PHOTOS ==================== -->
-  <section class="gallery-section" id="galerie">
-    <div class="gallery-header">
-      <p class="gallery-label">Sur le terrain</p>
-      <h2 class="gallery-title">Nos points de vente en action</h2>
-    </div>
-    
-    <div class="gallery-track-wrapper">
-      <div class="gallery-track">
-        <div class="gallery-item"><img src="./assets/gallery/1.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/2.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/3.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/4.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/5.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/6.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/7.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/8.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/9.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/10.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/11.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/12.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/13.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/14.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/15.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/16.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/17.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/18.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/19.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/20.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/21.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/22.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/23.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <!-- Duplication pour boucle infinie -->
-        <div class="gallery-item"><img src="./assets/gallery/1.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/2.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/3.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/4.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/5.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/6.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/7.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/8.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/9.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/10.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/11.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/12.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/13.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/14.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/15.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/16.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/17.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/18.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/19.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/20.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/21.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/22.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-        <div class="gallery-item"><img src="./assets/gallery/23.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== CONCEPT ==================== -->
+  <!-- ==================== 4. LE CONCEPT ==================== -->
   <section class="section" id="concept">
-    <div class="section-inner">
+    <div class="section-inner section-narrow">
       <div class="section-header">
-        <p class="section-label">Notre philosophie</p>
-        <h2 class="section-title">L'émotion avant tout</h2>
+        <p class="section-label">Le concept</p>
+        <h2 class="section-title">Plus qu'un portrait. Une expérience.</h2>
         <p class="section-subtitle">
-          Chaque portrait raconte une histoire unique. Celle de votre famille, 
-          à un instant précis de votre vie.
+          My Pretty Family n'est ni une photo souvenir, ni un produit impersonnel.<br>
+          C'est une interaction humaine qui crée une connexion émotionnelle immédiate.
         </p>
       </div>
-      <div class="concept-grid">
-        <div class="concept-card">
-          <div class="concept-icon">♡</div>
-          <h3 class="concept-title">Un souvenir</h3>
-          <p class="concept-desc">Plus qu'une image, un fragment de bonheur familial préservé pour toujours.</p>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-heart"></i></div>
+          <h3 class="feature-title">Souvenir émotionnel</h3>
+          <p class="feature-desc">Un moment figé dans le temps, chargé d'émotion.</p>
         </div>
-        <div class="concept-card">
-          <div class="concept-icon">◎</div>
-          <h3 class="concept-title">Une émotion</h3>
-          <p class="concept-desc">Le sourire, la complicité, la tendresse — capturés dans chaque détail.</p>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-comments"></i></div>
+          <h3 class="feature-title">Interaction humaine</h3>
+          <p class="feature-desc">Créé avec le client, pas pour lui.</p>
         </div>
-        <div class="concept-card">
-          <div class="concept-icon">✧</div>
-          <h3 class="concept-title">Un moment</h3>
-          <p class="concept-desc">Votre famille telle qu'elle est aujourd'hui, dans toute sa singularité.</p>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3 class="feature-title">Achat impulsif</h3>
+          <p class="feature-desc">Décision rapide, valeur perçue forte.</p>
         </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-check"></i></div>
+          <h3 class="feature-title">Zéro compétence artistique</h3>
+          <p class="feature-desc">L'outil fait le travail pour vous.</p>
+        </div>
+      </div>
+      
+      <div class="section-cta">
+        <a href="./concept.html" class="btn-outline">Découvrir le concept en détail →</a>
       </div>
     </div>
   </section>
 
-  <!-- ==================== COMMENT ÇA MARCHE ==================== -->
-  <section class="section section-alt">
+  <!-- ==================== 5. COMMENT ÇA MARCHE ==================== -->
+  <section class="section section-alt" id="fonctionnement">
     <div class="section-inner">
       <div class="section-header">
-        <p class="section-label">Simple et humain</p>
+        <p class="section-label">Simple. Rapide. Mémorable.</p>
         <h2 class="section-title">Comment ça fonctionne</h2>
+        <p class="section-subtitle">4 étapes pour transformer une visite en souvenir.</p>
       </div>
-      <div class="steps-grid">
-        <div class="step-card">
-          <div class="step-number">01</div>
+      
+      <div class="steps-horizontal">
+        <div class="step-item">
+          <div class="step-icon"><i class="fa-solid fa-hand-wave"></i></div>
+          <div class="step-number">1</div>
           <h3 class="step-title">Rencontre</h3>
-          <p class="step-desc">Vous découvrez le concept sur un point de vente partenaire</p>
+          <p class="step-desc">La famille découvre le concept</p>
         </div>
-        <div class="step-card">
-          <div class="step-number">02</div>
+        <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="step-item">
+          <div class="step-icon"><i class="fa-solid fa-comments"></i></div>
+          <div class="step-number">2</div>
           <h3 class="step-title">Échange</h3>
-          <p class="step-desc">Vous discutez avec le partenaire de votre famille</p>
+          <p class="step-desc">Personnalisation ensemble</p>
         </div>
-        <div class="step-card">
-          <div class="step-number">03</div>
+        <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="step-item">
+          <div class="step-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <div class="step-number">3</div>
           <h3 class="step-title">Création</h3>
-          <p class="step-desc">Votre portrait prend vie grâce à notre outil</p>
+          <p class="step-desc">Le portrait prend vie</p>
         </div>
-        <div class="step-card">
-          <div class="step-number">04</div>
+        <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="step-item">
+          <div class="step-icon"><i class="fa-solid fa-gift"></i></div>
+          <div class="step-number">4</div>
           <h3 class="step-title">Souvenir</h3>
-          <p class="step-desc">Vous repartez avec un souvenir unique</p>
+          <p class="step-desc">Le client repart avec son œuvre</p>
         </div>
+      </div>
+      
+      <div class="section-cta">
+        <a href="./fonctionnement.html" class="btn-outline">Voir le fonctionnement complet →</a>
       </div>
     </div>
   </section>
 
-  <!-- ==================== CTA PARTENAIRE ==================== -->
-  <section class="cta-section">
-    <div class="cta-inner">
-      <h2 class="cta-title">Vous souhaitez proposer ce concept ?</h2>
-      <p class="cta-text">
-        My Pretty Family recherche des partenaires autonomes et impliqués 
-        pour développer le réseau.
-      </p>
-      <a href="#partenaire" class="btn-white">En savoir plus</a>
-    </div>
-  </section>
-
-  <!-- ==================== PAGE PARTENAIRE ==================== -->
-  <section class="hero" id="partenaire" style="min-height: 85vh;">
-    <div class="hero-deco-1" style="left: 8%; right: auto;"></div>
-    <div class="hero-content">
-      <p class="hero-label">Réseau partenaires</p>
-      <h1 class="hero-title" style="font-size: clamp(36px, 5vw, 56px);">
-        Proposez My Pretty Family<br>
-        <span>sur votre point de vente</span>
-      </h1>
-      <p class="hero-subtitle" style="max-width: 580px;">
-        Un concept éprouvé depuis plus de 10 ans. Un cadre clair. 
-        Un réseau sélectif, à taille humaine.
-      </p>
-      <a href="#formulaire" class="btn-primary">Déposer ma candidature</a>
-    </div>
-  </section>
-
-  <!-- Stats Partenaire -->
-  <!-- <section class="stats">
-    <div class="stats-inner">
-      <div class="stat-item">
-        <div class="stat-number">10+</div>
-        <div class="stat-label">années d'exploitation</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">100%</div>
-        <div class="stat-label">terrain & humain</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">0</div>
-        <div class="stat-label">promesse de CA</div>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- ADN / Valeurs -->
-  <section class="section" id="concept-mpf">
-    <div class="section-inner" style="max-width: 900px;">
-      <div class="section-header" style="margin-bottom: 60px;">
-        <h2 class="section-title">Le concept My Pretty Family</h2>
-        <p class="section-subtitle">
-          Des portraits de famille personnalisés, vendus sur des points de vente physiques. 
-          Le client n'achète pas un dessin — il achète une émotion, un souvenir, 
-          un moment figé dans le temps.
-        </p>
-      </div>
-      <div class="values-grid">
-        <div class="value-card">
-          <h4 class="value-title">Émotion avant technique</h4>
-          <p class="value-desc">Le produit parle au cœur, pas à la raison.</p>
-        </div>
-        <div class="value-card">
-          <h4 class="value-title">Simplicité avant sophistication</h4>
-          <p class="value-desc">Un concept compréhensible en quelques secondes.</p>
-        </div>
-        <div class="value-card">
-          <h4 class="value-title">Relation humaine</h4>
-          <p class="value-desc">La vente repose sur l'échange, pas sur l'automatisation.</p>
-        </div>
-        <div class="value-card">
-          <h4 class="value-title">Autonomie avant dépendance</h4>
-          <p class="value-desc">Chaque partenaire est responsable de son activité.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== NOS CONCEPTS ==================== -->
-  <section class="section section-alt" id="concepts">
+  <!-- ==================== 6. CONFIGURATEUR ==================== -->
+  <section class="section" id="configurateur">
     <div class="section-inner">
+      <div class="configurator-block">
+        <div class="configurator-content">
+          <p class="section-label">L'outil clé</p>
+          <h2 class="section-title">Un configurateur pensé pour le terrain</h2>
+          <p class="configurator-text">
+            Le configurateur My Pretty Family a été conçu pour être utilisé par n'importe qui, 
+            sans formation technique. Un atout, pas une contrainte.
+          </p>
+          
+          <div class="configurator-features">
+            <div class="configurator-feature">
+              <i class="fa-solid fa-clock"></i>
+              <div>
+                <strong>Rapide</strong>
+                <span>Portrait créé en quelques minutes</span>
+              </div>
+            </div>
+            <div class="configurator-feature">
+              <i class="fa-solid fa-hand-pointer"></i>
+              <div>
+                <strong>Intuitif</strong>
+                <span>Aucune compétence requise</span>
+              </div>
+            </div>
+            <div class="configurator-feature">
+              <i class="fa-solid fa-arrows-rotate"></i>
+              <div>
+                <strong>Évolutif</strong>
+                <span>Mises à jour régulières incluses</span>
+              </div>
+            </div>
+          </div>
+          
+          <a href="./configurateur.html" class="btn-primary">Découvrir l'outil →</a>
+        </div>
+        <div class="configurator-visual">
+          <div class="configurator-mockup">
+            <i class="fa-solid fa-sliders"></i>
+            <span>Aperçu du configurateur</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 7. POUR QUI / PAS POUR QUI ==================== -->
+  <section class="section section-alt" id="profils">
+    <div class="section-inner section-narrow">
       <div class="section-header">
-        <p class="section-label">À chaque projet, sa solution</p>
-        <h2 class="section-title">Nos concepts</h2>
+        <h2 class="section-title">Est-ce fait pour vous ?</h2>
         <p class="section-subtitle">
-          Que vous débutiez ou souhaitiez vous implanter durablement, 
-          nous avons la formule adaptée à votre projet.
+          My Pretty Family n'est pas pour tout le monde. Et c'est voulu.
         </p>
       </div>
       
-      <div class="concepts-list">
-        <!-- Concept 1 : STARTER -->
-        <div class="concept-block">
-          <div class="concept-block-image">
-            <img src="./assets/concepts/starter.jpg" alt="Concept Starter My Pretty Family" loading="lazy">
+      <div class="profiles-grid">
+        <div class="profile-card profile-card-positive">
+          <div class="profile-header">
+            <i class="fa-solid fa-circle-check"></i>
+            <h3>C'est fait pour vous si</h3>
           </div>
-          <div class="concept-block-content">
-            <span class="concept-block-label">Starter</span>
-            <h3 class="concept-block-title">Commencer léger</h3>
-            <p class="concept-block-tagline">Une formule simple, fun et efficace pour se lancer !</p>
-            <p class="concept-block-desc">
-              Le Starter, c'est le point de vente léger par excellence : peu de matériel, 
-              une mise en place <strong>rapide</strong> et la même magie dans les créations 
-              My Pretty Family, avec un <strong>minimum d'investissement</strong>.
-            </p>
-            <a href="./concept-starter.html" class="btn-outline-small"><i class="fa-solid fa-square-arrow-up-right"></i> En savoir +</a>
-          </div>
+          <ul class="profile-list">
+            <li><i class="fa-solid fa-check"></i> Vous êtes en zone touristique ou lieu de passage</li>
+            <li><i class="fa-solid fa-check"></i> Vous cherchez une expérience différenciante</li>
+            <li><i class="fa-solid fa-check"></i> Vous aimez le contact humain</li>
+            <li><i class="fa-solid fa-check"></i> Vous êtes autonome et impliqué</li>
+          </ul>
         </div>
         
-        <!-- Concept 2 : CORNER -->
-        <div class="concept-block concept-block-reverse">
-          <div class="concept-block-image">
-            <img src="./assets/concepts/corner.jpg" alt="Concept Corner My Pretty Family" loading="lazy">
+        <div class="profile-card profile-card-negative">
+          <div class="profile-header">
+            <i class="fa-solid fa-circle-xmark"></i>
+            <h3>Ce n'est pas pour vous si</h3>
           </div>
-          <div class="concept-block-content">
-            <span class="concept-block-label">Corner</span>
-            <h3 class="concept-block-title">Travailler où vous voulez</h3>
-            <p class="concept-block-tagline">La version complète dans un format compact et pratique.</p>
-            <p class="concept-block-desc">
-              Ce concept mobile vous offre la flexibilité de vous installer là où la saison 
-              bat son plein : <strong>marchés touristiques, foires, événements estivaux</strong> 
-              ou lieux de passage animés.
-            </p>
-            <a href="./concept-corner.html" class="btn-outline-small"><i class="fa-solid fa-square-arrow-up-right"></i> En savoir +</a>
-          </div>
-        </div>
-        
-        <!-- Concept 3 : SHOP -->
-        <div class="concept-block">
-          <div class="concept-block-image">
-            <img src="./assets/concepts/shop.jpg" alt="Concept Shop My Pretty Family" loading="lazy">
-          </div>
-          <div class="concept-block-content">
-            <span class="concept-block-label">Shop</span>
-            <h3 class="concept-block-title">S'implanter dans la durée</h3>
-            <p class="concept-block-tagline">La version la plus complète et la plus performante.</p>
-            <p class="concept-block-desc">
-              Un <strong>magasin clé en main</strong>, pensé pour s'implanter durablement et 
-              devenir <strong>la référence du cadeau souvenir personnalisé</strong> de votre région.
-            </p>
-            <a href="./concept-shop.html" class="btn-outline-small"><i class="fa-solid fa-square-arrow-up-right"></i> En savoir +</a>
-          </div>
-        </div>
-        
-        <!-- Concept 4 : TRAVEL -->
-        <div class="concept-block concept-block-reverse">
-          <div class="concept-block-image">
-            <img src="./assets/concepts/travel.jpg" alt="Concept Travel My Pretty Family" loading="lazy">
-          </div>
-          <div class="concept-block-content">
-            <span class="concept-block-label">Travel</span>
-            <h3 class="concept-block-title">Créer du lien avec vos clients</h3>
-            <p class="concept-block-tagline">Solution clé en main pour les acteurs du tourisme et de l'hôtellerie.</p>
-            <p class="concept-block-desc">
-              Campings, resorts, villages vacances… Grâce à un simple <strong>QR code</strong>, 
-              vos clients personnalisent un souvenir avec <strong>le décor de votre établissement</strong>.
-            </p>
-            <a href="./concept-travel.html" class="btn-outline-small"><i class="fa-solid fa-square-arrow-up-right"></i> En savoir +</a>
-          </div>
+          <ul class="profile-list">
+            <li><i class="fa-solid fa-xmark"></i> Vous cherchez un revenu passif</li>
+            <li><i class="fa-solid fa-xmark"></i> Vous ne voulez pas interagir avec les clients</li>
+            <li><i class="fa-solid fa-xmark"></i> Vous attendez des garanties de CA</li>
+            <li><i class="fa-solid fa-xmark"></i> Vous voulez un "clé en main sans effort"</li>
+          </ul>
         </div>
       </div>
       
-      <!-- Tableau comparatif -->
-      <div class="compare-section">
-        <h3 class="compare-title">Comparer les concepts</h3>
-        <div class="compare-table-wrapper">
-          <table class="compare-table">
-            <thead>
-              <tr>
-                <th></th>
-                <th>
-                  <span class="compare-label">Starter</span>
-                  <span class="compare-tagline">Se lancer</span>
-                </th>
-                <th>
-                  <span class="compare-label">Corner</span>
-                  <span class="compare-tagline">Mobilité</span>
-                </th>
-                <th class="compare-popular">
-                  <span class="compare-label">Shop</span>
-                  <span class="compare-tagline">Durabilité</span>
-                  <span class="compare-badge">Populaire</span>
-                </th>
-                <th>
-                  <span class="compare-label">Travel</span>
-                  <span class="compare-tagline">B2B</span>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="compare-feature">Type d'installation</td>
-                <td>Événementiel</td>
-                <td>Mobile</td>
-                <td class="compare-popular">Fixe</td>
-                <td>Partenariat</td>
-              </tr>
-              <tr>
-                <td class="compare-feature">Surface requise</td>
-                <td>2-4 m²</td>
-                <td>6-10 m²</td>
-                <td class="compare-popular">15-40 m²</td>
-                <td>—</td>
-              </tr>
-              <tr>
-                <td class="compare-feature">Investissement initial</td>
-                <td>€</td>
-                <td>€€</td>
-                <td class="compare-popular">€€€</td>
-                <td>€</td>
-              </tr>
-              <tr>
-                <td class="compare-feature">Gamme de produits</td>
-                <td>Essentielle</td>
-                <td>Complète</td>
-                <td class="compare-popular">Complète +</td>
-                <td>Personnalisée</td>
-              </tr>
-              <tr>
-                <td class="compare-feature">Formation</td>
-                <td>✓</td>
-                <td>✓</td>
-                <td class="compare-popular">✓</td>
-                <td>✓</td>
-              </tr>
-              <tr>
-                <td class="compare-feature">Accompagnement</td>
-                <td>Standard</td>
-                <td>Standard</td>
-                <td class="compare-popular">Premium</td>
-                <td>Dédié</td>
-              </tr>
-              <tr>
-                <td class="compare-feature">Idéal pour</td>
-                <td>Marchés, festivals</td>
-                <td>Saisons touristiques</td>
-                <td class="compare-popular">Implantation durable</td>
-                <td>Hôtellerie, campings</td>
-              </tr>
-            </tbody>
-          </table>
+      <div class="section-cta">
+        <a href="#partenaire" class="btn-primary">Je me reconnais — Devenir partenaire</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 8. POURQUOI ÇA MARCHE ==================== -->
+  <section class="section" id="pourquoi">
+    <div class="section-inner section-narrow">
+      <div class="section-header">
+        <p class="section-label">Ce qui fait la différence</p>
+        <h2 class="section-title">Pourquoi ça marche</h2>
+        <p class="section-subtitle">
+          My Pretty Family fonctionne parce qu'il touche à l'essentiel : l'émotion.
+        </p>
+      </div>
+      
+      <div class="reasons-grid">
+        <div class="reason-card">
+          <div class="reason-icon"><i class="fa-solid fa-heart"></i></div>
+          <h3 class="reason-title">Achat émotionnel</h3>
+          <p class="reason-desc">Le client n'achète pas un produit, il achète un souvenir.</p>
+        </div>
+        <div class="reason-card">
+          <div class="reason-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3 class="reason-title">Décision rapide</h3>
+          <p class="reason-desc">L'émotion déclenche l'achat, pas la réflexion.</p>
+        </div>
+        <div class="reason-card">
+          <div class="reason-icon"><i class="fa-solid fa-gem"></i></div>
+          <h3 class="reason-title">Valeur perçue forte</h3>
+          <p class="reason-desc">Un portrait personnalisé vaut plus qu'un objet générique.</p>
+        </div>
+        <div class="reason-card">
+          <div class="reason-icon"><i class="fa-solid fa-star"></i></div>
+          <h3 class="reason-title">Expérience mémorable</h3>
+          <p class="reason-desc">Le client se souvient du moment, pas juste du produit.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Pour qui / Pas pour qui -->
-  <section class="section section-alt">
-    <div class="section-inner" style="max-width: 1000px;">
-      <div class="section-header" style="margin-bottom: 60px;">
-        <h2 class="section-title">Ce partenariat est-il fait pour vous ?</h2>
+  <!-- ==================== 9. DEVENIR PARTENAIRE ==================== -->
+  <section class="section section-alt" id="partenaire">
+    <div class="section-inner section-narrow">
+      <div class="section-header">
+        <p class="section-label">Rejoignez le réseau</p>
+        <h2 class="section-title">Ce que My Pretty Family met à votre disposition</h2>
+        <p class="section-subtitle">
+          Un cadre structuré, issu de plus de 10 ans d'expérience terrain.
+        </p>
       </div>
-      <div class="profile-grid">
-        <div class="profile-card">
-          <div class="profile-badge profile-badge-positive">PROFILS RECHERCHÉS</div>
-          <ul class="profile-list">
-            <li class="profile-item"><span class="profile-icon profile-icon-positive">✓</span> Boutiques indépendantes</li>
-            <li class="profile-item"><span class="profile-icon profile-icon-positive">✓</span> Stands, marchés, lieux touristiques</li>
-            <li class="profile-item"><span class="profile-icon profile-icon-positive">✓</span> Activités saisonnières</li>
-            <li class="profile-item"><span class="profile-icon profile-icon-positive">✓</span> Profils à l'aise avec le contact client</li>
-            <li class="profile-item"><span class="profile-icon profile-icon-positive">✓</span> Personnes autonomes et impliquées</li>
-          </ul>
+      
+      <div class="partner-inclus">
+        <div class="inclus-item">
+          <i class="fa-solid fa-check"></i>
+          <span>Accès au configurateur propriétaire</span>
         </div>
-        <div class="profile-card">
-          <div class="profile-badge profile-badge-negative">NON ADAPTÉ SI</div>
-          <ul class="profile-list">
-            <li class="profile-item"><span class="profile-icon profile-icon-negative">×</span> Recherche de revenu passif</li>
-            <li class="profile-item"><span class="profile-icon profile-icon-negative">×</span> Attente de garanties financières</li>
-            <li class="profile-item"><span class="profile-icon profile-icon-negative">×</span> Refus de l'implication terrain</li>
-            <li class="profile-item"><span class="profile-icon profile-icon-negative">×</span> Volonté d'un "clé en main sans effort"</li>
-            <li class="profile-item"><span class="profile-icon profile-icon-negative">×</span> Besoin d'être assisté en permanence</li>
-          </ul>
+        <div class="inclus-item">
+          <i class="fa-solid fa-check"></i>
+          <span>Droit d'usage de la marque</span>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Inclus / Non inclus -->
-  <section class="section">
-    <div class="section-inner" style="max-width: 1000px;">
-      <div class="section-header" style="margin-bottom: 60px;">
-        <h2 class="section-title">Ce que MPF met à disposition</h2>
-      </div>
-      <div class="inclus-grid">
-        <div>
-          <h3 class="inclus-title">Inclus dans le partenariat</h3>
-          <ul class="profile-list">
-            <li class="profile-item"><span class="inclus-icon-positive">✓</span> Accès à l'outil numérique propriétaire</li>
-            <li class="profile-item"><span class="inclus-icon-positive">✓</span> Droit d'usage de la marque My Pretty Family</li>
-            <li class="profile-item"><span class="inclus-icon-positive">✓</span> Supports visuels (affiches, exemples)</li>
-            <li class="profile-item"><span class="inclus-icon-positive">✓</span> Accompagnement au démarrage</li>
-            <li class="profile-item"><span class="inclus-icon-positive">✓</span> Mises à jour continues de l'outil</li>
-            <li class="profile-item"><span class="inclus-icon-positive">✓</span> Cadre structuré issu de +10 ans d'expérience</li>
-          </ul>
+        <div class="inclus-item">
+          <i class="fa-solid fa-check"></i>
+          <span>Supports visuels et marketing</span>
         </div>
-        <div>
-          <h3 class="inclus-title">Ce que MPF ne fournit pas</h3>
-          <ul class="profile-list">
-            <li class="profile-item inclus-negative"><span class="inclus-icon-negative">—</span> Garantie de chiffre d'affaires</li>
-            <li class="profile-item inclus-negative"><span class="inclus-icon-negative">—</span> Gestion de point de vente</li>
-            <li class="profile-item inclus-negative"><span class="inclus-icon-negative">—</span> Personnel ou force de vente</li>
-            <li class="profile-item inclus-negative"><span class="inclus-icon-negative">—</span> Revenu passif</li>
-            <li class="profile-item inclus-negative"><span class="inclus-icon-negative">—</span> Vente à la place du partenaire</li>
-          </ul>
+        <div class="inclus-item">
+          <i class="fa-solid fa-check"></i>
+          <span>Accompagnement au démarrage</span>
+        </div>
+        <div class="inclus-item">
+          <i class="fa-solid fa-check"></i>
+          <span>Mises à jour continues de l'outil</span>
+        </div>
+        <div class="inclus-item">
+          <i class="fa-solid fa-check"></i>
+          <span>Cadre structuré et éprouvé</span>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Conditions -->
-  <!-- <section class="section section-alt">
-    <div class="section-inner" style="max-width: 800px; text-align: center;">
-      <h2 class="section-title" style="margin-bottom: 48px;">Conditions d'accès au réseau</h2>
-      <div class="conditions-grid">
-        <div class="condition-card">
-          <div class="condition-value">790 €</div>
-          <div class="condition-label">Droit d'entrée</div>
-        </div>
-        <div class="condition-card">
-          <div class="condition-value">69 €</div>
-          <div class="condition-label">HT / mois</div>
-        </div>
-        <div class="condition-card">
-          <div class="condition-value" style="font-size: 18px;">Sélection</div>
-          <div class="condition-label">Process obligatoire</div>
-        </div>
-      </div>
-      <p class="condition-note">Réseau volontairement limité. Qualité avant quantité.</p>
-    </div>
-  </section> -->
-
-  <!-- Process -->
-  <section class="section">
-    <div class="section-inner">
-      <div class="section-header" style="margin-bottom: 60px;">
-        <h2 class="section-title">Le processus de candidature</h2>
-      </div>
-      <div class="process-horizontal">
-        <div class="process-step">
-          <div class="process-step-icon"><i class="fa-solid fa-file-lines"></i></div>
-          <h4 class="process-step-title">Candidature</h4>
-          <p class="process-step-desc">Remplissez le formulaire</p>
-        </div>
-        <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-        <div class="process-step">
-          <div class="process-step-icon"><i class="fa-solid fa-comments"></i></div>
-          <h4 class="process-step-title">Échange</h4>
-          <p class="process-step-desc">Discussion si profil retenu</p>
-        </div>
-        <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-        <div class="process-step">
-          <div class="process-step-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-          <h4 class="process-step-title">Étude</h4>
-          <p class="process-step-desc">Analyse de votre projet</p>
-        </div>
-        <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-        <div class="process-step">
-          <div class="process-step-icon"><i class="fa-solid fa-handshake"></i></div>
-          <h4 class="process-step-title">Onboarding</h4>
-          <p class="process-step-desc">Signature et formation</p>
-        </div>
-        <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-        <div class="process-step">
-          <div class="process-step-icon"><i class="fa-solid fa-rocket"></i></div>
-          <h4 class="process-step-title">Décollage</h4>
-          <p class="process-step-desc">Lancement de l'activité</p>
-        </div>
-      </div>
-      <p style="text-align: center; margin-top: 48px; font-size: 14px; color: #888;">
-        Nous contactons uniquement les profils correspondant aux critères actuels.
+      
+      <p class="partner-disclaimer">
+        Les résultats dépendent de votre implication et de votre emplacement. 
+        Aucun chiffre d'affaires n'est garanti.
       </p>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section section-alt">
-    <div class="section-inner" style="max-width: 700px;">
-      <div class="section-header" style="margin-bottom: 60px;">
-        <h2 class="section-title">Questions fréquentes</h2>
-      </div>
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-question">
-            <span class="faq-question-text">Est-ce une franchise ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">Non. My Pretty Family est un réseau de partenaires, pas une franchise lourde. Vous êtes autonome et responsable de votre activité.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            <span class="faq-question-text">Faut-il des compétences techniques ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">Non. L'outil est conçu pour être utilisé sans aucune compétence technique. Un accompagnement est prévu au démarrage.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            <span class="faq-question-text">Quel chiffre d'affaires puis-je espérer ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">Nous ne faisons aucune promesse de chiffre d'affaires. Les résultats dépendent du lieu, de la saisonnalité et de votre implication.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            <span class="faq-question-text">Puis-je cumuler avec une autre activité ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">Oui, de nombreux partenaires proposent MPF en complément d'une activité existante (boutique, stand saisonnier, etc.).</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            <span class="faq-question-text">Quelle est la durée d'engagement ?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">Les conditions d'engagement sont discutées lors de l'échange avec les profils retenus.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Formulaire -->
-  <section class="section" id="formulaire">
-    <div class="form-section">
-      <div class="form-header">
-        <h2 class="section-title">Déposer votre candidature</h2>
-        <p class="section-subtitle" style="margin-bottom: 0;">
-          Remplissez ce formulaire. Nous reviendrons vers vous si votre profil correspond.
-        </p>
-      </div>
       
-      <form>
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">Nom <span class="form-required">*</span></label>
-            <input type="text" class="form-input" name="nom" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Prénom <span class="form-required">*</span></label>
-            <input type="text" class="form-input" name="prenom" required>
-          </div>
-        </div>
-        
-        <div class="form-group">
-          <label class="form-label">Email <span class="form-required">*</span></label>
-          <input type="email" class="form-input" name="email" required>
-        </div>
-        
-        <div class="form-group">
-          <label class="form-label">Téléphone <span class="form-required">*</span></label>
-          <input type="tel" class="form-input" name="telephone" required>
-        </div>
-        
-        <div class="form-group">
-          <label class="form-label">Ville / Zone géographique <span class="form-required">*</span></label>
-          <input type="text" class="form-input" name="ville" required>
-        </div>
-        
-        <div class="form-group">
-          <label class="form-label">Type de point de vente envisagé <span class="form-required">*</span></label>
-          <select class="form-select" name="type_point_vente" required>
-            <option value="">Sélectionnez...</option>
-            <option value="boutique">Boutique existante</option>
-            <option value="stand">Stand / Marché</option>
-            <option value="touristique">Lieu touristique</option>
-            <option value="saisonnier">Activité saisonnière</option>
-            <option value="autre">Autre</option>
-          </select>
-        </div>
-        
-        <div class="form-group">
-          <label class="form-label">Votre motivation et votre projet <span class="form-required">*</span></label>
-          <textarea class="form-textarea" name="motivation" placeholder="Décrivez votre projet, votre situation actuelle, et pourquoi ce concept vous intéresse..." required></textarea>
-        </div>
-        
-        <div class="form-group">
-          <label class="form-label">Temps disponible pour cette activité <span class="form-required">*</span></label>
-          <select class="form-select" name="temps_disponible" required>
-            <option value="">Sélectionnez...</option>
-            <option value="temps-plein">Temps plein</option>
-            <option value="mi-temps">Mi-temps</option>
-            <option value="complement">En complément d'une activité</option>
-            <option value="saisonnier">Saisonnier uniquement</option>
-          </select>
-        </div>
-        
-        <div class="form-group">
-          <label class="form-label">Expérience en vente / relation client <span class="form-required">*</span></label>
-          <select class="form-select" name="experience_vente" required>
-            <option value="">Sélectionnez...</option>
-            <option value="oui-pro">Oui, expérience professionnelle</option>
-            <option value="oui-perso">Oui, expérience personnelle</option>
-            <option value="non">Non, mais motivé(e) à apprendre</option>
-            <option value="aucune">Non, et pas à l'aise avec ça</option>
-          </select>
-        </div>
-        
-        <div class="form-checkbox-group">
-          <label class="form-checkbox-label">
-            <input type="checkbox" name="budget_ok" required>
-            Je confirme avoir pris connaissance des conditions financières (790€ droit d'entrée + 69€ HT/mois) et dispose du budget nécessaire.
-          </label>
-          <label class="form-checkbox-label">
-            <input type="checkbox" name="cadre_ok" required>
-            J'ai lu et j'accepte le cadre du partenariat MPF : pas de garantie de CA, responsabilité terrain, autonomie requise.
-          </label>
-        </div>
-        
-        <button type="submit" class="form-submit">Envoyer ma candidature</button>
-        
-        <p class="form-note">Aucun échange hors formulaire. Pas de débat après refus.</p>
-      </form>
+      <div class="section-cta">
+        <a href="#candidature" class="btn-primary btn-large">Déposer ma candidature</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 10. CTA FINAL ==================== -->
+  <section class="cta-final" id="candidature">
+    <div class="cta-final-inner">
+      <h2 class="cta-final-title">Prêt à proposer une expérience unique ?</h2>
+      <p class="cta-final-text">
+        Rejoignez un réseau sélectif de partenaires qui font vivre des émotions chaque jour.
+      </p>
+      <a href="./candidature.html" class="btn-white btn-large">Déposer ma candidature</a>
     </div>
   </section>
 
   <!-- ==================== FOOTER ==================== -->
   <footer class="footer">
     <div class="footer-inner">
-      <div>
-        <img src="./assets/logo_blue.png" alt="My Pretty Family" class="footer-logo-img">
+      <div class="footer-brand">
+        <img src="./assets/logo_blue.png" alt="My Pretty Family" class="footer-logo">
         <p class="footer-desc">
-          Portraits de famille personnalisés.<br>
+          Expérience émotionnelle en point de vente.<br>
           Concept terrain depuis +10 ans.
         </p>
       </div>
+      
       <div class="footer-links">
-        <div>
-          <p class="footer-column-title">Navigation</p>
-          <a href="#accueil" class="footer-link">Le Concept</a>
-          <a href="#galerie" class="footer-link">Nos Points de Vente</a>
+        <div class="footer-column">
+          <h4 class="footer-column-title">Navigation</h4>
+          <a href="#concept" class="footer-link">Le Concept</a>
+          <a href="#configurateur" class="footer-link">L'Outil</a>
           <a href="#partenaire" class="footer-link">Devenir Partenaire</a>
         </div>
-        <div>
-          <p class="footer-column-title">Légal</p>
-          <a href="#" class="footer-link">Mentions légales</a>
-          <a href="#" class="footer-link">Confidentialité</a>
+        <div class="footer-column">
+          <h4 class="footer-column-title">Légal</h4>
+          <a href="./mentions-legales.html" class="footer-link">Mentions légales</a>
+          <a href="./confidentialite.html" class="footer-link">Confidentialité</a>
         </div>
       </div>
     </div>
+    
     <div class="footer-bottom">
       <p class="footer-copyright">© 2025 My Pretty Family. Tous droits réservés.</p>
     </div>
