@@ -288,7 +288,7 @@ body.menu-open {
 
 .hero-title span {
   /* Couleur chaude contrastée - bien visible sur fond bleuté */
-  color: #F5A962;
+  color: #6A8FB9;
 }
 
 .hero-subtitle {
@@ -343,8 +343,8 @@ body.menu-open {
 }
 
 .btn-secondary:hover {
-  border-color: #F5A962;
-  color: #F5A962;
+  border-color: #6A8FB9;
+  color: #6A8FB9;
 }
 
 .btn-white {
