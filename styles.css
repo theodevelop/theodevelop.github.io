@@ -717,6 +717,101 @@ body.menu-open {
   line-height: 1.5;
 }
 
+/* ==================== CONCEPTS ==================== */
+.concepts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.concept-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.concept-block-reverse {
+  direction: rtl;
+}
+
+.concept-block-reverse > * {
+  direction: ltr;
+}
+
+.concept-block-image {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(106,143,185,0.15);
+}
+
+.concept-block-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s;
+}
+
+.concept-block:hover .concept-block-image img {
+  transform: scale(1.03);
+}
+
+.concept-block-content {
+  padding: 20px 0;
+}
+
+.concept-block-label {
+  display: inline-block;
+  background: #6A8FB9;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.concept-block-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.concept-block-tagline {
+  font-size: 17px;
+  color: #6A8FB9;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.concept-block-desc {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.concept-block-desc strong {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.concept-block-use {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+  padding: 16px 20px;
+  background: white;
+  border-radius: 10px;
+  border-left: 3px solid #6A8FB9;
+}
+
 /* ==================== SECTIONS ==================== */
 .section {
   padding: 120px 48px;
@@ -983,6 +1078,37 @@ body.menu-open {
   font-size: 15px;
   color: #888;
   font-style: italic;
+}
+
+/* Inclus / Non inclus */
+.inclus-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+}
+
+.inclus-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: #1a1a1a;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.inclus-icon-positive {
+  color: #6A8FB9;
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.inclus-icon-negative {
+  color: #bbb;
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.inclus-negative {
+  color: #888;
 }
 
 /* Process */
@@ -1284,6 +1410,17 @@ body.menu-open {
     grid-template-columns: 1fr;
     max-width: 500px;
     margin: 0 auto;
+  }
+  
+  .concept-block,
+  .concept-block-reverse {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    direction: ltr;
+  }
+  
+  .concept-block-title {
+    font-size: 28px;
   }
 }
 

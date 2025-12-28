@@ -5,19 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Pretty Family - Portraits de famille personnalisés</title>
   <meta name="description" content="My Pretty Family - Portraits de famille personnalisés. Un concept éprouvé depuis plus de 10 ans.">
-
-  <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
-  <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-title" content="MPF" />
-  <link rel="manifest" href="/favicon/site.webmanifest" />
-
-
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+  <link rel="shortcut icon" href="./assets/favicon.ico">
+  
+  <!-- SEO & Open Graph -->
+  <meta name="author" content="My Pretty Family">
+  <meta name="keywords" content="portrait famille, portrait personnalisé, cadeau famille, souvenir famille, partenaire">
+  <meta property="og:title" content="My Pretty Family - Portraits de famille personnalisés">
+  <meta property="og:description" content="Plus qu'un portrait, un souvenir. Une émotion. Concept éprouvé depuis +10 ans.">
+  <meta property="og:image" content="https://theodevelop.github.io/assets/og-image.jpg">
+  <meta property="og:url" content="https://theodevelop.github.io/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
@@ -30,11 +38,32 @@
       <a href="#" class="nav-logo">
         <img src="./assets/logo_blue.png" alt="My Pretty Family">
       </a>
+      
+      <!-- Menu Desktop -->
       <div class="nav-links">
-        <a href="#concept" class="nav-link active">Le Concept</a>
+        <a href="#produits" class="nav-link">Nos Produits</a>
+        <a href="#concept-mpf" class="nav-link">Le Concept</a>
         <a href="#galerie" class="nav-link">Nos Points de Vente</a>
         <a href="#partenaire" class="nav-link">Devenir Partenaire</a>
         <a href="#formulaire" class="nav-cta">Candidater</a>
+      </div>
+      
+      <!-- Bouton Menu Mobile (Hamburger) -->
+      <button class="nav-mobile-toggle" aria-label="Menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+    
+    <!-- Menu Mobile Overlay -->
+    <div class="nav-mobile">
+      <div class="nav-mobile-links">
+        <a href="#produits" class="nav-mobile-link">Nos Produits</a>
+        <a href="#concept-mpf" class="nav-mobile-link">Le Concept</a>
+        <a href="#galerie" class="nav-mobile-link">Nos Points de Vente</a>
+        <a href="#partenaire" class="nav-mobile-link">Devenir Partenaire</a>
+        <a href="#formulaire" class="nav-mobile-cta">Candidater</a>
       </div>
     </div>
   </nav>
@@ -176,149 +205,55 @@
       <h2 class="gallery-title">Nos points de vente en action</h2>
     </div>
     
-    <!-- CARROUSEL DÉFILANT (11 photos + duplication pour boucle infinie) -->
     <div class="gallery-track-wrapper">
       <div class="gallery-track">
-        <!-- Première série de 11 photos -->
-        <div class="gallery-item">
-          <img src="./assets/gallery/1.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/2.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/3.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/4.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/5.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/6.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/7.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/8.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/9.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/10.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/11.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/12.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/13.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/14.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/15.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/16.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/17.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/18.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/19.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/20.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/21.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/22.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/23.jpg" alt="Point de vente My Pretty Family">
-        </div>
+        <div class="gallery-item"><img src="./assets/gallery/1.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/2.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/3.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/4.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/5.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/6.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/7.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/8.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/9.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/10.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/11.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/12.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/13.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/14.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/15.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/16.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/17.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/18.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/19.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/20.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/21.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/22.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/23.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
         <!-- Duplication pour boucle infinie -->
-        <div class="gallery-item">
-          <img src="./assets/gallery/1.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/2.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/3.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/4.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/5.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/6.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/7.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/8.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/9.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/10.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/11.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/12.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/13.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/14.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/15.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/16.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/17.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/18.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/19.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/20.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/21.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/22.jpg" alt="Point de vente My Pretty Family">
-        </div>
-        <div class="gallery-item">
-          <img src="./assets/gallery/23.jpg" alt="Point de vente My Pretty Family">
-        </div>
+        <div class="gallery-item"><img src="./assets/gallery/1.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/2.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/3.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/4.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/5.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/6.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/7.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/8.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/9.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/10.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/11.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/12.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/13.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/14.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/15.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/16.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/17.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/18.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/19.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/20.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/21.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/22.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
+        <div class="gallery-item"><img src="./assets/gallery/23.jpg" alt="Point de vente My Pretty Family" loading="lazy"></div>
       </div>
     </div>
   </section>
@@ -399,8 +334,6 @@
   </section>
 
   <!-- ==================== PAGE PARTENAIRE ==================== -->
-
-  <!-- Hero Partenaire -->
   <section class="hero" id="partenaire" style="min-height: 85vh;">
     <div class="hero-deco-1" style="left: 8%; right: auto;"></div>
     <div class="hero-content">
@@ -436,7 +369,7 @@
   </section>
 
   <!-- ADN / Valeurs -->
-  <section class="section">
+  <section class="section" id="concept-mpf">
     <div class="section-inner" style="max-width: 900px;">
       <div class="section-header" style="margin-bottom: 60px;">
         <h2 class="section-title">Le concept My Pretty Family</h2>
@@ -467,6 +400,102 @@
     </div>
   </section>
 
+  <!-- ==================== NOS CONCEPTS ==================== -->
+  <section class="section section-alt" id="concepts">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="section-label">À chaque projet, sa solution</p>
+        <h2 class="section-title">Nos concepts</h2>
+        <p class="section-subtitle">
+          Que vous débutiez ou souhaitiez vous implanter durablement, 
+          nous avons la formule adaptée à votre projet.
+        </p>
+      </div>
+      
+      <div class="concepts-list">
+        <!-- Concept 1 : STARTER -->
+        <div class="concept-block">
+          <div class="concept-block-image">
+            <img src="./assets/concepts/starter.jpg" alt="Concept Starter My Pretty Family" loading="lazy">
+          </div>
+          <div class="concept-block-content">
+            <span class="concept-block-label">Starter</span>
+            <h3 class="concept-block-title">Commencer léger</h3>
+            <p class="concept-block-tagline">Une formule simple, fun et efficace pour se lancer !</p>
+            <p class="concept-block-desc">
+              Le Starter, c'est le point de vente léger par excellence : peu de matériel, 
+              une mise en place <strong>rapide</strong> et la même magie dans les créations 
+              My Pretty Family, avec un <strong>minimum d'investissement</strong>.
+            </p>
+            <p class="concept-block-use">
+              Parfait pour vos premiers marchés nocturnes, marchés de Noël, festivals ou événements.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Concept 2 : CORNER -->
+        <div class="concept-block concept-block-reverse">
+          <div class="concept-block-image">
+            <img src="./assets/concepts/corner.jpg" alt="Concept Corner My Pretty Family" loading="lazy">
+          </div>
+          <div class="concept-block-content">
+            <span class="concept-block-label">Corner</span>
+            <h3 class="concept-block-title">Travailler où vous voulez</h3>
+            <p class="concept-block-tagline">La version complète dans un format compact et pratique.</p>
+            <p class="concept-block-desc">
+              Ce concept mobile vous offre la flexibilité de vous installer là où la saison 
+              bat son plein : <strong>marchés touristiques, foires, événements estivaux</strong> 
+              ou lieux de passage animés.
+            </p>
+            <p class="concept-block-use">
+              Un espace réduit, une mobilité totale — la liberté d'entreprendre autrement !
+            </p>
+          </div>
+        </div>
+        
+        <!-- Concept 3 : SHOP -->
+        <div class="concept-block">
+          <div class="concept-block-image">
+            <img src="./assets/concepts/shop.jpg" alt="Concept Shop My Pretty Family" loading="lazy">
+          </div>
+          <div class="concept-block-content">
+            <span class="concept-block-label">Shop</span>
+            <h3 class="concept-block-title">S'implanter dans la durée</h3>
+            <p class="concept-block-tagline">La version la plus complète et la plus performante.</p>
+            <p class="concept-block-desc">
+              Un <strong>magasin clé en main</strong>, pensé pour s'implanter durablement et 
+              devenir <strong>la référence du cadeau souvenir personnalisé</strong> de votre région. 
+              Un univers immersif complet où chaque visiteur crée son propre souvenir.
+            </p>
+            <p class="concept-block-use">
+              Gamme complète de produits personnalisés et toutes les dernières innovations.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Concept 4 : TRAVEL -->
+        <div class="concept-block concept-block-reverse">
+          <div class="concept-block-image">
+            <img src="./assets/concepts/travel.jpg" alt="Concept Travel My Pretty Family" loading="lazy">
+          </div>
+          <div class="concept-block-content">
+            <span class="concept-block-label">Travel</span>
+            <h3 class="concept-block-title">Créer du lien avec vos clients</h3>
+            <p class="concept-block-tagline">Solution clé en main pour les acteurs du tourisme et de l'hôtellerie.</p>
+            <p class="concept-block-desc">
+              Campings, resorts, villages vacances… Grâce à un simple <strong>QR code</strong>, 
+              vos clients accèdent à un espace de création ludique. Ils personnalisent un souvenir 
+              avec <strong>le décor de votre établissement</strong> et le nom de votre marque.
+            </p>
+            <p class="concept-block-use">
+              Un véritable support promotionnel qui prolonge le lien émotionnel avec vos visiteurs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Pour qui / Pas pour qui -->
   <section class="section section-alt">
     <div class="section-inner" style="max-width: 1000px;">
@@ -477,51 +506,21 @@
         <div class="profile-card">
           <div class="profile-badge profile-badge-positive">PROFILS RECHERCHÉS</div>
           <ul class="profile-list">
-            <li class="profile-item">
-              <span class="profile-icon profile-icon-positive">✓</span>
-              Boutiques indépendantes
-            </li>
-            <li class="profile-item">
-              <span class="profile-icon profile-icon-positive">✓</span>
-              Stands, marchés, lieux touristiques
-            </li>
-            <li class="profile-item">
-              <span class="profile-icon profile-icon-positive">✓</span>
-              Activités saisonnières
-            </li>
-            <li class="profile-item">
-              <span class="profile-icon profile-icon-positive">✓</span>
-              Profils à l'aise avec le contact client
-            </li>
-            <li class="profile-item">
-              <span class="profile-icon profile-icon-positive">✓</span>
-              Personnes autonomes et impliquées
-            </li>
+            <li class="profile-item"><span class="profile-icon profile-icon-positive">✓</span> Boutiques indépendantes</li>
+            <li class="profile-item"><span class="profile-icon profile-icon-positive">✓</span> Stands, marchés, lieux touristiques</li>
+            <li class="profile-item"><span class="profile-icon profile-icon-positive">✓</span> Activités saisonnières</li>
+            <li class="profile-item"><span class="profile-icon profile-icon-positive">✓</span> Profils à l'aise avec le contact client</li>
+            <li class="profile-item"><span class="profile-icon profile-icon-positive">✓</span> Personnes autonomes et impliquées</li>
           </ul>
         </div>
         <div class="profile-card">
           <div class="profile-badge profile-badge-negative">NON ADAPTÉ SI</div>
           <ul class="profile-list">
-            <li class="profile-item">
-              <span class="profile-icon profile-icon-negative">×</span>
-              Recherche de revenu passif
-            </li>
-            <li class="profile-item">
-              <span class="profile-icon profile-icon-negative">×</span>
-              Attente de garanties financières
-            </li>
-            <li class="profile-item">
-              <span class="profile-icon profile-icon-negative">×</span>
-              Refus de l'implication terrain
-            </li>
-            <li class="profile-item">
-              <span class="profile-icon profile-icon-negative">×</span>
-              Volonté d'un "clé en main sans effort"
-            </li>
-            <li class="profile-item">
-              <span class="profile-icon profile-icon-negative">×</span>
-              Besoin d'être assisté en permanence
-            </li>
+            <li class="profile-item"><span class="profile-icon profile-icon-negative">×</span> Recherche de revenu passif</li>
+            <li class="profile-item"><span class="profile-icon profile-icon-negative">×</span> Attente de garanties financières</li>
+            <li class="profile-item"><span class="profile-icon profile-icon-negative">×</span> Refus de l'implication terrain</li>
+            <li class="profile-item"><span class="profile-icon profile-icon-negative">×</span> Volonté d'un "clé en main sans effort"</li>
+            <li class="profile-item"><span class="profile-icon profile-icon-negative">×</span> Besoin d'être assisté en permanence</li>
           </ul>
         </div>
       </div>
@@ -534,59 +533,26 @@
       <div class="section-header" style="margin-bottom: 60px;">
         <h2 class="section-title">Ce que MPF met à disposition</h2>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px;">
+      <div class="inclus-grid">
         <div>
-          <h3 style="font-family: 'DM Serif Display', serif; font-size: 20px; color: #1a1a1a; margin-bottom: 24px;">Inclus dans le partenariat</h3>
+          <h3 class="inclus-title">Inclus dans le partenariat</h3>
           <ul class="profile-list">
-            <li class="profile-item" style="color: #444;">
-              <span style="color: #6A8FB9; font-size: 14px;">✓</span>
-              Accès à l'outil numérique propriétaire
-            </li>
-            <li class="profile-item" style="color: #444;">
-              <span style="color: #6A8FB9; font-size: 14px;">✓</span>
-              Droit d'usage de la marque My Pretty Family
-            </li>
-            <li class="profile-item" style="color: #444;">
-              <span style="color: #6A8FB9; font-size: 14px;">✓</span>
-              Supports visuels (affiches, exemples)
-            </li>
-            <li class="profile-item" style="color: #444;">
-              <span style="color: #6A8FB9; font-size: 14px;">✓</span>
-              Accompagnement au démarrage
-            </li>
-            <li class="profile-item" style="color: #444;">
-              <span style="color: #6A8FB9; font-size: 14px;">✓</span>
-              Mises à jour continues de l'outil
-            </li>
-            <li class="profile-item" style="color: #444;">
-              <span style="color: #6A8FB9; font-size: 14px;">✓</span>
-              Cadre structuré issu de +10 ans d'expérience
-            </li>
+            <li class="profile-item"><span class="inclus-icon-positive">✓</span> Accès à l'outil numérique propriétaire</li>
+            <li class="profile-item"><span class="inclus-icon-positive">✓</span> Droit d'usage de la marque My Pretty Family</li>
+            <li class="profile-item"><span class="inclus-icon-positive">✓</span> Supports visuels (affiches, exemples)</li>
+            <li class="profile-item"><span class="inclus-icon-positive">✓</span> Accompagnement au démarrage</li>
+            <li class="profile-item"><span class="inclus-icon-positive">✓</span> Mises à jour continues de l'outil</li>
+            <li class="profile-item"><span class="inclus-icon-positive">✓</span> Cadre structuré issu de +10 ans d'expérience</li>
           </ul>
         </div>
         <div>
-          <h3 style="font-family: 'DM Serif Display', serif; font-size: 20px; color: #1a1a1a; margin-bottom: 24px;">Ce que MPF ne fournit pas</h3>
+          <h3 class="inclus-title">Ce que MPF ne fournit pas</h3>
           <ul class="profile-list">
-            <li class="profile-item" style="color: #888;">
-              <span style="color: #bbb; font-size: 14px;">—</span>
-              Garantie de chiffre d'affaires
-            </li>
-            <li class="profile-item" style="color: #888;">
-              <span style="color: #bbb; font-size: 14px;">—</span>
-              Gestion de point de vente
-            </li>
-            <li class="profile-item" style="color: #888;">
-              <span style="color: #bbb; font-size: 14px;">—</span>
-              Personnel ou force de vente
-            </li>
-            <li class="profile-item" style="color: #888;">
-              <span style="color: #bbb; font-size: 14px;">—</span>
-              Revenu passif
-            </li>
-            <li class="profile-item" style="color: #888;">
-              <span style="color: #bbb; font-size: 14px;">—</span>
-              Vente à la place du partenaire
-            </li>
+            <li class="profile-item inclus-negative"><span class="inclus-icon-negative">—</span> Garantie de chiffre d'affaires</li>
+            <li class="profile-item inclus-negative"><span class="inclus-icon-negative">—</span> Gestion de point de vente</li>
+            <li class="profile-item inclus-negative"><span class="inclus-icon-negative">—</span> Personnel ou force de vente</li>
+            <li class="profile-item inclus-negative"><span class="inclus-icon-negative">—</span> Revenu passif</li>
+            <li class="profile-item inclus-negative"><span class="inclus-icon-negative">—</span> Vente à la place du partenaire</li>
           </ul>
         </div>
       </div>
@@ -680,45 +646,35 @@
             <span class="faq-question-text">Est-ce une franchise ?</span>
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-answer">
-            Non. My Pretty Family est un réseau de partenaires, pas une franchise lourde. Vous êtes autonome et responsable de votre activité.
-          </div>
+          <div class="faq-answer">Non. My Pretty Family est un réseau de partenaires, pas une franchise lourde. Vous êtes autonome et responsable de votre activité.</div>
         </div>
         <div class="faq-item">
           <button class="faq-question">
             <span class="faq-question-text">Faut-il des compétences techniques ?</span>
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-answer">
-            Non. L'outil est conçu pour être utilisé sans aucune compétence technique. Un accompagnement est prévu au démarrage.
-          </div>
+          <div class="faq-answer">Non. L'outil est conçu pour être utilisé sans aucune compétence technique. Un accompagnement est prévu au démarrage.</div>
         </div>
         <div class="faq-item">
           <button class="faq-question">
             <span class="faq-question-text">Quel chiffre d'affaires puis-je espérer ?</span>
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-answer">
-            Nous ne faisons aucune promesse de chiffre d'affaires. Les résultats dépendent du lieu, de la saisonnalité et de votre implication.
-          </div>
+          <div class="faq-answer">Nous ne faisons aucune promesse de chiffre d'affaires. Les résultats dépendent du lieu, de la saisonnalité et de votre implication.</div>
         </div>
         <div class="faq-item">
           <button class="faq-question">
             <span class="faq-question-text">Puis-je cumuler avec une autre activité ?</span>
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-answer">
-            Oui, de nombreux partenaires proposent MPF en complément d'une activité existante (boutique, stand saisonnier, etc.).
-          </div>
+          <div class="faq-answer">Oui, de nombreux partenaires proposent MPF en complément d'une activité existante (boutique, stand saisonnier, etc.).</div>
         </div>
         <div class="faq-item">
           <button class="faq-question">
             <span class="faq-question-text">Quelle est la durée d'engagement ?</span>
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-answer">
-            Les conditions d'engagement sont discutées lors de l'échange avec les profils retenus.
-          </div>
+          <div class="faq-answer">Les conditions d'engagement sont discutées lors de l'échange avec les profils retenus.</div>
         </div>
       </div>
     </div>
