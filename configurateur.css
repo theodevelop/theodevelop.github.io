@@ -1,0 +1,495 @@
+/* ==========================================
+   MY PRETTY FAMILY - Page Configurateur
+   ========================================== */
+
+/* ==================== PAGE HERO ==================== */
+.page-hero {
+  padding: 140px 48px 80px;
+  background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+  text-align: center;
+}
+
+.page-hero-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.config-hero {
+  padding-bottom: 100px;
+}
+
+.config-hero-icon {
+  font-size: 56px;
+  color: #6A8FB9;
+  margin-bottom: 24px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #6A8FB9;
+  text-decoration: none;
+  margin-bottom: 32px;
+  transition: gap 0.2s;
+}
+
+.back-link:hover {
+  gap: 12px;
+}
+
+.page-hero-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6A8FB9;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.page-hero-title {
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.page-hero-subtitle {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* ==================== CONFIG INTRO ==================== */
+.config-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.config-intro-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.config-intro-text {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.config-intro-text strong {
+  color: #1a1a1a;
+}
+
+/* Mockup */
+.config-mockup-large {
+  display: flex;
+  justify-content: center;
+}
+
+.mockup-screen {
+  width: 100%;
+  max-width: 400px;
+  background: #1a1a1a;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+}
+
+.mockup-header {
+  display: flex;
+  gap: 8px;
+  padding: 16px 20px;
+  background: #2a2a2a;
+}
+
+.mockup-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #444;
+}
+
+.mockup-dot:first-child {
+  background: #ff5f56;
+}
+
+.mockup-dot:nth-child(2) {
+  background: #ffbd2e;
+}
+
+.mockup-dot:nth-child(3) {
+  background: #27ca3f;
+}
+
+.mockup-content {
+  padding: 80px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: #888;
+}
+
+.mockup-content i {
+  font-size: 48px;
+  color: #6A8FB9;
+}
+
+.mockup-content span {
+  font-size: 14px;
+}
+
+/* ==================== STATS ROW ==================== */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.stat-block {
+  text-align: center;
+  padding: 32px 24px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.stat-icon {
+  font-size: 28px;
+  color: #6A8FB9;
+  margin-bottom: 16px;
+}
+
+.stat-value {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.stat-desc {
+  font-size: 13px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ==================== FEATURES SHOWCASE ==================== */
+.features-showcase {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.feature-showcase-item {
+  display: flex;
+  gap: 24px;
+  padding: 32px;
+  background: #f8fafc;
+  border-radius: 16px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-showcase-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(106, 143, 185, 0.1);
+}
+
+.feature-showcase-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 12px;
+  font-size: 24px;
+  color: #6A8FB9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.feature-showcase-content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.feature-showcase-content p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ==================== ADVANTAGES GRID ==================== */
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.advantage-card {
+  text-align: center;
+  padding: 40px 28px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.advantage-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(106, 143, 185, 0.12);
+}
+
+.advantage-icon {
+  font-size: 36px;
+  color: #6A8FB9;
+  margin-bottom: 20px;
+}
+
+.advantage-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.advantage-desc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ==================== PROCESS TIMELINE ==================== */
+.process-timeline {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.process-timeline::before {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 48px;
+  bottom: 48px;
+  width: 2px;
+  background: #e8eef4;
+}
+
+.process-timeline-item {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.process-timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.process-timeline-marker {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #6A8FB9;
+  color: white;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: 700;
+  z-index: 1;
+  box-shadow: 0 4px 16px rgba(106, 143, 185, 0.3);
+}
+
+.process-timeline-marker-final {
+  background: linear-gradient(135deg, #5a9a6a 0%, #4a8a5a 100%);
+  box-shadow: 0 4px 16px rgba(90, 154, 106, 0.3);
+}
+
+.process-timeline-content {
+  flex: 1;
+  padding: 8px 0;
+}
+
+.process-timeline-content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.process-timeline-content p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.process-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #888;
+  font-weight: 500;
+}
+
+.process-time i {
+  color: #6A8FB9;
+}
+
+/* ==================== FAQ ==================== */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  background: white;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  transition: background 0.2s;
+}
+
+.faq-question:hover {
+  background: #fafbfc;
+}
+
+.faq-question-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  padding-right: 16px;
+}
+
+.faq-icon {
+  font-size: 24px;
+  color: #6A8FB9;
+  font-weight: 300;
+  transition: transform 0.3s;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 24px 24px;
+  font-size: 15px;
+  color: #666;
+  line-height: 1.7;
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+/* ==================== CTA FINAL ==================== */
+.cta-final {
+  padding: 100px 48px;
+  background: linear-gradient(135deg, #6A8FB9 0%, #5a7fa9 100%);
+  text-align: center;
+}
+
+.cta-final-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-final-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.cta-final-text {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1024px) {
+  .config-intro {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .config-intro-visual {
+    order: -1;
+  }
+  
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .features-showcase {
+    grid-template-columns: 1fr;
+  }
+  
+  .advantages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 120px 24px 60px;
+  }
+  
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .process-timeline::before {
+    display: none;
+  }
+  
+  .process-timeline-item {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .cta-final {
+    padding: 80px 24px;
+  }
+  
+  .cta-final-title {
+    font-size: 28px;
+  }
+}

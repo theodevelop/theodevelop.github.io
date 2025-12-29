@@ -4,25 +4,65 @@
 
 document.addEventListener('DOMContentLoaded', function() {
   
+  // ==================== MOBILE MENU ====================
+  const mobileToggle = document.querySelector('.nav-mobile-toggle');
+  const mobileMenu = document.querySelector('.nav-mobile');
+  const mobileLinks = document.querySelectorAll('.nav-mobile-link, .nav-mobile-cta');
+  const body = document.body;
+
+  // Toggle menu
+  if (mobileToggle && mobileMenu) {
+    mobileToggle.addEventListener('click', function() {
+      const isOpen = mobileToggle.classList.contains('active');
+      
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    // Fermer le menu quand on clique sur un lien
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        closeMenu();
+      });
+    });
+
+    // Fermer le menu avec Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && mobileToggle.classList.contains('active')) {
+        closeMenu();
+      }
+    });
+  }
+
+  function openMenu() {
+    mobileToggle.classList.add('active');
+    mobileToggle.setAttribute('aria-expanded', 'true');
+    mobileMenu.classList.add('active');
+    body.classList.add('menu-open');
+  }
+
+  function closeMenu() {
+    mobileToggle.classList.remove('active');
+    mobileToggle.setAttribute('aria-expanded', 'false');
+    mobileMenu.classList.remove('active');
+    body.classList.remove('menu-open');
+  }
+
   // ==================== FAQ ACCORDION ====================
   const faqItems = document.querySelectorAll('.faq-item');
   
   faqItems.forEach(item => {
     const question = item.querySelector('.faq-question');
     
-    question.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      // Fermer les autres items (optionnel - décommenter pour accordion exclusif)
-      // faqItems.forEach(otherItem => {
-      //   if (otherItem !== item) {
-      //     otherItem.classList.remove('open');
-      //   }
-      // });
-      
-      // Toggle l'item actuel
-      item.classList.toggle('open');
-    });
+    if (question) {
+      question.addEventListener('click', function(e) {
+        e.preventDefault();
+        item.classList.toggle('open');
+      });
+    }
   });
 
   // ==================== SMOOTH SCROLL ====================
@@ -32,7 +72,6 @@ document.addEventListener('DOMContentLoaded', function() {
     link.addEventListener('click', function(e) {
       const href = this.getAttribute('href');
       
-      // Ignorer les liens vides ou "#"
       if (href === '#' || href === '') return;
       
       const target = document.querySelector(href);
@@ -40,7 +79,8 @@ document.addEventListener('DOMContentLoaded', function() {
       if (target) {
         e.preventDefault();
         
-        const navHeight = document.querySelector('.nav').offsetHeight;
+        const nav = document.querySelector('.nav');
+        const navHeight = nav ? nav.offsetHeight : 80;
         const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
         
         window.scrollTo({
@@ -77,28 +117,29 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', updateActiveNav);
   updateActiveNav();
 
-  // ==================== NAVBAR BACKGROUND ON SCROLL ====================
+  // ==================== NAVBAR SHADOW ON SCROLL ====================
   const nav = document.querySelector('.nav');
   
   function updateNavBackground() {
-    if (window.scrollY > 50) {
-      nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.08)';
-    } else {
-      nav.style.boxShadow = 'none';
+    if (nav) {
+      if (window.scrollY > 50) {
+        nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.08)';
+      } else {
+        nav.style.boxShadow = 'none';
+      }
     }
   }
   
   window.addEventListener('scroll', updateNavBackground);
   updateNavBackground();
 
-  // ==================== FORM VALIDATION FEEDBACK ====================
+  // ==================== FORM VALIDATION ====================
   const form = document.querySelector('form');
   
   if (form) {
     form.addEventListener('submit', function(e) {
       e.preventDefault();
       
-      // Vérification basique
       const requiredFields = form.querySelectorAll('[required]');
       let isValid = true;
       
@@ -114,20 +155,17 @@ document.addEventListener('DOMContentLoaded', function() {
       });
       
       if (isValid) {
-        // Ici vous pouvez ajouter l'envoi du formulaire
-        // Pour l'instant, on affiche juste un message
         const submitBtn = form.querySelector('.form-submit');
         const originalText = submitBtn.textContent;
         
         submitBtn.textContent = 'Envoi en cours...';
         submitBtn.disabled = true;
         
-        // Simulation d'envoi
+        // Simulation d'envoi (à remplacer par l'intégration réelle)
         setTimeout(() => {
           submitBtn.textContent = 'Candidature envoyée ✓';
           submitBtn.style.background = '#5a9a6a';
           
-          // Reset après quelques secondes (optionnel)
           setTimeout(() => {
             submitBtn.textContent = originalText;
             submitBtn.style.background = '#6A8FB9';
@@ -163,26 +201,6 @@ document.addEventListener('DOMContentLoaded', function() {
         galleryTrack.style.animationPlayState = 'running';
       }
     });
-  }
-
-  // ==================== LAZY LOADING IMAGES (optionnel) ====================
-  const lazyImages = document.querySelectorAll('img[data-src]');
-  
-  if ('IntersectionObserver' in window && lazyImages.length > 0) {
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          img.src = img.dataset.src;
-          img.removeAttribute('data-src');
-          observer.unobserve(img);
-        }
-      });
-    }, {
-      rootMargin: '50px 0px'
-    });
-    
-    lazyImages.forEach(img => imageObserver.observe(img));
   }
 
 });

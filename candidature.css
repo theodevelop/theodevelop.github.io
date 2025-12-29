@@ -1,0 +1,425 @@
+/* ==========================================
+   MY PRETTY FAMILY - Page Candidature
+   ========================================== */
+
+/* ==================== HERO CANDIDATURE ==================== */
+.candidature-hero {
+  padding: 140px 48px 60px;
+  background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+  text-align: center;
+}
+
+.candidature-hero-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #6A8FB9;
+  text-decoration: none;
+  margin-bottom: 32px;
+  transition: gap 0.2s;
+}
+
+.back-link:hover {
+  gap: 12px;
+}
+
+.candidature-title {
+  font-size: clamp(32px, 5vw, 44px);
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.candidature-subtitle {
+  font-size: 17px;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* ==================== CADRE RAPPEL ==================== */
+.cadre-rappel {
+  display: flex;
+  gap: 24px;
+  padding: 32px;
+  background: rgba(106, 143, 185, 0.08);
+  border: 1px solid rgba(106, 143, 185, 0.15);
+  border-radius: 16px;
+  margin-bottom: 48px;
+}
+
+.cadre-rappel-icon {
+  flex-shrink: 0;
+  font-size: 28px;
+  color: #6A8FB9;
+}
+
+.cadre-rappel-content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.cadre-rappel-content p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.cadre-rappel-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cadre-rappel-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #444;
+}
+
+.cadre-rappel-list li i {
+  color: #6A8FB9;
+  font-size: 12px;
+}
+
+/* ==================== FORM CONTAINER ==================== */
+.form-container {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.06);
+  padding: 48px;
+}
+
+/* ==================== FORM SECTIONS ==================== */
+.form-section {
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.form-section:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.form-section-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 28px;
+}
+
+.form-section-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: #6A8FB9;
+  color: white;
+  border-radius: 50%;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* ==================== FORM ELEMENTS ==================== */
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.required {
+  color: #e07070;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 14px 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  color: #1a1a1a;
+  background: #f8fafc;
+  border: 2px solid #e8eef4;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #6A8FB9;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(106, 143, 185, 0.1);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #aaa;
+}
+
+.form-select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 44px;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-hint {
+  font-size: 12px;
+  color: #888;
+  margin-top: 6px;
+}
+
+/* ==================== RADIO & CHECKBOX ==================== */
+.form-radio-group,
+.form-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-radio,
+.form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.form-radio input,
+.form-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-custom,
+.checkbox-custom {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #d0d8e0;
+  background: #f8fafc;
+  transition: all 0.2s;
+  margin-top: 1px;
+}
+
+.radio-custom {
+  border-radius: 50%;
+}
+
+.checkbox-custom {
+  border-radius: 6px;
+}
+
+.form-radio:hover .radio-custom,
+.form-checkbox:hover .checkbox-custom {
+  border-color: #6A8FB9;
+}
+
+.form-radio input:checked ~ .radio-custom {
+  border-color: #6A8FB9;
+  background: #6A8FB9;
+  box-shadow: inset 0 0 0 4px white;
+}
+
+.form-checkbox input:checked ~ .checkbox-custom {
+  border-color: #6A8FB9;
+  background: #6A8FB9;
+}
+
+.form-checkbox input:checked ~ .checkbox-custom::after {
+  content: '✓';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  height: 100%;
+}
+
+.checkbox-text {
+  flex: 1;
+}
+
+/* ==================== VALIDATION SECTION ==================== */
+.form-section-validation {
+  background: #fafbfc;
+  margin-left: -48px;
+  margin-right: -48px;
+  padding: 40px 48px;
+  border-radius: 0;
+  border-bottom: none;
+}
+
+.validation-intro {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+/* ==================== SUBMIT SECTION ==================== */
+.form-submit-section {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.form-submit {
+  min-width: 280px;
+}
+
+.form-submit-note {
+  font-size: 13px;
+  color: #888;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+/* ==================== NOTE FINALE ==================== */
+.form-note-final {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+}
+
+.form-note-final i {
+  color: #888;
+  font-size: 16px;
+}
+
+.form-note-final p {
+  font-size: 13px;
+  color: #888;
+}
+
+.form-note-final a {
+  color: #6A8FB9;
+  text-decoration: none;
+}
+
+.form-note-final a:hover {
+  text-decoration: underline;
+}
+
+/* ==================== ERROR STATES ==================== */
+.form-input.error,
+.form-select.error,
+.form-textarea.error {
+  border-color: #e07070;
+  background: #fef8f8;
+}
+
+.form-error-message {
+  font-size: 12px;
+  color: #e07070;
+  margin-top: 6px;
+}
+
+/* ==================== SUCCESS STATE ==================== */
+.form-success {
+  text-align: center;
+  padding: 60px 40px;
+}
+
+.form-success-icon {
+  font-size: 64px;
+  color: #5a9a6a;
+  margin-bottom: 24px;
+}
+
+.form-success h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.form-success p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  .candidature-hero {
+    padding: 120px 24px 48px;
+  }
+  
+  .cadre-rappel {
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+  }
+  
+  .form-container {
+    padding: 32px 24px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  
+  .form-section-validation {
+    margin-left: -24px;
+    margin-right: -24px;
+    padding: 32px 24px;
+  }
+  
+  .form-submit {
+    width: 100%;
+  }
+}

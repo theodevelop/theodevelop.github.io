@@ -1,0 +1,565 @@
+/* ==========================================
+   MY PRETTY FAMILY - Page Concept
+   ========================================== */
+
+/* ==================== PAGE HERO ==================== */
+.page-hero {
+  padding: 140px 48px 80px;
+  background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+  text-align: center;
+}
+
+.page-hero-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #6A8FB9;
+  text-decoration: none;
+  margin-bottom: 32px;
+  transition: gap 0.2s;
+}
+
+.back-link:hover {
+  gap: 12px;
+}
+
+.page-hero-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6A8FB9;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.page-hero-title {
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.page-hero-subtitle {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* ==================== INTRO BLOCK ==================== */
+.intro-block {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.intro-icon {
+  font-size: 48px;
+  color: #6A8FB9;
+  margin-bottom: 24px;
+}
+
+.intro-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.intro-text {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.intro-text strong {
+  color: #1a1a1a;
+}
+
+/* ==================== ADN GRID ==================== */
+.adn-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.adn-card {
+  position: relative;
+  background: white;
+  padding: 36px 28px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.adn-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(106, 143, 185, 0.12);
+}
+
+.adn-number {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #6A8FB9;
+  opacity: 0.5;
+}
+
+.adn-icon {
+  font-size: 36px;
+  color: #6A8FB9;
+  margin-bottom: 20px;
+}
+
+.adn-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.adn-desc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ==================== NOT GRID ==================== */
+.not-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.not-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  background: #f8fafc;
+  border-radius: 12px;
+}
+
+.not-item i {
+  flex-shrink: 0;
+  font-size: 20px;
+  color: #e07070;
+  margin-top: 2px;
+}
+
+.not-item strong {
+  display: block;
+  font-size: 15px;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.not-item span {
+  font-size: 13px;
+  color: #666;
+}
+
+/* ==================== PRODUCTS GRID ==================== */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(106, 143, 185, 0.15);
+}
+
+.product-card-featured {
+  border: 2px solid #6A8FB9;
+}
+
+.product-image {
+  position: relative;
+  height: 220px;
+  background: #e8eef4;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 6px 14px;
+  background: #6A8FB9;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 20px;
+}
+
+.product-badge-gold {
+  background: linear-gradient(135deg, #c9a227 0%, #d4af37 100%);
+}
+
+.product-content {
+  padding: 28px;
+}
+
+.product-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.product-tagline {
+  font-size: 14px;
+  color: #6A8FB9;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.product-features {
+  list-style: none;
+}
+
+.product-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.product-features li:last-child {
+  margin-bottom: 0;
+}
+
+.product-features li i {
+  color: #5a9a6a;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.product-features li strong {
+  color: #1a1a1a;
+}
+
+/* ==================== FORMULE BLOCKS ==================== */
+.formule-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.formule-block:last-child {
+  margin-bottom: 0;
+}
+
+.formule-block-reverse {
+  direction: rtl;
+}
+
+.formule-block-reverse > * {
+  direction: ltr;
+}
+
+.formule-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(106, 143, 185, 0.1);
+  color: #6A8FB9;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.formule-badge-popular {
+  background: #6A8FB9;
+  color: white;
+}
+
+.formule-popular-tag {
+  display: inline-block;
+  margin-left: 12px;
+  font-size: 12px;
+  color: #5a9a6a;
+  font-weight: 600;
+}
+
+.formule-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.formule-tagline {
+  font-size: 16px;
+  color: #6A8FB9;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.formule-desc {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.formule-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.formule-detail {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #555;
+}
+
+.formule-detail i {
+  width: 20px;
+  color: #6A8FB9;
+}
+
+.formule-image {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.formule-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==================== COMPARE TABLE ==================== */
+.compare-table-wrapper {
+  overflow-x: auto;
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 20px 24px;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.compare-table th {
+  background: #f8fafc;
+  font-weight: 600;
+  color: #1a1a1a;
+  vertical-align: top;
+}
+
+.compare-table th:first-child,
+.compare-table td:first-child {
+  text-align: left;
+}
+
+.compare-label {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.compare-tagline {
+  display: block;
+  font-size: 12px;
+  color: #888;
+  font-weight: 400;
+}
+
+.compare-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #5a9a6a;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.compare-popular {
+  background: rgba(106, 143, 185, 0.05);
+}
+
+.compare-feature {
+  font-weight: 600;
+  color: #333;
+}
+
+.compare-table td {
+  font-size: 14px;
+  color: #555;
+}
+
+.compare-table td i {
+  color: #5a9a6a;
+  font-size: 16px;
+}
+
+.compare-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ==================== CTA FINAL ==================== */
+.cta-final {
+  padding: 100px 48px;
+  background: linear-gradient(135deg, #6A8FB9 0%, #5a7fa9 100%);
+  text-align: center;
+}
+
+.cta-final-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-final-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.cta-final-text {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 32px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-outline-white {
+  display: inline-block;
+  background: transparent;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.3s;
+}
+
+.btn-outline-white:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1024px) {
+  .adn-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .products-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .formule-block {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .formule-block-reverse {
+    direction: ltr;
+  }
+  
+  .formule-image {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 120px 24px 60px;
+  }
+  
+  .adn-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .not-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .formule-title {
+    font-size: 26px;
+  }
+  
+  .cta-final {
+    padding: 80px 24px;
+  }
+  
+  .cta-final-title {
+    font-size: 28px;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-outline-white {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
