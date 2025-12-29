@@ -14,6 +14,10 @@
   margin: 0 auto;
 }
 
+.config-hero {
+  padding-bottom: 100px;
+}
+
 .config-hero-icon {
   font-size: 56px;
   color: #6A8FB9;
@@ -67,10 +71,10 @@
 }
 
 .config-intro-title {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
   color: #1a1a1a;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .config-intro-text {
@@ -80,15 +84,11 @@
   margin-bottom: 16px;
 }
 
-.config-intro-text:last-child {
-  margin-bottom: 0;
-}
-
 .config-intro-text strong {
   color: #1a1a1a;
 }
 
-/* Config Mockup */
+/* Mockup */
 .config-mockup-large {
   display: flex;
   justify-content: center;
@@ -96,7 +96,7 @@
 
 .mockup-screen {
   width: 100%;
-  max-width: 450px;
+  max-width: 400px;
   background: #1a1a1a;
   border-radius: 16px;
   overflow: hidden;
@@ -117,28 +117,34 @@
   background: #444;
 }
 
-.mockup-dot:nth-child(1) { background: #ff5f56; }
-.mockup-dot:nth-child(2) { background: #ffbd2e; }
-.mockup-dot:nth-child(3) { background: #27ca40; }
+.mockup-dot:first-child {
+  background: #ff5f56;
+}
+
+.mockup-dot:nth-child(2) {
+  background: #ffbd2e;
+}
+
+.mockup-dot:nth-child(3) {
+  background: #27ca3f;
+}
 
 .mockup-content {
-  aspect-ratio: 16/10;
+  padding: 80px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 16px;
-  background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+  color: #888;
 }
 
 .mockup-content i {
-  font-size: 64px;
+  font-size: 48px;
   color: #6A8FB9;
 }
 
 .mockup-content span {
   font-size: 14px;
-  color: #666;
 }
 
 /* ==================== STATS ROW ==================== */
@@ -153,7 +159,7 @@
   padding: 32px 24px;
   background: white;
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .stat-icon {
@@ -163,16 +169,17 @@
 }
 
 .stat-value {
-  font-size: 42px;
+  font-size: 36px;
   font-weight: 700;
   color: #1a1a1a;
-  line-height: 1;
   margin-bottom: 8px;
 }
 
 .stat-desc {
-  font-size: 14px;
+  font-size: 13px;
   color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* ==================== FEATURES SHOWCASE ==================== */
@@ -204,13 +211,10 @@
   align-items: center;
   justify-content: center;
   background: white;
-  border-radius: 14px;
-  box-shadow: 0 4px 12px rgba(106, 143, 185, 0.1);
-}
-
-.feature-showcase-icon i {
+  border-radius: 12px;
   font-size: 24px;
   color: #6A8FB9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .feature-showcase-content h3 {
@@ -234,26 +238,27 @@
 }
 
 .advantage-card {
-  background: white;
-  padding: 36px;
-  border-radius: 16px;
   text-align: center;
+  padding: 40px 28px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .advantage-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 50px rgba(106, 143, 185, 0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(106, 143, 185, 0.12);
 }
 
 .advantage-icon {
-  font-size: 32px;
+  font-size: 36px;
   color: #6A8FB9;
   margin-bottom: 20px;
 }
 
 .advantage-title {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 700;
   color: #1a1a1a;
   margin-bottom: 12px;
@@ -275,22 +280,22 @@
 .process-timeline::before {
   content: '';
   position: absolute;
-  top: 0;
-  bottom: 0;
   left: 24px;
+  top: 48px;
+  bottom: 48px;
   width: 2px;
-  background: linear-gradient(to bottom, #6A8FB9 0%, rgba(106, 143, 185, 0.2) 100%);
+  background: #e8eef4;
 }
 
 .process-timeline-item {
   display: flex;
   gap: 32px;
-  padding-bottom: 48px;
+  margin-bottom: 40px;
   position: relative;
 }
 
 .process-timeline-item:last-child {
-  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .process-timeline-marker {
@@ -305,30 +310,29 @@
   border-radius: 50%;
   font-size: 18px;
   font-weight: 700;
-  position: relative;
   z-index: 1;
-  box-shadow: 0 4px 15px rgba(106, 143, 185, 0.3);
+  box-shadow: 0 4px 16px rgba(106, 143, 185, 0.3);
 }
 
 .process-timeline-marker-final {
   background: linear-gradient(135deg, #5a9a6a 0%, #4a8a5a 100%);
-  box-shadow: 0 4px 15px rgba(90, 154, 106, 0.3);
+  box-shadow: 0 4px 16px rgba(90, 154, 106, 0.3);
 }
 
 .process-timeline-content {
   flex: 1;
-  padding-top: 4px;
+  padding: 8px 0;
 }
 
 .process-timeline-content h3 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   color: #1a1a1a;
   margin-bottom: 8px;
 }
 
 .process-timeline-content p {
-  font-size: 15px;
+  font-size: 14px;
   color: #666;
   line-height: 1.6;
   margin-bottom: 12px;
@@ -339,12 +343,12 @@
   align-items: center;
   gap: 8px;
   font-size: 13px;
-  color: #6A8FB9;
-  font-weight: 600;
+  color: #888;
+  font-weight: 500;
 }
 
 .process-time i {
-  font-size: 14px;
+  color: #6A8FB9;
 }
 
 /* ==================== FAQ ==================== */
@@ -409,11 +413,37 @@
   display: block;
 }
 
+/* ==================== CTA FINAL ==================== */
+.cta-final {
+  padding: 100px 48px;
+  background: linear-gradient(135deg, #6A8FB9 0%, #5a7fa9 100%);
+  text-align: center;
+}
+
+.cta-final-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-final-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.cta-final-text {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 1024px) {
   .config-intro {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 40px;
   }
   
   .config-intro-visual {
@@ -440,24 +470,6 @@
   
   .stats-row {
     grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  
-  .stat-block {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    text-align: left;
-    padding: 24px;
-  }
-  
-  .stat-icon {
-    margin-bottom: 0;
-  }
-  
-  .stat-value {
-    font-size: 32px;
-    margin-bottom: 4px;
   }
   
   .advantages-grid {
@@ -465,16 +477,19 @@
   }
   
   .process-timeline::before {
-    left: 20px;
-  }
-  
-  .process-timeline-marker {
-    width: 42px;
-    height: 42px;
-    font-size: 16px;
+    display: none;
   }
   
   .process-timeline-item {
-    gap: 20px;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .cta-final {
+    padding: 80px 24px;
+  }
+  
+  .cta-final-title {
+    font-size: 28px;
   }
 }

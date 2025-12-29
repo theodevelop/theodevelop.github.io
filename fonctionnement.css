@@ -409,6 +409,31 @@
   display: block;
 }
 
+/* ==================== CTA FINAL ==================== */
+.cta-final {
+  padding: 100px 48px;
+  background: linear-gradient(135deg, #6A8FB9 0%, #5a7fa9 100%);
+  text-align: center;
+}
+
+.cta-final-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-final-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.cta-final-text {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 32px;
+}
+
 /* ==================== CTA BUTTONS ==================== */
 .cta-buttons {
   display: flex;
@@ -486,6 +511,14 @@
   
   .diff-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .cta-final {
+    padding: 80px 24px;
+  }
+  
+  .cta-final-title {
+    font-size: 28px;
   }
   
   .cta-buttons {
