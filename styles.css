@@ -52,7 +52,7 @@ body {
 
 .nav-links {
   display: flex;
-  gap: 40px;
+  gap: 32px;
   align-items: center;
 }
 
@@ -82,6 +82,31 @@ body {
 .nav-cta:hover {
   background: #5a7fa9;
   transform: translateY(-1px);
+}
+
+/* Nav Login Icon */
+.nav-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #f8fafc;
+  border-radius: 50%;
+  color: #6A8FB9;
+  text-decoration: none;
+  transition: all 0.2s;
+  margin-left: -16px;
+}
+
+.nav-login:hover {
+  background: #6A8FB9;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.nav-login i {
+  font-size: 16px;
 }
 
 /* Mobile Navigation */
@@ -145,6 +170,22 @@ body {
   margin-top: 8px;
 }
 
+.nav-mobile-login {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: #6A8FB9;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.nav-mobile-login i {
+  font-size: 16px;
+}
+
 /* ==================== HERO ==================== */
 .hero {
   min-height: 100vh;
@@ -152,7 +193,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 120px 48px 80px;
-  background-image: url('./assets/images/image_black.png');
+  background-image: url('./assets/images/image_black.webp');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -218,7 +259,9 @@ body {
 
 /* ==================== BUTTONS ==================== */
 .btn-primary {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   background: #6A8FB9;
   color: white;
   padding: 16px 36px;
@@ -235,6 +278,14 @@ body {
   background: #5a7fa9;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(106, 143, 185, 0.3);
+}
+
+.btn-primary i {
+  transition: transform 0.2s;
+}
+
+.btn-primary:hover i {
+  transform: translateX(4px);
 }
 
 .btn-secondary {
@@ -256,7 +307,9 @@ body {
 }
 
 .btn-outline {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   background: transparent;
   color: #6A8FB9;
   padding: 14px 32px;
@@ -273,8 +326,18 @@ body {
   color: white;
 }
 
+.btn-outline i {
+  transition: transform 0.2s;
+}
+
+.btn-outline:hover i {
+  transform: translateX(4px);
+}
+
 .btn-white {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   background: white;
   color: #6A8FB9;
   padding: 16px 36px;
@@ -288,6 +351,14 @@ body {
 .btn-white:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn-white i {
+  transition: transform 0.2s;
+}
+
+.btn-white:hover i {
+  transform: translateX(4px);
 }
 
 .btn-large {
@@ -437,6 +508,12 @@ body {
   font-size: 14px;
   color: #888;
   font-weight: 500;
+}
+
+/* Testimonials CTA Button */
+.testimonials-cta {
+  text-align: center;
+  margin-top: 40px;
 }
 
 /* ==================== FEATURES GRID ==================== */
