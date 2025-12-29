@@ -367,6 +367,11 @@ body {
 }
 
 /* ==================== GALLERY ==================== */
+
+#preuves .section-inner {
+  max-width: none;
+}
+
 .gallery-track-wrapper {
   overflow: hidden;
   margin: 0 -48px;
