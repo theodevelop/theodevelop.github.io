@@ -7,7 +7,7 @@ QUALITY = 85  # qualité WebP (0–100)
 def convert_jpg_to_webp(root_dir):
     for root, _, files in os.walk(root_dir):
         for file in files:
-            if file.lower().endswith((".jpg", ".jpeg")):
+            if file.lower().endswith((".jpg", ".jpeg", ".png")):
                 jpg_path = os.path.join(root, file)
                 webp_path = os.path.splitext(jpg_path)[0] + ".webp"
 
