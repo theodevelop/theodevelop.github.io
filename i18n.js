@@ -211,7 +211,7 @@
         <div class="lang-mobile-toggle-content">
           <span class="lang-flag">${SUPPORTED_LANGUAGES[currentLanguage].flag}</span>
           <div class="lang-mobile-toggle-text">
-            <span class="lang-mobile-toggle-label">Langue</span>
+            <span class="lang-mobile-toggle-label" data-i18n="nav.langLabel">Langue</span>
             <span class="lang-mobile-toggle-current">${SUPPORTED_LANGUAGES[currentLanguage].name}</span>
           </div>
         </div>

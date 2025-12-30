@@ -64,5 +64,14 @@ const navTranslations = {
     pt: "Escolher idioma",
     de: "Sprache wählen",
     nl: "Kies taal"
+  },
+  langLabel: {
+    fr: "Langue",
+    en: "Language",
+    it: "Lingua",
+    es: "Idioma",
+    pt: "Língua",
+    de: "Sprache",
+    nl: "Taal"
   }
 };
