@@ -138,7 +138,7 @@ const homeTranslations = {
     nl: "Meer dan een portret. Een ervaring."
   },
   conceptSubtitle: {
-    fr: "My Pretty Family transforme la création d'un portaire en un moment ludique et émotionnel.<br> Les clients participent, rient... et repartent avec un souvenir unique, imaginé ensemble.<br> Un concept visuel fort, centré sur l'émotion et le plaisir de partagé.",
+    fr: "My Pretty Family transforme la création d'un portrait en un moment ludique et émotionnel.<br> Les clients participent, rient... et repartent avec un souvenir unique, imaginé ensemble.<br> Un concept visuel fort, centré sur l'émotion et le plaisir de partagé.",
     en: "My Pretty Family transforms the creation of a portrait into a fun and emotional moment.<br> Customers participate, laugh... and leave with a unique memory, imagined together.<br> A strong visual concept, centered on emotion and the joy of sharing.",
     it: "My Pretty Family trasforma la creazione di un ritratto in un momento divertente ed emozionante.<br> I clienti partecipano, ridono... e se ne vanno con un ricordo unico, immaginato insieme.<br> Un concetto visivo forte, incentrato sull'emozione e sulla gioia di condividere.",
     es: "My Pretty Family transforma la creación de un retrato en un momento divertido y emocional.<br> Los clientes participan, ríen... y se van con un recuerdo único, imaginado juntos.<br> Un concepto visual fuerte, centrado en la emoción y la alegría de compartir.",
