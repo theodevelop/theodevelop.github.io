@@ -109,83 +109,6 @@ body {
   font-size: 16px;
 }
 
-/* Mobile Navigation */
-/* .nav-mobile-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-}
-
-.hamburger-line {
-  width: 24px;
-  height: 2px;
-  background: #1a1a1a;
-  transition: all 0.3s;
-}
-
-.nav-mobile {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: white;
-  padding: 24px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-}
-
-.nav-mobile.active {
-  display: block;
-}
-
-.nav-mobile-links {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.nav-mobile-link {
-  font-size: 16px;
-  color: #1a1a1a;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 12px 0;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.nav-mobile-cta {
-  display: inline-block;
-  background: #6A8FB9;
-  color: white;
-  padding: 14px 24px;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 600;
-  text-decoration: none;
-  text-align: center;
-  margin-top: 8px;
-}
-
-.nav-mobile-login {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 15px;
-  color: #6A8FB9;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 12px 0;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.nav-mobile-login i {
-  font-size: 16px;
-} */
-
 /* ==================== HERO ==================== */
 
 /* ==================== HERO - NOUVEAU DESIGN ==================== */
@@ -593,7 +516,7 @@ body {
   object-fit: cover;
 }
 
-/* ==================== TESTIMONIAL ==================== */
+/* ==================== TESTIMONIAL (single) ==================== */
 .testimonial {
   max-width: 700px;
   margin: 60px auto 0;
@@ -627,6 +550,178 @@ body {
 .testimonials-cta {
   text-align: center;
   margin-top: 40px;
+}
+
+/* ==================== HOME TESTIMONIALS GRID ==================== */
+.home-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.home-testimonial-card {
+  background: #f8fafc;
+  padding: 32px;
+  border-radius: 16px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.home-testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(106, 143, 185, 0.12);
+}
+
+.home-testimonial-stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.home-testimonial-stars i {
+  font-size: 14px;
+  color: #f5b800;
+}
+
+.home-testimonial-text {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.home-testimonial-footer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.home-testimonial-avatar {
+  width: 44px;
+  height: 44px;
+  background: #e8eef4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-testimonial-avatar i {
+  font-size: 18px;
+  color: #6A8FB9;
+}
+
+.home-testimonial-info {
+  flex: 1;
+}
+
+.home-testimonial-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 2px;
+}
+
+.home-testimonial-location {
+  font-size: 13px;
+  color: #888;
+}
+
+/* ==================== CONCEPT BLOCK (nouveau style) ==================== */
+.concept-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.concept-content .section-label {
+  text-align: left;
+}
+
+.concept-content .section-title {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.concept-text {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.concept-features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 32px 0;
+}
+
+.concept-feature {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.concept-feature i {
+  font-size: 24px;
+  color: #6A8FB9;
+  width: 32px;
+}
+
+.concept-feature strong {
+  display: block;
+  font-size: 15px;
+  color: #1a1a1a;
+  margin-bottom: 2px;
+}
+
+.concept-feature span {
+  font-size: 13px;
+  color: #888;
+}
+
+.concept-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.concept-image-placeholder {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(106, 143, 185, 0.15);
+}
+
+.concept-image-placeholder img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.concept-mockup {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, #f0f4f8 0%, #e8eef4 100%);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border: 2px dashed #d0d8e0;
+}
+
+.concept-mockup i {
+  font-size: 48px;
+  color: #6A8FB9;
+}
+
+.concept-mockup span {
+  font-size: 14px;
+  color: #888;
 }
 
 /* ==================== FEATURES GRID ==================== */
@@ -951,7 +1046,7 @@ body {
   align-items: center;
   gap: 12px;
   padding: 16px 20px;
-  background: white;
+  background: #f8fafc;
   border-radius: 10px;
   font-size: 15px;
   color: #333;
@@ -1075,28 +1170,38 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
   
-  .configurator-block {
+  .configurator-block,
+  .concept-block {
     grid-template-columns: 1fr;
     gap: 40px;
   }
   
   .configurator-content .section-label,
-  .configurator-content .section-title {
+  .configurator-content .section-title,
+  .concept-content .section-label,
+  .concept-content .section-title {
     text-align: center;
   }
   
-  .configurator-text {
+  .configurator-text,
+  .concept-text {
     text-align: center;
   }
   
-  .configurator-features {
+  .configurator-features,
+  .concept-features {
     align-items: center;
   }
   
-  .configurator-content {
+  .configurator-content,
+  .concept-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  
+  .home-testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1108,10 +1213,6 @@ body {
   .nav-links {
     display: none;
   }
-  
-  /* .nav-mobile-toggle {
-    display: flex;
-  } */
   
   .hero {
     padding: 100px 24px 60px;
@@ -1125,6 +1226,10 @@ body {
   .profiles-grid,
   .reasons-grid,
   .partner-inclus {
+    grid-template-columns: 1fr;
+  }
+  
+  .home-testimonials-grid {
     grid-template-columns: 1fr;
   }
   
