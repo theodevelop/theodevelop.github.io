@@ -74,31 +74,40 @@ const translations = {
       nl: "Partnernetwerk"
     },
     heroTitle: {
-      fr: "Offrez aux familles un souvenir",
-      en: "Give families a memory",
-      it: "Offri alle famiglie un ricordo",
-      es: "Ofrece a las familias un recuerdo",
-      pt: "Ofereça às famílias uma lembrança",
-      de: "Schenken Sie Familien eine Erinnerung",
-      nl: "Geef families een herinnering"
+      fr: "My Pretty Family",
+      en: "My Pretty Family",
+      it: "My Pretty Family",
+      es: "My Pretty Family",
+      pt: "My Pretty Family",
+      de: "My Pretty Family",
+      nl: "My Pretty Family"
     },
-    heroTitleSpan: {
-      fr: "qu'elles garderont toute leur vie",
-      en: "they will cherish forever",
-      it: "che conserveranno per sempre",
-      es: "que guardarán para siempre",
-      pt: "que guardarão para sempre",
-      de: "die sie für immer behalten werden",
-      nl: "die ze voor altijd zullen koesteren"
+    heroTagline: {
+      fr: "Le portrait de famille personnalisé",
+      en: "The personalized family portrait",
+      it: "Il ritratto di famiglia personalizzato",
+      es: "El retrato familiar personalizado",
+      pt: "O retrato de família personalizado",
+      de: "Das personalisierte Familienporträt",
+      nl: "Het gepersonaliseerde familieportret"
+    },
+    heroSubtitleTitle: {
+      fr: "Transformez chaque visite<br>en souvenir inoubliable",
+      en: "Transform every visit<br>into an unforgettable memory",
+      it: "Trasforma ogni visita<br>in un ricordo indimenticabile",
+      es: "Transforma cada visita<br>en un recuerdo inolvidable",
+      pt: "Transforme cada visita<br>em uma lembrança inesquecível",
+      de: "Verwandeln Sie jeden Besuch<br>in eine unvergessliche Erinnerung",
+      nl: "Verander elk bezoek<br>in een onvergetelijke herinnering"
     },
     heroSubtitle: {
-      fr: "My Pretty Family transforme une simple visite en moment inoubliable.<br>Une expérience émotionnelle en point de vente, pensée pour les lieux touristiques et premium.",
-      en: "My Pretty Family transforms a simple visit into an unforgettable moment.<br>An emotional point-of-sale experience, designed for tourist and premium locations.",
-      it: "My Pretty Family trasforma una semplice visita in un momento indimenticabile.<br>Un'esperienza emotiva nel punto vendita, pensata per luoghi turistici e premium.",
-      es: "My Pretty Family transforma una simple visita en un momento inolvidable.<br>Una experiencia emocional en el punto de venta, pensada para lugares turísticos y premium.",
-      pt: "My Pretty Family transforma uma simples visita em um momento inesquecível.<br>Uma experiência emocional no ponto de venda, pensada para locais turísticos e premium.",
-      de: "My Pretty Family verwandelt einen einfachen Besuch in einen unvergesslichen Moment.<br>Ein emotionales Erlebnis am Point of Sale, konzipiert für touristische und Premium-Standorte.",
-      nl: "My Pretty Family transformeert een simpel bezoek in een onvergetelijk moment.<br>Een emotionele ervaring op het verkooppunt, ontworpen voor toeristische en premium locaties."
+      fr: "Un concept créatif pensé pour les lieux touristiques et premium.",
+      en: "A creative concept designed for tourist and premium locations.",
+      it: "Un concetto creativo pensato per luoghi turistici e premium.",
+      es: "Un concepto creativo pensado para lugares turísticos y premium.",
+      pt: "Um conceito criativo pensado para locais turísticos e premium.",
+      de: "Ein kreatives Konzept für touristische und Premium-Standorte.",
+      nl: "Een creatief concept ontworpen voor toeristische en premium locaties."
     },
     btnVideo: {
       fr: "Découvrir en vidéo",
