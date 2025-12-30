@@ -111,13 +111,13 @@ const clientsTranslations = {
     nl: "Wat ze schrijven"
   },
   stat1Value: {
-    fr: "30 000+",
-    en: "30,000+",
-    it: "30.000+",
-    es: "30.000+",
-    pt: "30.000+",
-    de: "30.000+",
-    nl: "30.000+"
+    fr: "250 000+",
+    en: "250,000+",
+    it: "250.000+",
+    es: "250.000+",
+    pt: "250.000+",
+    de: "250.000+",
+    nl: "250.000+"
   },
   stat1Desc: {
     fr: "Familles satisfaites",
