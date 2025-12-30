@@ -1,219 +1,209 @@
 /* ==========================================
-   MY PRETTY FAMILY - Page Nos Clients
+   MY PRETTY FAMILY - Nos Clients Page
+   Styles pour les témoignages et vidéos portrait
    ========================================== */
 
-/* ==================== PAGE HERO ==================== */
+/* ==================== HERO ==================== */
 .clients-hero {
-  padding: 140px 48px 80px;
-  background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+  padding: 140px 24px 80px;
   text-align: center;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
 }
 
 .clients-hero-inner {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.back-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  color: #6A8FB9;
-  text-decoration: none;
-  margin-bottom: 32px;
-  transition: gap 0.2s;
-}
-
-.back-link:hover {
-  gap: 12px;
-}
-
-.page-hero-label {
-  font-size: 13px;
-  font-weight: 600;
-  color: #6A8FB9;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 16px;
-}
-
-.page-hero-title {
-  font-size: clamp(36px, 5vw, 52px);
-  font-weight: 700;
-  color: #1a1a1a;
-  line-height: 1.15;
-  margin-bottom: 20px;
-}
-
-.page-hero-subtitle {
-  font-size: 18px;
-  color: #666;
-  line-height: 1.7;
-}
-
-/* ==================== INTRO BLOCK ==================== */
-.intro-block {
-  text-align: center;
   max-width: 700px;
   margin: 0 auto;
-}
-
-.intro-icon {
-  font-size: 48px;
-  color: #6A8FB9;
-  margin-bottom: 24px;
-}
-
-.intro-title {
-  font-size: 28px;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 20px;
-}
-
-.intro-text {
-  font-size: 17px;
-  color: #555;
-  line-height: 1.8;
-  margin-bottom: 16px;
-}
-
-.intro-text strong {
-  color: #1a1a1a;
 }
 
 /* ==================== VIDEOS GRID ==================== */
 .videos-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
+@media (max-width: 900px) {
+  .videos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .videos-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+  }
+}
+
+/* ==================== VIDEO CARD ==================== */
 .video-card {
   background: white;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .video-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 48px rgba(106, 143, 185, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 
-.video-thumbnail {
+/* ==================== VIDEO CONTAINER - FORMAT PORTRAIT ==================== */
+.video-container {
   position: relative;
-  aspect-ratio: 16/9;
+  width: 100%;
+  /* Ratio 9:16 pour vidéos portrait (iPhone) */
+  aspect-ratio: 16 / 9;
+  background: #1a1a1a;
   overflow: hidden;
-  cursor: pointer;
 }
 
-.video-thumbnail img {
+/* Fallback pour navigateurs qui ne supportent pas aspect-ratio */
+@supports not (aspect-ratio: 9 / 16) {
+  .video-container {
+    padding-bottom: 177.78%; /* 16/9 = 1.7778 */
+    height: 0;
+  }
+  
+  .video-container .video-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+/* ==================== VIDEO PLAYER ==================== */
+.video-player {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s;
+  display: block;
 }
 
-.video-card:hover .video-thumbnail img {
-  transform: scale(1.05);
+/* Quand la vidéo est en cours de lecture, montrer tout */
+.video-player:not([poster]) {
+  object-fit: contain;
+  background: #000;
 }
 
-.video-play {
+/* ==================== VIDEO OVERLAY (Play Button) ==================== */
+.video-overlay {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 70px;
-  height: 70px;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 50%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s, background 0.3s;
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease;
+  cursor: pointer;
 }
 
-.video-play i {
+.video-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.video-play-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 24px;
   color: #6A8FB9;
-  margin-left: 4px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.video-card:hover .video-play {
-  transform: translate(-50%, -50%) scale(1.1);
-  background: #6A8FB9;
+.video-play-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
 }
 
-.video-card:hover .video-play i {
-  color: white;
+.video-play-btn i {
+  margin-left: 4px; /* Centre visuel du triangle play */
 }
 
+/* ==================== VIDEO CONTENT (Quote) ==================== */
 .video-content {
-  padding: 24px;
+  padding: 16px 20px 20px;
 }
 
 .video-quote {
-  font-size: 15px;
-  color: #444;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
   font-style: italic;
-  margin-bottom: 12px;
+  color: #333;
   line-height: 1.5;
+  margin: 0 0 8px 0;
 }
 
 .video-author {
-  font-size: 13px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
   color: #888;
-  font-weight: 500;
+  margin: 0;
 }
 
-/* ==================== PHOTOS GALLERY ==================== */
-.photos-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.photo-item {
+/* ==================== VIDEOS NOTE ==================== */
+.videos-note {
+  text-align: center;
+  margin-top: 32px;
+  padding: 16px 24px;
+  background: #f8fafc;
   border-radius: 12px;
-  overflow: hidden;
-  aspect-ratio: 4/3;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s, box-shadow 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #666;
 }
 
-.photo-item:hover {
-  transform: scale(1.03);
-  box-shadow: 0 12px 40px rgba(106, 143, 185, 0.15);
-}
-
-.photo-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.videos-note i {
+  color: #6A8FB9;
 }
 
 /* ==================== TESTIMONIALS GRID ==================== */
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  gap: 24px;
 }
 
+@media (max-width: 900px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==================== TESTIMONIAL CARD ==================== */
 .testimonial-card {
   background: white;
-  padding: 32px;
+  padding: 28px;
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .testimonial-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(106, 143, 185, 0.12);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .testimonial-stars {
@@ -223,37 +213,33 @@
 }
 
 .testimonial-stars i {
+  color: #ffc107;
   font-size: 14px;
-  color: #f5b800;
 }
 
 .testimonial-text {
   font-size: 15px;
-  color: #444;
   line-height: 1.7;
-  margin-bottom: 24px;
-  font-style: italic;
+  color: #444;
+  margin: 0 0 20px 0;
 }
 
 .testimonial-footer {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
 
 .testimonial-avatar {
   width: 44px;
   height: 44px;
-  background: #f0f4f8;
   border-radius: 50%;
+  background: #f0f4f8;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.testimonial-avatar i {
-  font-size: 18px;
   color: #6A8FB9;
+  font-size: 18px;
 }
 
 .testimonial-info {
@@ -261,60 +247,61 @@
 }
 
 .testimonial-name {
-  font-size: 15px;
   font-weight: 600;
-  color: #1a1a1a;
-  margin-bottom: 2px;
+  font-size: 14px;
+  color: #333;
+  margin: 0 0 2px 0;
 }
 
 .testimonial-location {
-  font-size: 13px;
+  font-size: 12px;
   color: #888;
+  margin: 0;
 }
 
 /* ==================== STATS ROW ==================== */
 .stats-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
 }
 
 .stat-block {
   text-align: center;
-  padding: 32px 24px;
-  background: #f8fafc;
-  border-radius: 16px;
-  transition: transform 0.3s;
-}
-
-.stat-block:hover {
-  transform: translateY(-4px);
+  padding: 24px;
 }
 
 .stat-icon {
-  font-size: 28px;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: rgba(106, 143, 185, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-size: 24px;
   color: #6A8FB9;
-  margin-bottom: 16px;
 }
 
 .stat-value {
+  font-family: 'Montserrat', sans-serif;
   font-size: 36px;
   font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 8px;
+  color: #333;
+  margin-bottom: 4px;
 }
 
 .stat-desc {
   font-size: 14px;
-  color: #888;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  color: #666;
 }
 
 /* ==================== CTA FINAL ==================== */
 .cta-final {
-  padding: 100px 48px;
   background: linear-gradient(135deg, #6A8FB9 0%, #5a7fa9 100%);
+  padding: 80px 24px;
   text-align: center;
 }
 
@@ -324,78 +311,54 @@
 }
 
 .cta-final-title {
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 700;
   color: white;
-  margin-bottom: 16px;
+  margin: 0 0 16px 0;
 }
 
 .cta-final-text {
-  font-size: 17px;
-  color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 32px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 32px 0;
   line-height: 1.6;
 }
 
-/* ==================== RESPONSIVE ==================== */
-@media (max-width: 1024px) {
-  .videos-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .testimonials-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .stats-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.btn-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 32px;
+  background: white;
+  color: #6A8FB9;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.btn-white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* ==================== RESPONSIVE ==================== */
 @media (max-width: 768px) {
   .clients-hero {
-    padding: 120px 24px 60px;
+    padding: 120px 20px 60px;
   }
   
-  .videos-grid {
-    grid-template-columns: 1fr;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  
-  .photos-gallery {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-  
-  .testimonials-grid {
-    grid-template-columns: 1fr;
+  .cta-final-title {
+    font-size: 26px;
   }
   
   .stats-row {
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-  
-  .stat-block {
-    padding: 24px 16px;
+    gap: 24px;
   }
   
   .stat-value {
     font-size: 28px;
-  }
-  
-  .cta-final {
-    padding: 80px 24px;
-  }
-  
-  .cta-final-title {
-    font-size: 28px;
-  }
-}
-
-@media (max-width: 480px) {
-  .photos-gallery {
-    grid-template-columns: 1fr;
   }
 }
