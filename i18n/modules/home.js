@@ -102,22 +102,22 @@ const homeTranslations = {
     nl: "Meer dan 250.000 portretten gemaakt"
   },
   testimonialQuote: {
-    fr: "Les clients repartent avec le sourire. Certains reviennent l'année suivante pour compléter leur collection.",
-    en: "Customers leave with a smile. Some even return the following year to complete their collection.",
-    it: "I clienti se ne vanno con il sorriso. Alcuni tornano persino l'anno successivo per completare la loro collezione.",
-    es: "Los clientes se van con una sonrisa. Algunos incluso vuelven al año siguiente para completar su colección.",
-    pt: "Os clientes saem com um sorriso. Alguns até voltam no ano seguinte para completar a sua coleção.",
-    de: "Kunden gehen mit einem Lächeln. Manche kommen sogar im folgenden Jahr zurück, um ihre Sammlung zu vervollständigen.",
-    nl: "Klanten vertrekken met een glimlach. Sommigen komen zelfs het jaar erop terug om hun collectie aan te vullen."
+    fr: "Les clients repartent à chaque fois avec le sourire.",
+    en: "Customers always leave with a smile.",
+    it: "I clienti se ne vanno sempre con il sorriso sulle labbra.",
+    es: "Los clientes siempre se van con una sonrisa.",
+    pt: "Os clientes saem sempre com um sorriso no rosto.",
+    de: "Die Kunden gehen jedes Mal mit einem Lächeln nach Hause.",
+    nl: "De klanten vertrekken elke keer met een glimlach."
   },
   testimonialAuthor: {
-    fr: "— Partenaire, Côte d'Azur",
-    en: "— Partner, French Riviera",
-    it: "— Partner, Costa Azzurra",
-    es: "— Socio, Costa Azul",
-    pt: "— Parceiro, Côte d’Azur",
-    de: "— Partner, Côte d’Azur",
-    nl: "— Partner, Côte d’Azur"
+    fr: "— Partenaire, J-Michel (84)",
+    en: "— Partner, J-Michel (French Riviera, France)",
+    it: "— Partner, J-Michel (Costa Azzurra, Francia)",
+    es: "— Socio, J-Michel (Costa Azul, Francia)",
+    pt: "— Parceiro, J-Michel (Costa Azul, França)",
+    de: "— Partner, J-Michel (Côte d'Azur, Frankreich)",
+    nl: "— Partner, J-Michel (Côte d'Azur, Frankrijk)"
   },
     conceptLabel: {
     fr: "Le concept",
