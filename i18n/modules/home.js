@@ -138,13 +138,13 @@ const homeTranslations = {
     nl: "Meer dan een portret. Een ervaring."
   },
   conceptSubtitle: {
-    fr: "My Pretty Family n'est ni une photo souvenir, ni un produit impersonnel.<br>C'est une interaction humaine qui crée une connexion émotionnelle immédiate.",
-    en: "My Pretty Family is neither a souvenir photo nor an impersonal product.<br>It's a human interaction that creates an immediate emotional connection.",
-    it: "My Pretty Family non è né una foto ricordo né un prodotto impersonale.<br>È un'interazione umana che crea una connessione emotiva immediata.",
-    es: "My Pretty Family no es ni una foto de recuerdo ni un producto impersonal.<br>Es una interacción humana que crea una conexión emocional inmediata.",
-    pt: "My Pretty Family não é nem uma foto de lembrança nem um produto impessoal.<br>É uma interação humana que cria uma conexão emocional imediata.",
-    de: "My Pretty Family ist weder ein Erinnerungsfoto noch ein unpersönliches Produkt.<br>Es ist eine menschliche Interaktion, die sofort eine emotionale Verbindung schafft.",
-    nl: "My Pretty Family is geen souvenirfoto en ook geen onpersoonlijk product.<br>Het is een menselijke interactie die meteen een emotionele connectie creëert."
+    fr: "My Pretty Family transforme la création d'un portaire en un moment ludique et émotionnel.<br> Les clients participent, rient... et repartent avec un souvenir unique, imaginé ensemble.<br> Un concept visuel fort, centré sur l'émotion et le plaisir de partagé.",
+    en: "My Pretty Family transforms the creation of a portrait into a fun and emotional moment.<br> Customers participate, laugh... and leave with a unique memory, imagined together.<br> A strong visual concept, centered on emotion and the joy of sharing.",
+    it: "My Pretty Family trasforma la creazione di un ritratto in un momento divertente ed emozionante.<br> I clienti partecipano, ridono... e se ne vanno con un ricordo unico, immaginato insieme.<br> Un concetto visivo forte, incentrato sull'emozione e sulla gioia di condividere.",
+    es: "My Pretty Family transforma la creación de un retrato en un momento divertido y emocional.<br> Los clientes participan, ríen... y se van con un recuerdo único, imaginado juntos.<br> Un concepto visual fuerte, centrado en la emoción y la alegría de compartir.",
+    pt: "My Pretty Family transforma a criação de um retrato num momento divertido e emocional.<br> Os clientes participam, riem... e saem com uma lembrança única, imaginada em conjunto.<br> Um conceito visual forte, centrado na emoção e na alegria de partilhar.",
+    de: "My Pretty Family verwandelt die Erstellung eines Porträts in einen lustigen und emotionalen Moment.<br> Kunden nehmen teil, lachen... und gehen mit einer einzigartigen Erinnerung, die gemeinsam vorgestellt wurde.<br> Ein starkes visuelles Konzept, das sich auf Emotionen und die Freude am Teilen konzentriert.",
+    nl: "My Pretty Family transformeert het creëren van een portret in een leuk en emotioneel moment.<br> Klanten doen mee, lachen... en vertrekken met een unieke herinnering, samen bedacht.<br> Een sterk visueel concept, gericht op emotie en het plezier van delen."
   },
     featureSouvenir: {
     fr: "Souvenir émotionnel",

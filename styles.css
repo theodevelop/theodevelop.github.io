@@ -522,7 +522,7 @@ body {
 .section-subtitle {
   font-size: 17px;
   color: #666;
-  max-width: 600px;
+  /* max-width: 600px; */
   margin: 0 auto;
   line-height: 1.7;
 }
