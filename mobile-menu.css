@@ -1,0 +1,474 @@
+/* ==========================================
+   MY PRETTY FAMILY - Mobile Menu + Language Selector Mobile
+   Menu 3/4 écran + Popup sélecteur de langue
+   ========================================== */
+
+/* ==================== MENU MOBILE 3/4 WIDTH ==================== */
+.nav-mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 75%;
+  max-width: 320px;
+  height: 100vh;
+  height: 100dvh;
+  background: white;
+  box-shadow: -8px 0 32px rgba(0, 0, 0, 0.15);
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-mobile.open {
+  transform: translateX(0);
+}
+
+.nav-mobile-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.hamburger-line {
+  width: 24px;
+  height: 2px;
+  background: #1a1a1a;
+  transition: all 0.3s;
+}
+
+/* ==================== OVERLAY ==================== */
+.nav-mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.35s ease;
+  z-index: 999;
+}
+
+.nav-mobile-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ==================== HEADER DU MENU ==================== */
+.nav-mobile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  flex-shrink: 0;
+  background: white;
+}
+
+.nav-mobile-logo {
+  height: 32px;
+  width: auto;
+}
+
+.nav-mobile-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #f8fafc;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #666;
+  font-size: 18px;
+  transition: all 0.2s;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-mobile-close:hover {
+  background: #eef2f7;
+  color: #333;
+}
+
+/* ==================== CONTENU DU MENU ==================== */
+.nav-mobile-content {
+  flex: 1;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background: white;
+}
+
+.nav-mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-mobile-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  color: #333;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 10px;
+  transition: all 0.2s;
+  background: transparent;
+  border: none;
+}
+
+.nav-mobile-link:hover,
+.nav-mobile-link.active {
+  background: #f8fafc;
+  color: #6A8FB9;
+}
+
+.nav-mobile-link i {
+  width: 20px;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+.nav-mobile-link:hover i,
+.nav-mobile-link.active i {
+  color: #6A8FB9;
+}
+
+/* ==================== SÉPARATEUR ==================== */
+.nav-mobile-separator {
+  height: 1px;
+  background: #f0f0f0;
+  margin: 16px 0;
+  border: none;
+}
+
+/* ==================== LOGIN PARTENAIRE ==================== */
+.nav-mobile-login {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  color: #666;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 10px;
+  transition: all 0.2s;
+  background: transparent;
+}
+
+.nav-mobile-login:hover {
+  background: #f8fafc;
+  color: #6A8FB9;
+}
+
+.nav-mobile-login i {
+  width: 20px;
+  text-align: center;
+}
+
+/* ==================== CTA CANDIDATER ==================== */
+.nav-mobile-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #6A8FB9 0%, #5a7fa9 100%);
+  color: white;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: all 0.2s;
+  border: none;
+}
+
+.nav-mobile-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(106, 143, 185, 0.3);
+  color: white;
+}
+
+/* ==================== SÉLECTEUR DE LANGUE MOBILE ==================== */
+.lang-selector-mobile {
+  margin-top: auto;
+  padding-top: 24px;
+  flex-shrink: 0;
+}
+
+/* Bouton compact pour ouvrir le popup */
+.lang-mobile-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 14px 16px;
+  background: #f8fafc;
+  border: 1px solid #e8eef4;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.2s;
+}
+
+.lang-mobile-toggle:hover {
+  background: #eef2f7;
+  border-color: #6A8FB9;
+}
+
+.lang-mobile-toggle-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lang-mobile-toggle .lang-flag {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.lang-mobile-toggle-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.lang-mobile-toggle-label {
+  font-size: 11px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.lang-mobile-toggle-current {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.lang-mobile-toggle-arrow {
+  color: #888;
+  font-size: 14px;
+}
+
+/* ==================== POPUP LANGUE ==================== */
+.lang-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 2000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.lang-popup-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lang-popup {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  border-radius: 24px 24px 0 0;
+  padding: 0;
+  transform: translateY(100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.lang-popup-overlay.open .lang-popup {
+  transform: translateY(0);
+}
+
+/* Handle pour swipe */
+.lang-popup-handle {
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+}
+
+.lang-popup-handle span {
+  width: 40px;
+  height: 4px;
+  background: #ddd;
+  border-radius: 2px;
+}
+
+/* Header du popup */
+.lang-popup-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.lang-popup-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.lang-popup-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: #f8fafc;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #666;
+  font-size: 16px;
+  transition: all 0.2s;
+}
+
+.lang-popup-close:hover {
+  background: #eef2f7;
+  color: #333;
+}
+
+/* Liste des langues */
+.lang-popup-list {
+  padding: 16px 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lang-popup-option {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 16px;
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 14px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.lang-popup-option:hover {
+  background: #f8fafc;
+}
+
+.lang-popup-option.active {
+  background: rgba(106, 143, 185, 0.08);
+  border-color: #6A8FB9;
+}
+
+.lang-popup-option .lang-flag {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.lang-popup-option-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.lang-popup-option-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.lang-popup-option-code {
+  font-size: 12px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.lang-popup-option.active .lang-popup-option-name {
+  color: #6A8FB9;
+}
+
+.lang-popup-option-check {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6A8FB9;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.lang-popup-option.active .lang-popup-option-check {
+  opacity: 1;
+}
+
+/* ==================== BODY SCROLL LOCK ==================== */
+body.menu-open,
+body.lang-popup-open {
+  overflow: hidden;
+}
+
+/* ==================== RESPONSIVE ==================== */
+/* Masquer sur desktop */
+@media (min-width: 769px) {
+  .nav-mobile,
+  .nav-mobile-overlay,
+  .lang-selector-mobile,
+  .lang-popup-overlay,
+  .nav-mobile-toggle {
+    display: none !important;
+  }
+}
+
+/* ==================== SAFE AREA (iPhone) ==================== */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .lang-popup-list {
+    padding-bottom: calc(32px + env(safe-area-inset-bottom));
+  }
+  
+  .nav-mobile-content {
+    padding-bottom: calc(24px + env(safe-area-inset-bottom));
+  }
+}

@@ -22,30 +22,30 @@ const homeTranslations = {
   },
   heroTagline: {
     fr: "Le portrait de famille personnalisé",
-    en: "The personalized family portrait",
-    it: "Il ritratto di famiglia personalizzato",
-    es: "El retrato familiar personalizado",
-    pt: "O retrato de família personalizado",
-    de: "Das personalisierte Familienporträt",
-    nl: "Het gepersonaliseerde familieportret"
+    en: "Personalized family portraits",
+    it: "Ritratti di famiglia personalizzati",
+    es: "Retratos familiares personalizados",
+    pt: "Retratos de família personalizados",
+    de: "Personalisierte Familienporträts",
+    nl: "Gepersonaliseerde familieportretten"
   },
   heroSubtitleTitle: {
     fr: "Transformez chaque visite<br>en souvenir inoubliable",
-    en: "Transform every visit<br>into an unforgettable memory",
+    en: "Turn every visit<br>into an unforgettable memory",
     it: "Trasforma ogni visita<br>in un ricordo indimenticabile",
     es: "Transforma cada visita<br>en un recuerdo inolvidable",
     pt: "Transforme cada visita<br>em uma lembrança inesquecível",
-    de: "Verwandeln Sie jeden Besuch<br>in eine unvergessliche Erinnerung",
-    nl: "Verander elk bezoek<br>in een onvergetelijke herinnering"
+    de: "Machen Sie jeden Besuch<br>zu einer unvergesslichen Erinnerung",
+    nl: "Maak van elk bezoek<br>een onvergetelijke herinnering"
   },
   heroSubtitle: {
     fr: "Un concept créatif pensé pour les lieux touristiques et premium.",
     en: "A creative concept designed for tourist and premium locations.",
-    it: "Un concetto creativo pensato per luoghi turistici e premium.",
-    es: "Un concepto creativo pensado para lugares turísticos y premium.",
+    it: "Un concept creativo pensato per luoghi turistici e premium.",
+    es: "Un concepto creativo pensado para ubicaciones turísticas y premium.",
     pt: "Um conceito criativo pensado para locais turísticos e premium.",
     de: "Ein kreatives Konzept für touristische und Premium-Standorte.",
-    nl: "Een creatief concept ontworpen voor toeristische en premium locaties."
+    nl: "Een creatief concept voor toeristische en premium locaties."
   },
   btnVideo: {
     fr: "Découvrir en vidéo",
@@ -60,66 +60,66 @@ const homeTranslations = {
     fr: "Devenir partenaire",
     en: "Become a partner",
     it: "Diventa partner",
-    es: "Conviértete en socio",
+    es: "Hazte socio",
     pt: "Torne-se parceiro",
     de: "Partner werden",
     nl: "Word partner"
   },
   videoTitle: {
     fr: "Découvrez My Pretty Family en 1 minute",
-    en: "Discover My Pretty Family in 1 minute",
-    it: "Scopri My Pretty Family in 1 minuto",
-    es: "Descubre My Pretty Family en 1 minuto",
-    pt: "Descubra My Pretty Family em 1 minuto",
-    de: "Entdecken Sie My Pretty Family in 1 Minute",
-    nl: "Ontdek My Pretty Family in 1 minuut"
+    en: "Discover My Pretty Family in one minute",
+    it: "Scopri My Pretty Family in un minuto",
+    es: "Descubre My Pretty Family en un minuto",
+    pt: "Descubra My Pretty Family em um minuto",
+    de: "Entdecken Sie My Pretty Family in einer Minute",
+    nl: "Ontdek My Pretty Family in één minuut"
   },
   videoSubtitle: {
     fr: "Comprenez comment une rencontre devient un souvenir inoubliable.",
-    en: "Understand how an encounter becomes an unforgettable memory.",
+    en: "See how a simple encounter becomes an unforgettable memory.",
     it: "Scopri come un incontro diventa un ricordo indimenticabile.",
     es: "Descubre cómo un encuentro se convierte en un recuerdo inolvidable.",
-    pt: "Entenda como um encontro se torna uma lembrança inesquecível.",
-    de: "Verstehen Sie, wie eine Begegnung zu einer unvergesslichen Erinnerung wird.",
-    nl: "Begrijp hoe een ontmoeting een onvergetelijke herinnering wordt."
+    pt: "Descubra como um encontro se transforma em uma lembrança inesquecível.",
+    de: "Erfahren Sie, wie eine Begegnung zu einer unvergesslichen Erinnerung wird.",
+    nl: "Ontdek hoe een ontmoeting een onvergetelijke herinnering wordt."
   },
-  proofLabel: {
+    proofLabel: {
     fr: "Sur le terrain, chaque jour",
     en: "On the ground, every day",
     it: "Sul campo, ogni giorno",
     es: "En el terreno, cada día",
     pt: "No terreno, todos os dias",
     de: "Vor Ort, jeden Tag",
-    nl: "In het veld, elke dag"
+    nl: "Op het terrein, elke dag"
   },
   proofTitle: {
     fr: "Ce n'est pas une idée.<br>C'est une expérience déjà vécue.",
-    en: "It's not an idea.<br>It's an experience already lived.",
-    it: "Non è un'idea.<br>È un'esperienza già vissuta.",
-    es: "No es una idea.<br>Es una experiencia ya vivida.",
-    pt: "Não é uma ideia.<br>É uma experiência já vivida.",
+    en: "It's not just an idea.<br>It's a real, lived experience.",
+    it: "Non è solo un'idea.<br>È un'esperienza già vissuta.",
+    es: "No es solo una idea.<br>Es una experiencia ya vivida.",
+    pt: "Não é apenas uma ideia.<br>É uma experiência já vivida.",
     de: "Es ist keine Idee.<br>Es ist eine bereits erlebte Erfahrung.",
-    nl: "Het is geen idee.<br>Het is een al beleefde ervaring."
+    nl: "Het is geen idee.<br>Het is een ervaring die al is beleefd."
   },
   testimonialQuote: {
     fr: "Les clients repartent avec le sourire. Certains reviennent l'année suivante pour compléter leur collection.",
-    en: "Customers leave with a smile. Some return the following year to complete their collection.",
-    it: "I clienti se ne vanno con il sorriso. Alcuni tornano l'anno successivo per completare la loro collezione.",
-    es: "Los clientes se van con una sonrisa. Algunos vuelven al año siguiente para completar su colección.",
-    pt: "Os clientes saem com um sorriso. Alguns voltam no ano seguinte para completar sua coleção.",
-    de: "Kunden gehen mit einem Lächeln. Manche kommen im folgenden Jahr zurück, um ihre Sammlung zu vervollständigen.",
-    nl: "Klanten vertrekken met een glimlach. Sommigen komen het volgende jaar terug om hun collectie aan te vullen."
+    en: "Customers leave with a smile. Some even return the following year to complete their collection.",
+    it: "I clienti se ne vanno con il sorriso. Alcuni tornano persino l'anno successivo per completare la loro collezione.",
+    es: "Los clientes se van con una sonrisa. Algunos incluso vuelven al año siguiente para completar su colección.",
+    pt: "Os clientes saem com um sorriso. Alguns até voltam no ano seguinte para completar a sua coleção.",
+    de: "Kunden gehen mit einem Lächeln. Manche kommen sogar im folgenden Jahr zurück, um ihre Sammlung zu vervollständigen.",
+    nl: "Klanten vertrekken met een glimlach. Sommigen komen zelfs het jaar erop terug om hun collectie aan te vullen."
   },
   testimonialAuthor: {
     fr: "— Partenaire, Côte d'Azur",
     en: "— Partner, French Riviera",
     it: "— Partner, Costa Azzurra",
     es: "— Socio, Costa Azul",
-    pt: "— Parceiro, Côte d'Azur",
-    de: "— Partner, Côte d'Azur",
-    nl: "— Partner, Côte d'Azur"
+    pt: "— Parceiro, Côte d’Azur",
+    de: "— Partner, Côte d’Azur",
+    nl: "— Partner, Côte d’Azur"
   },
-  conceptLabel: {
+    conceptLabel: {
     fr: "Le concept",
     en: "The concept",
     it: "Il concetto",
@@ -133,20 +133,20 @@ const homeTranslations = {
     en: "More than a portrait. An experience.",
     it: "Più di un ritratto. Un'esperienza.",
     es: "Más que un retrato. Una experiencia.",
-    pt: "Mais que um retrato. Uma experiência.",
+    pt: "Mais do que um retrato. Uma experiência.",
     de: "Mehr als ein Porträt. Ein Erlebnis.",
     nl: "Meer dan een portret. Een ervaring."
   },
   conceptSubtitle: {
     fr: "My Pretty Family n'est ni une photo souvenir, ni un produit impersonnel.<br>C'est une interaction humaine qui crée une connexion émotionnelle immédiate.",
     en: "My Pretty Family is neither a souvenir photo nor an impersonal product.<br>It's a human interaction that creates an immediate emotional connection.",
-    it: "My Pretty Family non è né una foto ricordo, né un prodotto impersonale.<br>È un'interazione umana che crea una connessione emotiva immediata.",
-    es: "My Pretty Family no es ni una foto de recuerdo, ni un producto impersonal.<br>Es una interacción humana que crea una conexión emocional inmediata.",
-    pt: "My Pretty Family não é nem uma foto de lembrança, nem um produto impessoal.<br>É uma interação humana que cria uma conexão emocional imediata.",
-    de: "My Pretty Family ist weder ein Erinnerungsfoto noch ein unpersönliches Produkt.<br>Es ist eine menschliche Interaktion, die eine sofortige emotionale Verbindung schafft.",
-    nl: "My Pretty Family is geen souvenirfoto of onpersoonlijk product.<br>Het is een menselijke interactie die een directe emotionele connectie creëert."
+    it: "My Pretty Family non è né una foto ricordo né un prodotto impersonale.<br>È un'interazione umana che crea una connessione emotiva immediata.",
+    es: "My Pretty Family no es ni una foto de recuerdo ni un producto impersonal.<br>Es una interacción humana que crea una conexión emocional inmediata.",
+    pt: "My Pretty Family não é nem uma foto de lembrança nem um produto impessoal.<br>É uma interação humana que cria uma conexão emocional imediata.",
+    de: "My Pretty Family ist weder ein Erinnerungsfoto noch ein unpersönliches Produkt.<br>Es ist eine menschliche Interaktion, die sofort eine emotionale Verbindung schafft.",
+    nl: "My Pretty Family is geen souvenirfoto en ook geen onpersoonlijk product.<br>Het is een menselijke interactie die meteen een emotionele connectie creëert."
   },
-  featureSouvenir: {
+    featureSouvenir: {
     fr: "Souvenir émotionnel",
     en: "Emotional memory",
     it: "Ricordo emotivo",
@@ -157,12 +157,12 @@ const homeTranslations = {
   },
   featureSouvenirDesc: {
     fr: "Un moment figé dans le temps, chargé d'émotion.",
-    en: "A moment frozen in time, full of emotion.",
+    en: "A moment frozen in time, filled with emotion.",
     it: "Un momento congelato nel tempo, carico di emozione.",
-    es: "Un momento congelado en el tiempo, cargado de emoción.",
-    pt: "Um momento congelado no tempo, carregado de emoção.",
+    es: "Un momento congelado en el tiempo, lleno de emoción.",
+    pt: "Um momento congelado no tempo, cheio de emoção.",
     de: "Ein Moment, eingefroren in der Zeit, voller Emotionen.",
-    nl: "Een moment bevroren in de tijd, vol emotie."
+    nl: "Een moment, bevroren in de tijd, vol emotie."
   },
   featureInteraction: {
     fr: "Interaction humaine",
@@ -176,11 +176,11 @@ const homeTranslations = {
   featureInteractionDesc: {
     fr: "Créé avec le client, pas pour lui.",
     en: "Created with the customer, not for them.",
-    it: "Creato con il cliente, non per lui.",
-    es: "Creado con el cliente, no para él.",
-    pt: "Criado com o cliente, não para ele.",
-    de: "Mit dem Kunden erstellt, nicht für ihn.",
-    nl: "Gemaakt met de klant, niet voor hen."
+    it: "Creato insieme al cliente, non per lui.",
+    es: "Creado junto al cliente, no para él.",
+    pt: "Criado junto com o cliente, não para ele.",
+    de: "Gemeinsam mit dem Kunden erstellt, nicht für ihn.",
+    nl: "Samen met de klant gemaakt, niet voor hem."
   },
   featureImpulse: {
     fr: "Achat impulsif",
@@ -202,12 +202,12 @@ const homeTranslations = {
   },
   featureNoSkill: {
     fr: "Zéro compétence artistique",
-    en: "Zero artistic skill required",
-    it: "Zero competenze artistiche",
-    es: "Cero habilidades artísticas",
-    pt: "Zero habilidades artísticas",
+    en: "No artistic skills required",
+    it: "Nessuna competenza artistica richiesta",
+    es: "No se requieren habilidades artísticas",
+    pt: "Nenhuma habilidade artística necessária",
     de: "Keine künstlerischen Fähigkeiten erforderlich",
-    nl: "Geen artistieke vaardigheden nodig"
+    nl: "Geen artistieke vaardigheden vereist"
   },
   featureNoSkillDesc: {
     fr: "L'outil fait le travail pour vous.",
@@ -221,7 +221,7 @@ const homeTranslations = {
   btnConceptDetail: {
     fr: "Découvrir le concept en détail",
     en: "Discover the concept in detail",
-    it: "Scopri il concetto in dettaglio",
+    it: "Scopri il concetto nel dettaglio",
     es: "Descubre el concepto en detalle",
     pt: "Descubra o conceito em detalhe",
     de: "Das Konzept im Detail entdecken",

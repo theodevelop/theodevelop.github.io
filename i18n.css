@@ -1,8 +1,9 @@
 /* ==========================================
-   MY PRETTY FAMILY - Language Selector Styles
+   MY PRETTY FAMILY - Language Selector (Desktop only)
+   Le menu mobile et le sélecteur mobile sont dans mobile-menu.css
    ========================================== */
 
-/* ==================== DESKTOP SELECTOR ==================== */
+/* ==================== DESKTOP LANGUAGE SELECTOR ==================== */
 .lang-selector {
   position: relative;
   margin-left: 8px;
@@ -24,11 +25,7 @@
   transition: all 0.2s;
 }
 
-.lang-toggle:hover {
-  background: #eef2f7;
-  border-color: #6A8FB9;
-}
-
+.lang-toggle:hover,
 .lang-toggle.open {
   background: #eef2f7;
   border-color: #6A8FB9;
@@ -54,7 +51,7 @@
   transform: rotate(180deg);
 }
 
-/* ==================== DROPDOWN ==================== */
+/* ==================== DROPDOWN DESKTOP ==================== */
 .lang-dropdown {
   position: absolute;
   top: calc(100% + 8px);
@@ -76,6 +73,7 @@
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+  animation: langDropdownIn 0.2s ease forwards;
 }
 
 .lang-option {
@@ -114,102 +112,7 @@
   flex: 1;
 }
 
-/* ==================== MOBILE SELECTOR ==================== */
-.lang-selector-mobile {
-  margin-top: 24px;
-  padding-top: 24px;
-  border-top: 1px solid #f0f0f0;
-}
-
-.lang-mobile-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: center;
-}
-
-.lang-mobile-option {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  padding: 12px 16px;
-  background: #f8fafc;
-  border: 2px solid transparent;
-  border-radius: 12px;
-  cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
-  transition: all 0.2s;
-  min-width: 70px;
-}
-
-.lang-mobile-option:hover {
-  background: #eef2f7;
-}
-
-.lang-mobile-option.active {
-  background: rgba(106, 143, 185, 0.1);
-  border-color: #6A8FB9;
-}
-
-.lang-mobile-option .lang-flag {
-  font-size: 24px;
-}
-
-.lang-mobile-option .lang-code {
-  font-size: 11px;
-  font-weight: 600;
-  color: #666;
-  letter-spacing: 0.5px;
-}
-
-.lang-mobile-option.active .lang-code {
-  color: #6A8FB9;
-}
-
-/* ==================== RESPONSIVE ==================== */
-@media (max-width: 768px) {
-  .lang-selector {
-    display: none;
-  }
-}
-
-@media (min-width: 769px) {
-  .lang-selector-mobile {
-    display: none;
-  }
-}
-
-/* ==================== FIXED RIGHT POSITION VARIANT ==================== */
-/* Si vous voulez le sélecteur collé à droite de la page */
-.lang-selector-fixed {
-  position: fixed;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  z-index: 999;
-}
-
-.lang-selector-fixed .lang-toggle {
-  border-radius: 8px 0 0 8px;
-  border-right: none;
-  padding: 12px 14px;
-  background: white;
-  box-shadow: -4px 0 16px rgba(0, 0, 0, 0.08);
-}
-
-.lang-selector-fixed .lang-dropdown {
-  right: 100%;
-  top: 50%;
-  transform: translateY(-50%) translateX(8px);
-  margin-right: 8px;
-}
-
-.lang-selector-fixed .lang-dropdown.open {
-  transform: translateY(-50%) translateX(0);
-}
-
-/* Animation d'entrée */
+/* ==================== ANIMATION ==================== */
 @keyframes langDropdownIn {
   from {
     opacity: 0;
@@ -221,6 +124,10 @@
   }
 }
 
-.lang-dropdown.open {
-  animation: langDropdownIn 0.2s ease forwards;
+/* ==================== RESPONSIVE ==================== */
+/* Masquer le sélecteur desktop sur mobile */
+@media (max-width: 768px) {
+  .lang-selector {
+    display: none;
+  }
 }

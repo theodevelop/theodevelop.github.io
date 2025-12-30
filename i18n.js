@@ -1,6 +1,7 @@
 /**
  * MY PRETTY FAMILY - Système de traduction i18n
  * Gère le changement de langue et la persistance
+ * Version avec menu mobile 3/4 et popup langue
  */
 
 (function() {
@@ -86,22 +87,30 @@
    * Traduit un élément DOM
    */
   function translateElement(element, lang) {
+    // data-i18n pour le contenu
     const key = element.getAttribute('data-i18n');
-    if (!key) return;
-
-    const translation = getNestedTranslation(key, lang);
-    if (translation) {
-      // Vérifier si c'est un placeholder
-      if (element.hasAttribute('placeholder')) {
-        element.placeholder = translation;
-      } 
-      // Vérifier si c'est un attribut title
-      else if (element.hasAttribute('data-i18n-attr') && element.getAttribute('data-i18n-attr') === 'title') {
-        element.title = translation;
-      }
-      // Sinon, remplacer le contenu HTML
-      else {
+    if (key) {
+      const translation = getNestedTranslation(key, lang);
+      if (translation) {
         element.innerHTML = translation;
+      }
+    }
+
+    // data-i18n-placeholder pour les placeholders
+    const placeholderKey = element.getAttribute('data-i18n-placeholder');
+    if (placeholderKey) {
+      const translation = getNestedTranslation(placeholderKey, lang);
+      if (translation) {
+        element.placeholder = translation;
+      }
+    }
+
+    // data-i18n-title pour les attributs title
+    const titleKey = element.getAttribute('data-i18n-title');
+    if (titleKey) {
+      const translation = getNestedTranslation(titleKey, lang);
+      if (translation) {
+        element.title = translation;
       }
     }
   }
@@ -110,36 +119,43 @@
    * Traduit tous les éléments de la page
    */
   function translatePage(lang) {
-    const elements = document.querySelectorAll('[data-i18n]');
+    const elements = document.querySelectorAll('[data-i18n], [data-i18n-placeholder], [data-i18n-title]');
     elements.forEach(el => translateElement(el, lang));
 
     // Mettre à jour l'attribut lang du HTML
     document.documentElement.lang = lang;
 
-    // Mettre à jour le sélecteur de langue
-    updateLanguageSelector(lang);
+    // Mettre à jour les sélecteurs de langue
+    updateLanguageSelectors(lang);
   }
 
   /**
-   * Met à jour l'affichage du sélecteur de langue
+   * Met à jour l'affichage des sélecteurs de langue (desktop et mobile)
    */
-  function updateLanguageSelector(lang) {
+  function updateLanguageSelectors(lang) {
+    const langData = SUPPORTED_LANGUAGES[lang];
+    if (!langData) return;
+
+    // Desktop
     const currentFlag = document.querySelector('.lang-current-flag');
     const currentCode = document.querySelector('.lang-current-code');
-    
-    if (currentFlag && SUPPORTED_LANGUAGES[lang]) {
-      currentFlag.textContent = SUPPORTED_LANGUAGES[lang].flag;
-    }
-    if (currentCode && SUPPORTED_LANGUAGES[lang]) {
-      currentCode.textContent = lang.toUpperCase();
-    }
+    if (currentFlag) currentFlag.textContent = langData.flag;
+    if (currentCode) currentCode.textContent = lang.toUpperCase();
 
-    // Mettre à jour l'état actif dans le dropdown
+    // Desktop dropdown
     document.querySelectorAll('.lang-option').forEach(option => {
-      option.classList.remove('active');
-      if (option.getAttribute('data-lang') === lang) {
-        option.classList.add('active');
-      }
+      option.classList.toggle('active', option.getAttribute('data-lang') === lang);
+    });
+
+    // Mobile toggle button
+    const mobileToggleFlag = document.querySelector('.lang-mobile-toggle .lang-flag');
+    const mobileToggleCurrent = document.querySelector('.lang-mobile-toggle-current');
+    if (mobileToggleFlag) mobileToggleFlag.textContent = langData.flag;
+    if (mobileToggleCurrent) mobileToggleCurrent.textContent = langData.name;
+
+    // Mobile popup
+    document.querySelectorAll('.lang-popup-option').forEach(option => {
+      option.classList.toggle('active', option.getAttribute('data-lang') === lang);
     });
   }
 
@@ -161,9 +177,9 @@
   }
 
   /**
-   * Crée le HTML du sélecteur de langue
+   * Crée le HTML du sélecteur de langue desktop
    */
-  function createLanguageSelector() {
+  function createDesktopLanguageSelector() {
     const selector = document.createElement('div');
     selector.className = 'lang-selector';
     selector.innerHTML = `
@@ -185,49 +201,121 @@
   }
 
   /**
-   * Injecte le sélecteur de langue dans la navigation
+   * Crée le HTML du bouton langue mobile (compact)
    */
-  function injectLanguageSelector() {
-    // Desktop nav
-    const navLinks = document.querySelector('.nav-links');
-    if (navLinks) {
-      const selector = createLanguageSelector();
-      navLinks.appendChild(selector);
-    }
+  function createMobileLanguageButton() {
+    const container = document.createElement('div');
+    container.className = 'lang-selector-mobile';
+    container.innerHTML = `
+      <button class="lang-mobile-toggle" aria-label="Changer de langue">
+        <div class="lang-mobile-toggle-content">
+          <span class="lang-flag">${SUPPORTED_LANGUAGES[currentLanguage].flag}</span>
+          <div class="lang-mobile-toggle-text">
+            <span class="lang-mobile-toggle-label">Langue</span>
+            <span class="lang-mobile-toggle-current">${SUPPORTED_LANGUAGES[currentLanguage].name}</span>
+          </div>
+        </div>
+        <i class="fa-solid fa-chevron-right lang-mobile-toggle-arrow"></i>
+      </button>
+    `;
+    return container;
+  }
 
-    // Mobile nav
-    const mobileLinks = document.querySelector('.nav-mobile-links');
-    if (mobileLinks) {
-      const mobileSelectorContainer = document.createElement('div');
-      mobileSelectorContainer.className = 'lang-selector-mobile';
-      mobileSelectorContainer.innerHTML = `
-        <div class="lang-mobile-grid">
+  /**
+   * Crée le popup de sélection de langue (mobile)
+   */
+  function createLanguagePopup() {
+    const popup = document.createElement('div');
+    popup.className = 'lang-popup-overlay';
+    popup.id = 'langPopup';
+    popup.innerHTML = `
+      <div class="lang-popup">
+        <div class="lang-popup-handle"><span></span></div>
+        <div class="lang-popup-header">
+          <h3 class="lang-popup-title" data-i18n="nav.popupChoisirLangue">Choisir la langue</h3>
+          <button class="lang-popup-close" aria-label="Fermer">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="lang-popup-list">
           ${Object.entries(SUPPORTED_LANGUAGES).map(([code, data]) => `
-            <button class="lang-mobile-option ${code === currentLanguage ? 'active' : ''}" data-lang="${code}">
+            <button class="lang-popup-option ${code === currentLanguage ? 'active' : ''}" data-lang="${code}">
               <span class="lang-flag">${data.flag}</span>
-              <span class="lang-code">${code.toUpperCase()}</span>
+              <div class="lang-popup-option-info">
+                <span class="lang-popup-option-name">${data.name}</span>
+                <span class="lang-popup-option-code">${code.toUpperCase()}</span>
+              </div>
+              <span class="lang-popup-option-check">
+                <i class="fa-solid fa-check"></i>
+              </span>
             </button>
           `).join('')}
         </div>
-      `;
-      mobileLinks.appendChild(mobileSelectorContainer);
+      </div>
+    `;
+    return popup;
+  }
+
+  /**
+   * Ouvre le popup de langue
+   */
+  function openLanguagePopup() {
+    const popup = document.getElementById('langPopup');
+    if (popup) {
+      popup.classList.add('open');
+      document.body.classList.add('lang-popup-open');
     }
   }
 
   /**
-   * Initialise les événements du sélecteur
+   * Ferme le popup de langue
+   */
+  function closeLanguagePopup() {
+    const popup = document.getElementById('langPopup');
+    if (popup) {
+      popup.classList.remove('open');
+      document.body.classList.remove('lang-popup-open');
+    }
+  }
+
+  /**
+   * Injecte les sélecteurs de langue
+   */
+  function injectLanguageSelectors() {
+    // Desktop nav
+    const navLinks = document.querySelector('.nav-links');
+    if (navLinks && !navLinks.querySelector('.lang-selector')) {
+      const selector = createDesktopLanguageSelector();
+      navLinks.appendChild(selector);
+    }
+
+    // Mobile nav - Bouton compact
+    const mobileContent = document.querySelector('.nav-mobile-content');
+    if (mobileContent && !mobileContent.querySelector('.lang-selector-mobile')) {
+      const mobileButton = createMobileLanguageButton();
+      mobileContent.appendChild(mobileButton);
+    }
+
+    // Popup langue (ajouté au body)
+    if (!document.getElementById('langPopup')) {
+      const popup = createLanguagePopup();
+      document.body.appendChild(popup);
+    }
+  }
+
+  /**
+   * Initialise les événements des sélecteurs
    */
   function initLanguageSelectorEvents() {
-    // Desktop toggle
     document.addEventListener('click', function(e) {
+      // Desktop toggle
       const toggle = e.target.closest('.lang-toggle');
-      const dropdown = document.querySelector('.lang-dropdown');
-      
       if (toggle) {
         e.stopPropagation();
+        const dropdown = toggle.nextElementSibling;
         const isOpen = toggle.classList.contains('open');
         
-        // Fermer tous les dropdowns
+        // Fermer tous
         document.querySelectorAll('.lang-toggle').forEach(t => t.classList.remove('open'));
         document.querySelectorAll('.lang-dropdown').forEach(d => d.classList.remove('open'));
         
@@ -241,13 +329,13 @@
         return;
       }
 
-      // Sélection d'une langue (desktop)
+      // Desktop option
       const option = e.target.closest('.lang-option');
       if (option) {
         const lang = option.getAttribute('data-lang');
         setLanguage(lang);
         
-        // Fermer le dropdown
+        // Fermer dropdown
         document.querySelectorAll('.lang-toggle').forEach(t => {
           t.classList.remove('open');
           t.setAttribute('aria-expanded', 'false');
@@ -256,19 +344,38 @@
         return;
       }
 
-      // Sélection d'une langue (mobile)
-      const mobileOption = e.target.closest('.lang-mobile-option');
-      if (mobileOption) {
-        const lang = mobileOption.getAttribute('data-lang');
-        setLanguage(lang);
-        
-        // Mettre à jour l'état actif mobile
-        document.querySelectorAll('.lang-mobile-option').forEach(opt => opt.classList.remove('active'));
-        mobileOption.classList.add('active');
+      // Mobile toggle - ouvrir popup
+      const mobileToggle = e.target.closest('.lang-mobile-toggle');
+      if (mobileToggle) {
+        e.stopPropagation();
+        openLanguagePopup();
         return;
       }
 
-      // Clic ailleurs - fermer le dropdown
+      // Popup close button
+      const popupClose = e.target.closest('.lang-popup-close');
+      if (popupClose) {
+        closeLanguagePopup();
+        return;
+      }
+
+      // Popup option
+      const popupOption = e.target.closest('.lang-popup-option');
+      if (popupOption) {
+        const lang = popupOption.getAttribute('data-lang');
+        setLanguage(lang);
+        closeLanguagePopup();
+        return;
+      }
+
+      // Clic sur overlay du popup
+      const popupOverlay = e.target.closest('.lang-popup-overlay');
+      if (popupOverlay && e.target === popupOverlay) {
+        closeLanguagePopup();
+        return;
+      }
+
+      // Clic ailleurs - fermer dropdown desktop
       document.querySelectorAll('.lang-toggle').forEach(t => {
         t.classList.remove('open');
         t.setAttribute('aria-expanded', 'false');
@@ -276,14 +383,18 @@
       document.querySelectorAll('.lang-dropdown').forEach(d => d.classList.remove('open'));
     });
 
-    // Fermer avec Escape
+    // Escape pour fermer
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') {
+        // Fermer dropdown desktop
         document.querySelectorAll('.lang-toggle').forEach(t => {
           t.classList.remove('open');
           t.setAttribute('aria-expanded', 'false');
         });
         document.querySelectorAll('.lang-dropdown').forEach(d => d.classList.remove('open'));
+        
+        // Fermer popup mobile
+        closeLanguagePopup();
       }
     });
   }
@@ -301,8 +412,8 @@
     // Récupérer la langue initiale
     currentLanguage = getInitialLanguage();
 
-    // Injecter le sélecteur
-    injectLanguageSelector();
+    // Injecter les sélecteurs
+    injectLanguageSelectors();
 
     // Initialiser les événements
     initLanguageSelectorEvents();
@@ -316,7 +427,9 @@
     setLanguage: setLanguage,
     getCurrentLanguage: () => currentLanguage,
     translate: (key) => getNestedTranslation(key, currentLanguage),
-    getSupportedLanguages: () => ({ ...SUPPORTED_LANGUAGES })
+    getSupportedLanguages: () => ({ ...SUPPORTED_LANGUAGES }),
+    openLanguagePopup: openLanguagePopup,
+    closeLanguagePopup: closeLanguagePopup
   };
 
   // Lancer l'initialisation

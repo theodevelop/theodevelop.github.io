@@ -9,14 +9,14 @@ const navTranslations = {
     es: "El Concepto",
     pt: "O Conceito",
     de: "Das Konzept",
-    nl: "Het Concept"
+    nl: "Het concept"
   },
   fonctionnement: {
     fr: "Le Fonctionnement",
     en: "How It Works",
-    it: "Come Funziona",
-    es: "Cómo Funciona",
-    pt: "Como Funciona",
+    it: "Come funziona",
+    es: "Cómo funciona",
+    pt: "Como funciona",
     de: "Wie es funktioniert",
     nl: "Hoe het werkt"
   },
@@ -27,33 +27,42 @@ const navTranslations = {
     es: "La Herramienta",
     pt: "A Ferramenta",
     de: "Das Tool",
-    nl: "De Tool"
+    nl: "De tool"
   },
   clients: {
     fr: "Nos Clients",
     en: "Our Clients",
-    it: "I Nostri Clienti",
-    es: "Nuestros Clientes",
-    pt: "Nossos Clientes",
+    it: "I nostri clienti",
+    es: "Nuestros clientes",
+    pt: "Nossos clientes",
     de: "Unsere Kunden",
-    nl: "Onze Klanten"
+    nl: "Onze klanten"
   },
   candidater: {
     fr: "Candidater",
     en: "Apply",
     it: "Candidati",
-    es: "Postularse",
+    es: "Postular",
     pt: "Candidatar-se",
     de: "Bewerben",
     nl: "Solliciteren"
   },
   espacePartenaire: {
     fr: "Espace partenaire",
-    en: "Partner area",
+    en: "Partner Area",
     it: "Area partner",
-    es: "Área de socios",
-    pt: "Área do parceiro",
+    es: "Área de partners",
+    pt: "Área de parceiros",
     de: "Partnerbereich",
-    nl: "Partnerzone"
+    nl: "Partneromgeving"
+  },
+  popupChoisirLangue: {
+    fr: "Choisir la langue",
+    en: "Choose Language",
+    it: "Scegli la lingua",
+    es: "Elegir idioma",
+    pt: "Escolher idioma",
+    de: "Sprache wählen",
+    nl: "Kies taal"
   }
 };
