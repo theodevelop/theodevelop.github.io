@@ -87,87 +87,158 @@
 .videos-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
+@media (max-width: 900px) {
+  .videos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .videos-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+  }
+}
+
+/* ==================== VIDEO CARD ==================== */
 .video-card {
   background: white;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .video-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 48px rgba(106, 143, 185, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 
-.video-thumbnail {
+/* ==================== VIDEO CONTAINER - FORMAT PORTRAIT ==================== */
+.video-container {
   position: relative;
-  aspect-ratio: 16/9;
+  width: 100%;
+  /* Ratio 16:9 pour vidéos paysage */
+  aspect-ratio: 16 / 9;
+  background: #1a1a1a;
   overflow: hidden;
-  cursor: pointer;
 }
 
-.video-thumbnail img {
+/* Fallback pour navigateurs qui ne supportent pas aspect-ratio */
+@supports not (aspect-ratio: 16 / 9) {
+  .video-container {
+    padding-bottom: 177.78%; /* 16/9 = 1.7778 */
+    height: 0;
+  }
+  
+  .video-container .video-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+/* ==================== VIDEO PLAYER ==================== */
+.video-player {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s;
+  display: block;
 }
 
-.video-card:hover .video-thumbnail img {
-  transform: scale(1.05);
+/* Quand la vidéo est en cours de lecture, montrer tout */
+.video-player:not([poster]) {
+  object-fit: contain;
+  background: #000;
 }
 
-.video-play {
+/* ==================== VIDEO OVERLAY (Play Button) ==================== */
+.video-overlay {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 70px;
-  height: 70px;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 50%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s, background 0.3s;
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease;
+  cursor: pointer;
 }
 
-.video-play i {
+.video-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.video-play-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 24px;
   color: #6A8FB9;
-  margin-left: 4px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.video-card:hover .video-play {
-  transform: translate(-50%, -50%) scale(1.1);
-  background: #6A8FB9;
+.video-play-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
 }
 
-.video-card:hover .video-play i {
-  color: white;
+.video-play-btn i {
+  margin-left: 4px; /* Centre visuel du triangle play */
 }
 
+/* ==================== VIDEO CONTENT (Quote) ==================== */
 .video-content {
-  padding: 24px;
+  padding: 16px 20px 20px;
 }
 
 .video-quote {
-  font-size: 15px;
-  color: #444;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
   font-style: italic;
-  margin-bottom: 12px;
+  color: #333;
   line-height: 1.5;
+  margin: 0 0 8px 0;
 }
 
 .video-author {
-  font-size: 13px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
   color: #888;
-  font-weight: 500;
+  margin: 0;
+}
+
+/* ==================== VIDEOS NOTE ==================== */
+.videos-note {
+  text-align: center;
+  margin-top: 32px;
+  padding: 16px 24px;
+  background: #f8fafc;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.videos-note i {
+  color: #6A8FB9;
 }
 
 /* ==================== PHOTOS GALLERY ==================== */

@@ -30,45 +30,89 @@
   
   <!-- Styles -->
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./mobile-menu.css">
   <link rel="stylesheet" href="./configurateur.css">
+  <link rel="stylesheet" href="./i18n.css">
 </head>
 <body>
 
-  <!-- ==================== NAVIGATION ==================== -->
+  <!-- NAVIGATION COMPLETE -->
   <nav class="nav">
     <div class="nav-inner">
       <a href="./index.html" class="nav-logo">
         <img src="./assets/logo_blue.png" alt="My Pretty Family">
       </a>
       
+      <!-- Desktop Links -->
       <div class="nav-links">
-        <a href="./concept.html" class="nav-link">Le Concept</a>
-        <a href="./fonctionnement.html" class="nav-link">Le Fonctionnement</a>
-        <a href="./configurateur.html" class="nav-link">L'Outil</a>
-        <a href="./nos-clients.html" class="nav-link">Nos Clients</a>
-        <a href="./candidature.html" class="nav-cta">Candidater</a>
-        <a href="https://shop.myprettyfamily.com/shopadmin/?url_demandee=shopadmin" class="nav-login" title="Espace partenaire">
+        <a href="./concept.html" class="nav-link" data-i18n="nav.concept">Le Concept</a>
+        <!-- <a href="./fonctionnement.html" class="nav-link" data-i18n="nav.fonctionnement">Le Fonctionnement</a> -->
+        <a href="./configurateur.html" class="nav-link" data-i18n="nav.outil">L'Outil</a>
+        <a href="./nos-clients.html" class="nav-link" data-i18n="nav.clients">Nos Clients</a>
+        <a href="./candidature.html" class="nav-cta" data-i18n="nav.candidater">Candidater</a>
+        <a href="https://shop.myprettyfamily.com/shopadmin/?url_demandee=shopadmin" class="nav-login" data-i18n-title="nav.espacePartenaire" title="Espace partenaire">
           <i class="fa-solid fa-user"></i>
         </a>
+        <!-- Le sélecteur de langue desktop est injecté ici par i18n.js -->
       </div>
       
-      <button class="nav-mobile-toggle" aria-label="Menu">
+      <!-- Burger Button -->
+      <button class="nav-mobile-toggle" aria-label="Menu" aria-expanded="false">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
       </button>
     </div>
     
+    <!-- ==================== MENU MOBILE 3/4 ==================== -->
     <div class="nav-mobile">
-      <div class="nav-mobile-links">
-        <a href="./concept.html" class="nav-mobile-link">Le Concept</a>
-        <a href="./fonctionnement.html" class="nav-mobile-link">Le Fonctionnement</a>
-        <a href="./configurateur.html" class="nav-mobile-link">L'Outil</a>
-        <a href="./nos-clients.html" class="nav-mobile-link">Nos Clients</a>
+      <!-- Header avec logo et bouton fermer -->
+      <div class="nav-mobile-header">
+        <img src="./assets/logo_blue.png" alt="My Pretty Family" class="nav-mobile-logo">
+        <button class="nav-mobile-close" aria-label="Fermer le menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      
+      <!-- Contenu scrollable -->
+      <div class="nav-mobile-content">
+        <!-- Liens de navigation -->
+        <div class="nav-mobile-links">
+          <a href="./concept.html" class="nav-mobile-link">
+            <i class="fa-solid fa-lightbulb"></i>
+            <span data-i18n="nav.concept">Le Concept</span>
+          </a>
+          <a href="./fonctionnement.html" class="nav-mobile-link">
+            <i class="fa-solid fa-cogs"></i>
+            <span data-i18n="nav.fonctionnement">Le Fonctionnement</span>
+          </a>
+          <a href="./configurateur.html" class="nav-mobile-link">
+            <i class="fa-solid fa-sliders"></i>
+            <span data-i18n="nav.outil">L'Outil</span>
+          </a>
+          <a href="./nos-clients.html" class="nav-mobile-link">
+            <i class="fa-solid fa-users"></i>
+            <span data-i18n="nav.clients">Nos Clients</span>
+          </a>
+        </div>
+        
+        <!-- Séparateur -->
+        <div class="nav-mobile-separator"></div>
+        
+        <!-- Espace partenaire -->
         <a href="https://shop.myprettyfamily.com/shopadmin/?url_demandee=shopadmin" class="nav-mobile-login">
-          <i class="fa-solid fa-user"></i> Espace partenaire
+          <i class="fa-solid fa-user"></i>
+          <span data-i18n="nav.espacePartenaire">Espace partenaire</span>
         </a>
-        <a href="./candidature.html" class="nav-mobile-cta">Candidater</a>
+        
+        <!-- CTA Candidater -->
+        <a href="./candidature.html" class="nav-mobile-cta">
+          <span data-i18n="nav.candidater">Candidater</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        
+        <!-- Le sélecteur de langue mobile est injecté ici par i18n.js -->
+        <!-- Il s'affiche comme un bouton compact qui ouvre un popup -->
       </div>
     </div>
   </nav>
@@ -76,9 +120,9 @@
   <!-- ==================== HERO ==================== -->
   <section class="page-hero config-hero">
     <div class="page-hero-inner">
-      <p class="page-hero-label">L'outil clé</p>
-      <h1 class="page-hero-title">Le Configurateur<br>My Pretty Family</h1>
-      <p class="page-hero-subtitle">
+      <p class="page-hero-label" data-i18n="configurateur.heroLabel">L'outil clé</p>
+      <h1 class="page-hero-title" data-i18n="configurateur.heroTitle">Le Configurateur<br>My Pretty Family</h1>
+      <p class="page-hero-subtitle" data-i18n="configurateur.heroSubtitle">
         Un outil numérique propriétaire, pensé pour le terrain.<br>
         Simple. Rapide. Intuitif.
       </p>
@@ -90,14 +134,14 @@
     <div class="section-inner section-narrow">
       <div class="config-intro">
         <div class="config-intro-content">
-          <h2 class="config-intro-title">L'outil au cœur du concept</h2>
-          <p class="config-intro-text">
+          <h2 class="config-intro-title" data-i18n="configurateur.introTitle">L'outil au cœur du concept</h2>
+          <p class="config-intro-text" data-i18n="configurateur.introText1">
             Le configurateur My Pretty Family est bien plus qu'un simple logiciel. 
             C'est le <strong>pilier opérationnel</strong> qui permet à chaque partenaire 
             de créer des portraits personnalisés en quelques minutes, sans aucune 
             compétence technique ou artistique.
           </p>
-          <p class="config-intro-text">
+          <p class="config-intro-text" data-i18n="configurateur.introText2">
             Développé et optimisé depuis plus de 10 ans, il a été conçu pour 
             une utilisation <strong>terrain</strong> : fluide, rapide, et pensé 
             pour l'interaction avec le client.
@@ -113,7 +157,7 @@
               </div>
               <div class="mockup-content">
                 <i class="fa-solid fa-sliders"></i>
-                <span>Interface du configurateur</span>
+                <span data-i18n="common.mockupConfigurator">Interface du configurateur</span>
               </div>
             </div>
           </div>
@@ -128,44 +172,45 @@
       <div class="stats-row">
         <div class="stat-block">
           <div class="stat-icon"><i class="fa-solid fa-clock"></i></div>
-          <div class="stat-value">5 min</div>
-          <div class="stat-desc">pour créer un portrait complet</div>
+          <div class="stat-value" data-i18n="configurateur.stat1Value">5 min</div>
+          <div class="stat-desc" data-i18n="configurateur.stat1Desc">pour créer un portrait complet</div>
         </div>
         <div class="stat-block">
           <div class="stat-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-          <div class="stat-value">0</div>
-          <div class="stat-desc">compétence technique requise</div>
+          <div class="stat-value" data-i18n="configurateur.stat2Value">0</div>
+          <div class="stat-desc" data-i18n="configurateur.stat2Desc">compétence technique requise</div>
         </div>
         <div class="stat-block">
           <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
-          <div class="stat-value">∞</div>
-          <div class="stat-desc">combinaisons possibles</div>
+          <div class="stat-value" data-i18n="configurateur.stat3Value">∞</div>
+          <div class="stat-desc" data-i18n="configurateur.stat3Desc">combinaisons possibles</div>
         </div>
         <div class="stat-block">
           <div class="stat-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
-          <div class="stat-value">10+</div>
-          <div class="stat-desc">années d'optimisation</div>
+          <div class="stat-value" data-i18n="configurateur.stat4Value">10+</div>
+          <div class="stat-desc" data-i18n="configurateur.stat4Desc">années d'optimisation</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==================== FONCTIONNALITÉS ==================== -->
+  <!-- ==================== FONCTIONNALITÉS & AVANTAGES (FUSIONNÉS) ==================== -->
   <section class="section" id="fonctionnalites">
     <div class="section-inner">
       <div class="section-header">
-        <p class="section-label">Ce que permet l'outil</p>
-        <h2 class="section-title">Fonctionnalités principales</h2>
+        <p class="section-label" data-i18n="configurateur.featuresLabel">Ce que permet l'outil</p>
+        <h2 class="section-title" data-i18n="configurateur.featuresTitle">Fonctionnalités & Avantages</h2>
       </div>
       
+      <!-- Grille des fonctionnalités principales -->
       <div class="features-showcase">
         <div class="feature-showcase-item">
           <div class="feature-showcase-icon">
             <i class="fa-solid fa-user-plus"></i>
           </div>
           <div class="feature-showcase-content">
-            <h3>Création de personnages</h3>
-            <p>
+            <h3 data-i18n="configurateur.feature1Title">Création de personnages</h3>
+            <p data-i18n="configurateur.feature1Desc">
               Construisez chaque membre de la famille étape par étape : 
               morphologie, couleur de peau, coiffure, vêtements, accessoires… 
               Chaque détail compte pour que le client se reconnaisse.
@@ -178,8 +223,8 @@
             <i class="fa-solid fa-palette"></i>
           </div>
           <div class="feature-showcase-content">
-            <h3>Choix des fonds et décors</h3>
-            <p>
+            <h3 data-i18n="configurateur.feature2Title">Choix des fonds et décors</h3>
+            <p data-i18n="configurateur.feature2Desc">
               Une large bibliothèque de fonds thématiques et personnalisables. 
               Plage, montagne, ville, ou décor sur-mesure pour les partenaires Travel.
             </p>
@@ -191,8 +236,8 @@
             <i class="fa-solid fa-paw"></i>
           </div>
           <div class="feature-showcase-content">
-            <h3>Animaux et thématiques</h3>
-            <p>
+            <h3 data-i18n="configurateur.feature3Title">Animaux et thématiques</h3>
+            <p data-i18n="configurateur.feature3Desc">
               Chiens, chats, NAC… Les animaux de compagnie font partie de la famille. 
               Ajoutez aussi des éléments thématiques : métiers, passions, occasions spéciales.
             </p>
@@ -204,8 +249,8 @@
             <i class="fa-solid fa-font"></i>
           </div>
           <div class="feature-showcase-content">
-            <h3>Personnalisation du texte</h3>
-            <p>
+            <h3 data-i18n="configurateur.feature4Title">Personnalisation du texte</h3>
+            <p data-i18n="configurateur.feature4Desc">
               Prénoms, titre de la famille, date… Chaque portrait peut être 
               accompagné d'un texte personnalisé qui renforce la dimension émotionnelle.
             </p>
@@ -217,8 +262,8 @@
             <i class="fa-solid fa-eye"></i>
           </div>
           <div class="feature-showcase-content">
-            <h3>Prévisualisation en temps réel</h3>
-            <p>
+            <h3 data-i18n="configurateur.feature5Title">Prévisualisation en temps réel</h3>
+            <p data-i18n="configurateur.feature5Desc">
               Le client voit son portrait se construire en direct. 
               Cette transparence crée de l'engagement et facilite les ajustements.
             </p>
@@ -230,33 +275,26 @@
             <i class="fa-solid fa-print"></i>
           </div>
           <div class="feature-showcase-content">
-            <h3>Export et impression</h3>
-            <p>
+            <h3 data-i18n="configurateur.feature6Title">Export et impression</h3>
+            <p data-i18n="configurateur.feature6Desc">
               Génération du fichier haute définition en un clic. 
               Compatible avec tous les systèmes d'impression professionnels.
             </p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ==================== AVANTAGES PARTENAIRE ==================== -->
-  <section class="section section-alt" id="avantages">
-    <div class="section-inner">
-      <div class="section-header">
-        <p class="section-label">Pour les partenaires</p>
-        <h2 class="section-title">Pourquoi cet outil change tout</h2>
-        <p class="section-subtitle">
-          Le configurateur n'est pas un gadget. C'est ce qui rend le concept duplicable.
-        </p>
+      
+      <!-- Séparateur visuel -->
+      <div class="section-divider">
+        <span class="divider-text">Pour les partenaires</span>
       </div>
       
+      <!-- Grille des avantages partenaire -->
       <div class="advantages-grid">
         <div class="advantage-card">
           <div class="advantage-icon"><i class="fa-solid fa-rocket"></i></div>
-          <h3 class="advantage-title">Démarrage immédiat</h3>
-          <p class="advantage-desc">
+          <h3 class="advantage-title" data-i18n="configurateur.advantage1Title">Démarrage immédiat</h3>
+          <p class="advantage-desc" data-i18n="configurateur.advantage1Desc">
             Pas besoin de formation longue. En quelques heures, vous maîtrisez l'outil 
             et pouvez créer vos premiers portraits.
           </p>
@@ -264,8 +302,8 @@
         
         <div class="advantage-card">
           <div class="advantage-icon"><i class="fa-solid fa-user-check"></i></div>
-          <h3 class="advantage-title">Autonomie totale</h3>
-          <p class="advantage-desc">
+          <h3 class="advantage-title" data-i18n="configurateur.advantage2Title">Autonomie totale</h3>
+          <p class="advantage-desc" data-i18n="configurateur.advantage2Desc">
             Vous n'avez besoin de personne pour créer. L'outil vous rend autonome 
             dès le premier jour.
           </p>
@@ -273,8 +311,8 @@
         
         <div class="advantage-card">
           <div class="advantage-icon"><i class="fa-solid fa-shield-halved"></i></div>
-          <h3 class="advantage-title">Qualité constante</h3>
-          <p class="advantage-desc">
+          <h3 class="advantage-title" data-i18n="configurateur.advantage3Title">Qualité constante</h3>
+          <p class="advantage-desc" data-i18n="configurateur.advantage3Desc">
             Le résultat est toujours professionnel. L'outil garantit une qualité 
             homogène, quel que soit l'opérateur.
           </p>
@@ -282,8 +320,8 @@
         
         <div class="advantage-card">
           <div class="advantage-icon"><i class="fa-solid fa-bolt"></i></div>
-          <h3 class="advantage-title">Rapidité d'exécution</h3>
-          <p class="advantage-desc">
+          <h3 class="advantage-title" data-i18n="configurateur.advantage4Title">Rapidité d'exécution</h3>
+          <p class="advantage-desc" data-i18n="configurateur.advantage4Desc">
             5 minutes pour un portrait complet. Cette rapidité permet de traiter 
             plusieurs clients à la suite sans frustration.
           </p>
@@ -291,8 +329,8 @@
         
         <div class="advantage-card">
           <div class="advantage-icon"><i class="fa-solid fa-comments"></i></div>
-          <h3 class="advantage-title">Support de vente</h3>
-          <p class="advantage-desc">
+          <h3 class="advantage-title" data-i18n="configurateur.advantage5Title">Support de vente</h3>
+          <p class="advantage-desc" data-i18n="configurateur.advantage5Desc">
             L'interface visuelle aide à la vente. Le client voit son portrait 
             se construire et s'implique dans le processus.
           </p>
@@ -300,8 +338,8 @@
         
         <div class="advantage-card">
           <div class="advantage-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
-          <h3 class="advantage-title">Mises à jour incluses</h3>
-          <p class="advantage-desc">
+          <h3 class="advantage-title" data-i18n="configurateur.advantage6Title">Mises à jour incluses</h3>
+          <p class="advantage-desc" data-i18n="configurateur.advantage6Desc">
             Nouveaux personnages, nouvelles options, améliorations régulières… 
             L'outil évolue sans surcoût.
           </p>
@@ -310,103 +348,20 @@
     </div>
   </section>
 
-  <!-- ==================== PROCESSUS CRÉATION ==================== -->
-  <!-- <section class="section">
-    <div class="section-inner">
-      <div class="section-header">
-        <p class="section-label">En pratique</p>
-        <h2 class="section-title">Le processus de création</h2>
-        <p class="section-subtitle">De la rencontre client à la remise du portrait.</p>
-      </div>
-      
-      <div class="process-timeline">
-        <div class="process-timeline-item">
-          <div class="process-timeline-marker">
-            <span>1</span>
-          </div>
-          <div class="process-timeline-content">
-            <h3>Échange avec le client</h3>
-            <p>
-              Vous discutez avec la famille pour comprendre qui compose le foyer : 
-              adultes, enfants, animaux, particularités…
-            </p>
-            <span class="process-time"><i class="fa-regular fa-clock"></i> 2 min</span>
-          </div>
-        </div>
-        
-        <div class="process-timeline-item">
-          <div class="process-timeline-marker">
-            <span>2</span>
-          </div>
-          <div class="process-timeline-content">
-            <h3>Création des personnages</h3>
-            <p>
-              Vous construisez chaque membre de la famille dans le configurateur. 
-              Le client voit son portrait prendre forme en direct.
-            </p>
-            <span class="process-time"><i class="fa-regular fa-clock"></i> 3-4 min</span>
-          </div>
-        </div>
-        
-        <div class="process-timeline-item">
-          <div class="process-timeline-marker">
-            <span>3</span>
-          </div>
-          <div class="process-timeline-content">
-            <h3>Personnalisation finale</h3>
-            <p>
-              Choix du fond, ajout des prénoms, du titre de la famille, 
-              et des derniers ajustements.
-            </p>
-            <span class="process-time"><i class="fa-regular fa-clock"></i> 1 min</span>
-          </div>
-        </div>
-        
-        <div class="process-timeline-item">
-          <div class="process-timeline-marker">
-            <span>4</span>
-          </div>
-          <div class="process-timeline-content">
-            <h3>Validation et impression</h3>
-            <p>
-              Le client valide son portrait. Vous générez le fichier 
-              et lancez l'impression.
-            </p>
-            <span class="process-time"><i class="fa-regular fa-clock"></i> 1 min</span>
-          </div>
-        </div>
-        
-        <div class="process-timeline-item">
-          <div class="process-timeline-marker process-timeline-marker-final">
-            <i class="fa-solid fa-gift"></i>
-          </div>
-          <div class="process-timeline-content">
-            <h3>Remise du souvenir</h3>
-            <p>
-              Le client repart avec son portrait encadré. 
-              Un moment d'émotion, une expérience mémorable.
-            </p>
-            <span class="process-time"><i class="fa-solid fa-heart"></i> Moment magique</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
   <!-- ==================== FAQ CONFIGURATEUR ==================== -->
-  <section class="section">
+  <section class="section section-alt">
     <div class="section-inner section-narrow">
       <div class="section-header">
-        <h2 class="section-title">Questions fréquentes</h2>
+        <h2 class="section-title" data-i18n="configurateur.faqTitle">Questions fréquentes</h2>
       </div>
       
       <div class="faq-list">
         <div class="faq-item">
           <button class="faq-question">
-            <span class="faq-question-text">Faut-il savoir dessiner pour utiliser l'outil ?</span>
+            <span class="faq-question-text" data-i18n="configurateur.faq1Q">Faut-il savoir dessiner pour utiliser l'outil ?</span>
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-answer">
+          <div class="faq-answer" data-i18n="configurateur.faq1A">
             Absolument pas. Le configurateur fonctionne par assemblage d'éléments graphiques. 
             Vous sélectionnez, vous combinez, vous personnalisez. Aucun talent artistique requis.
           </div>
@@ -414,10 +369,10 @@
         
         <div class="faq-item">
           <button class="faq-question">
-            <span class="faq-question-text">L'outil fonctionne-t-il hors connexion ?</span>
+            <span class="faq-question-text" data-i18n="configurateur.faq2Q">L'outil fonctionne-t-il hors connexion ?</span>
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-answer">
+          <div class="faq-answer" data-i18n="configurateur.faq2A">
             Le configurateur nécessite une connexion internet pour fonctionner de manière optimale 
             et accéder à toutes les ressources. Une connexion stable est recommandée pour le terrain.
           </div>
@@ -425,10 +380,10 @@
         
         <div class="faq-item">
           <button class="faq-question">
-            <span class="faq-question-text">Combien de temps pour maîtriser l'outil ?</span>
+            <span class="faq-question-text" data-i18n="configurateur.faq3Q">Combien de temps pour maîtriser l'outil ?</span>
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-answer">
+          <div class="faq-answer" data-i18n="configurateur.faq3A">
             La prise en main est rapide : quelques heures suffisent pour être opérationnel. 
             Après une dizaine de portraits, vous serez parfaitement à l'aise et gagnerez encore en rapidité.
           </div>
@@ -436,10 +391,10 @@
         
         <div class="faq-item">
           <button class="faq-question">
-            <span class="faq-question-text">L'outil est-il régulièrement mis à jour ?</span>
+            <span class="faq-question-text" data-i18n="configurateur.faq4Q">L'outil est-il régulièrement mis à jour ?</span>
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-answer">
+          <div class="faq-answer" data-i18n="configurateur.faq4A">
             Oui. De nouveaux personnages, accessoires, fonds et fonctionnalités sont ajoutés régulièrement. 
             Ces mises à jour sont incluses dans l'abonnement, sans surcoût.
           </div>
@@ -447,10 +402,10 @@
         
         <div class="faq-item">
           <button class="faq-question">
-            <span class="faq-question-text">Puis-je tester l'outil avant de m'engager ?</span>
+            <span class="faq-question-text" data-i18n="configurateur.faq5Q">Puis-je tester l'outil avant de m'engager ?</span>
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-answer">
+          <div class="faq-answer" data-i18n="configurateur.faq5A">
             L'accès au configurateur est réservé aux partenaires du réseau. 
             Une démonstration peut être organisée lors du processus de candidature pour les profils retenus.
           </div>
@@ -462,12 +417,14 @@
   <!-- ==================== CTA ==================== -->
   <section class="cta-final">
     <div class="cta-final-inner">
-      <h2 class="cta-final-title">Envie de découvrir l'outil ?</h2>
-      <p class="cta-final-text">
+      <h2 class="cta-final-title" data-i18n="configurateur.ctaTitle">Envie de découvrir l'outil ?</h2>
+      <p class="cta-final-text" data-i18n="configurateur.ctaText">
         L'accès au configurateur est réservé aux partenaires du réseau.<br>
         Déposez votre candidature pour en savoir plus.
       </p>
-      <a href="./candidature.html" class="btn-white btn-large">Déposer ma candidature <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="./candidature.html" class="btn-white btn-large">
+        <span data-i18n="home.btnApply">Déposer ma candidature</span> <i class="fa-solid fa-arrow-right"></i>
+      </a>
     </div>
   </section>
 
@@ -476,7 +433,7 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <img src="./assets/logo_blue.png" alt="My Pretty Family" class="footer-logo">
-        <p class="footer-desc">
+        <p class="footer-desc" data-i18n="footer.desc">
           Expérience émotionnelle en point de vente.<br>
           Concept terrain depuis +10 ans.
         </p>
@@ -484,26 +441,37 @@
       
       <div class="footer-links">
         <div class="footer-column">
-          <h4 class="footer-column-title">Navigation</h4>
-          <a href="./concept.html" class="footer-link">Le Concept</a>
-          <a href="./fonctionnement.html" class="footer-link">Le Fonctionnement</a>
-          <a href="./configurateur.html" class="footer-link">L'Outil</a>
-          <a href="./nos-clients.html" class="footer-link">Nos Clients</a>
+          <h4 class="footer-column-title" data-i18n="footer.navigation">Navigation</h4>
+          <a href="./concept.html" class="footer-link" data-i18n="nav.concept">Le Concept</a>
+          <!-- <a href="./fonctionnement.html" class="footer-link" data-i18n="nav.fonctionnement">Le Fonctionnement</a> -->
+          <a href="./configurateur.html" class="footer-link" data-i18n="nav.outil">L'Outil</a>
+          <a href="./nos-clients.html" class="footer-link" data-i18n="nav.clients">Nos Clients</a>
         </div>
         <div class="footer-column">
-          <h4 class="footer-column-title">Légal</h4>
-          <a href="./mentions-legales.html" class="footer-link">Mentions légales</a>
-          <a href="./confidentialite.html" class="footer-link">Confidentialité</a>
+          <h4 class="footer-column-title" data-i18n="footer.legal">Légal</h4>
+          <a href="./mentions-legales.html" class="footer-link" data-i18n="footer.mentionsLegales">Mentions légales</a>
+          <a href="./confidentialite.html" class="footer-link" data-i18n="footer.confidentialite">Confidentialité</a>
         </div>
       </div>
     </div>
     
     <div class="footer-bottom">
-      <p class="footer-copyright">© 2025 My Pretty Family. Tous droits réservés.</p>
+      <p class="footer-copyright" data-i18n="footer.copyright">© 2025 My Pretty Family. Tous droits réservés.</p>
     </div>
   </footer>
 
   <!-- Scripts -->
+  <!-- Modules de traduction -->
+  <script src="./i18n/modules/nav.js"></script>
+  <script src="./i18n/modules/footer.js"></script>
+  <script src="./i18n/modules/common.js"></script>
+  <script src="./i18n/modules/configurateur.js"></script>
+
+  <!-- Assemblage -->
+  <script src="./i18n/translations.js"></script>
+
+  <!-- Système i18n -->
+  <script src="./i18n.js"></script>
   <script src="./main.js"></script>
 </body>
 </html>

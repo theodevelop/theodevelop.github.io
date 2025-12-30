@@ -1,0 +1,133 @@
+/* ==========================================
+   MY PRETTY FAMILY - Language Selector (Desktop only)
+   Le menu mobile et le sélecteur mobile sont dans mobile-menu.css
+   ========================================== */
+
+/* ==================== DESKTOP LANGUAGE SELECTOR ==================== */
+.lang-selector {
+  position: relative;
+  margin-left: 8px;
+}
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: #f8fafc;
+  border: 1px solid #e8eef4;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #4a4a4a;
+  transition: all 0.2s;
+}
+
+.lang-toggle:hover,
+.lang-toggle.open {
+  background: #eef2f7;
+  border-color: #6A8FB9;
+}
+
+.lang-current-flag {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.lang-current-code {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.lang-arrow {
+  font-size: 10px;
+  color: #888;
+  transition: transform 0.2s;
+}
+
+.lang-toggle.open .lang-arrow {
+  transform: rotate(180deg);
+}
+
+/* ==================== DROPDOWN DESKTOP ==================== */
+.lang-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 160px;
+  background: white;
+  border: 1px solid #e8eef4;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.2s ease;
+  z-index: 1001;
+  padding: 8px;
+}
+
+.lang-dropdown.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  animation: langDropdownIn 0.2s ease forwards;
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 12px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.lang-option:hover {
+  background: #f8fafc;
+}
+
+.lang-option.active {
+  background: rgba(106, 143, 185, 0.1);
+  color: #6A8FB9;
+  font-weight: 600;
+}
+
+.lang-flag {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.lang-name {
+  flex: 1;
+}
+
+/* ==================== ANIMATION ==================== */
+@keyframes langDropdownIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================== RESPONSIVE ==================== */
+/* Masquer le sélecteur desktop sur mobile */
+@media (max-width: 768px) {
+  .lang-selector {
+    display: none;
+  }
+}
