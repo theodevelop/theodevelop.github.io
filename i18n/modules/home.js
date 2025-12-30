@@ -93,13 +93,13 @@ const homeTranslations = {
     nl: "Op het terrein, elke dag"
   },
   proofTitle: {
-    fr: "Ce n'est pas une idée.<br>C'est une expérience déjà vécue.",
-    en: "It's not just an idea.<br>It's a real, lived experience.",
-    it: "Non è solo un'idea.<br>È un'esperienza già vissuta.",
-    es: "No es solo una idea.<br>Es una experiencia ya vivida.",
-    pt: "Não é apenas uma ideia.<br>É uma experiência já vivida.",
-    de: "Es ist keine Idee.<br>Es ist eine bereits erlebte Erfahrung.",
-    nl: "Het is geen idee.<br>Het is een ervaring die al is beleefd."
+    fr: "+ de 250 000 portraits réalisés",
+    en: "Over 250,000 portraits created",
+    it: "Oltre 250.000 ritratti realizzati",
+    es: "Más de 250.000 retratos realizados",
+    pt: "Mais de 250.000 retratos realizados",
+    de: "Über 250.000 erstellte Porträts",
+    nl: "Meer dan 250.000 portretten gemaakt"
   },
   testimonialQuote: {
     fr: "Les clients repartent avec le sourire. Certains reviennent l'année suivante pour compléter leur collection.",
