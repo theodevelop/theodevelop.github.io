@@ -940,13 +940,13 @@ const conceptTranslations = {
     de: "Finden Sie heraus, ob My Pretty Family zu Ihrem Projekt passt.",
     nl: "Ontdek of My Pretty Family bij uw project past."
   },
-  btnHowItWorks: {
-    fr: "Voir le fonctionnement",
-    en: "See how it works",
-    it: "Vedi come funziona",
-    es: "Ver cómo funciona",
-    pt: "Ver como funciona",
-    de: "Funktionsweise ansehen",
-    nl: "Bekijk hoe het werkt"
+  btnOutil: {
+    fr: "Voir le configurateur",
+    en: "See the configurator",
+    it: "Vedi il configuratore",
+    es: "Ver el configurador",
+    pt: "Ver o configurador",
+    de: "Siehe den Konfigurator",
+    nl: "Bekijk de configurator"
   }
 };
