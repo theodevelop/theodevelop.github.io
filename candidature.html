@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Candidature Partenaire - My Pretty Family</title>
-  <meta name="description" content="Déposez votre candidature pour devenir partenaire My Pretty Family. Rejoignez un réseau sélectif de partenaires terrain.">
+  <title>Candidature - My Pretty Family</title>
+  <meta name="description" content="Déposez votre candidature pour devenir partenaire My Pretty Family. Réseau sélectif de portraits de famille personnalisés.">
   
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="./assets/favicon/favicon.ico">
@@ -15,8 +15,8 @@
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
   
   <!-- SEO & Open Graph -->
-  <meta property="og:title" content="Candidature Partenaire - My Pretty Family">
-  <meta property="og:description" content="Déposez votre candidature pour devenir partenaire My Pretty Family. Rejoignez un réseau sélectif.">
+  <meta property="og:title" content="Candidature - My Pretty Family">
+  <meta property="og:description" content="Déposez votre candidature pour devenir partenaire My Pretty Family.">
   <meta property="og:image" content="./assets/og-image.webp">
   <meta property="og:type" content="website">
   
@@ -43,12 +43,12 @@
       </a>
       
       <div class="nav-links">
-        <a href="./concept.html" class="nav-link">Le Concept</a>
-        <a href="./fonctionnement.html" class="nav-link">Le Fonctionnement</a>
-        <a href="./configurateur.html" class="nav-link">L'Outil</a>
-        <a href="./nos-clients.html" class="nav-link">Nos Clients</a>
-        <a href="./candidature.html" class="nav-cta">Candidater</a>
-        <a href="https://shop.myprettyfamily.com/shopadmin/?url_demandee=shopadmin" class="nav-login" title="Espace partenaire">
+        <a href="./concept.html" class="nav-link" data-i18n="nav.concept">Le Concept</a>
+        <a href="./fonctionnement.html" class="nav-link" data-i18n="nav.fonctionnement">Le Fonctionnement</a>
+        <a href="./configurateur.html" class="nav-link" data-i18n="nav.outil">L'Outil</a>
+        <a href="./nos-clients.html" class="nav-link" data-i18n="nav.clients">Nos Clients</a>
+        <a href="./candidature.html" class="nav-cta" data-i18n="nav.candidater">Candidater</a>
+        <a href="https://shop.myprettyfamily.com/shopadmin/?url_demandee=shopadmin" class="nav-login" data-i18n-title="nav.espacePartenaire" title="Espace partenaire">
           <i class="fa-solid fa-user"></i>
         </a>
       </div>
@@ -62,28 +62,23 @@
     
     <div class="nav-mobile">
       <div class="nav-mobile-links">
-        <a href="./concept.html" class="nav-mobile-link">Le Concept</a>
-        <a href="./fonctionnement.html" class="nav-mobile-link">Le Fonctionnement</a>
-        <a href="./configurateur.html" class="nav-mobile-link">L'Outil</a>
-        <a href="./nos-clients.html" class="nav-mobile-link">Nos Clients</a>
+        <a href="./concept.html" class="nav-mobile-link" data-i18n="nav.concept">Le Concept</a>
+        <a href="./fonctionnement.html" class="nav-mobile-link" data-i18n="nav.fonctionnement">Le Fonctionnement</a>
+        <a href="./configurateur.html" class="nav-mobile-link" data-i18n="nav.outil">L'Outil</a>
+        <a href="./nos-clients.html" class="nav-mobile-link" data-i18n="nav.clients">Nos Clients</a>
         <a href="https://shop.myprettyfamily.com/shopadmin/?url_demandee=shopadmin" class="nav-mobile-login">
-          <i class="fa-solid fa-user"></i> Espace partenaire
+          <i class="fa-solid fa-user"></i> <span data-i18n="nav.espacePartenaire">Espace partenaire</span>
         </a>
-        <a href="./candidature.html" class="nav-mobile-cta">Candidater</a>
+        <a href="./candidature.html" class="nav-mobile-cta" data-i18n="nav.candidater">Candidater</a>
       </div>
     </div>
   </nav>
 
-
   <!-- ==================== HERO CANDIDATURE ==================== -->
   <section class="candidature-hero">
     <div class="candidature-hero-inner">
-      <!-- <a href="./index.html" class="back-link">
-        <i class="fa-solid fa-arrow-left"></i>
-        Retour à l'accueil
-      </a> -->
-      <h1 class="candidature-title">Déposer ma candidature</h1>
-      <p class="candidature-subtitle">
+      <h1 class="candidature-title" data-i18n="candidature.heroTitle">Déposer ma candidature</h1>
+      <p class="candidature-subtitle" data-i18n="candidature.heroSubtitle">
         Vous souhaitez proposer My Pretty Family sur votre point de vente ?<br>
         Prenez quelques minutes pour nous présenter votre projet.
       </p>
@@ -100,15 +95,15 @@
           <i class="fa-solid fa-circle-info"></i>
         </div>
         <div class="cadre-rappel-content">
-          <h3>Avant de candidater</h3>
-          <p>
+          <h3 data-i18n="candidature.rappelTitle">Avant de candidater</h3>
+          <p data-i18n="candidature.rappelText">
             My Pretty Family est un réseau <strong>volontairement sélectif</strong>. 
             Nous recherchons des partenaires autonomes, impliqués, et à l'aise avec le contact client.
           </p>
           <ul class="cadre-rappel-list">
-            <li><i class="fa-solid fa-check"></i> Aucun chiffre d'affaires n'est garanti</li>
-            <li><i class="fa-solid fa-check"></i> Les résultats dépendent de votre implication</li>
-            <li><i class="fa-solid fa-check"></i> Ce n'est pas un "revenu passif"</li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="candidature.rappelItem1">Aucun chiffre d'affaires n'est garanti</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="candidature.rappelItem2">Les résultats dépendent de votre implication</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="candidature.rappelItem3">Ce n'est pas un "revenu passif"</span></li>
           </ul>
         </div>
       </div>
@@ -121,34 +116,34 @@
           <div class="form-section">
             <h3 class="form-section-title">
               <span class="form-section-number">1</span>
-              Vos informations
+              <span data-i18n="candidature.section1Title">Vos informations</span>
             </h3>
             
             <div class="form-row">
               <div class="form-group">
-                <label for="prenom" class="form-label">Prénom <span class="required">*</span></label>
+                <label for="prenom" class="form-label"><span data-i18n="candidature.labelPrenom">Prénom</span> <span class="required">*</span></label>
                 <input type="text" id="prenom" name="prenom" class="form-input" required>
               </div>
               <div class="form-group">
-                <label for="nom" class="form-label">Nom <span class="required">*</span></label>
+                <label for="nom" class="form-label"><span data-i18n="candidature.labelNom">Nom</span> <span class="required">*</span></label>
                 <input type="text" id="nom" name="nom" class="form-input" required>
               </div>
             </div>
             
             <div class="form-row">
               <div class="form-group">
-                <label for="email" class="form-label">Email <span class="required">*</span></label>
+                <label for="email" class="form-label"><span data-i18n="candidature.labelEmail">Email</span> <span class="required">*</span></label>
                 <input type="email" id="email" name="email" class="form-input" required>
               </div>
               <div class="form-group">
-                <label for="telephone" class="form-label">Téléphone <span class="required">*</span></label>
+                <label for="telephone" class="form-label"><span data-i18n="candidature.labelTelephone">Téléphone</span> <span class="required">*</span></label>
                 <input type="tel" id="telephone" name="telephone" class="form-input" required>
               </div>
             </div>
             
             <div class="form-group">
-              <label for="ville" class="form-label">Ville / Zone géographique <span class="required">*</span></label>
-              <input type="text" id="ville" name="ville" class="form-input" placeholder="Ex: Biarritz, Côte Basque" required>
+              <label for="ville" class="form-label"><span data-i18n="candidature.labelVille">Ville / Zone géographique</span> <span class="required">*</span></label>
+              <input type="text" id="ville" name="ville" class="form-input" data-i18n-placeholder="candidature.placeholderVille" placeholder="Ex: Biarritz, Côte Basque" required>
             </div>
           </div>
 
@@ -156,46 +151,46 @@
           <div class="form-section">
             <h3 class="form-section-title">
               <span class="form-section-number">2</span>
-              Votre projet
+              <span data-i18n="candidature.section2Title">Votre projet</span>
             </h3>
             
             <div class="form-group">
-              <label for="type_point_vente" class="form-label">Type de point de vente envisagé <span class="required">*</span></label>
+              <label for="type_point_vente" class="form-label"><span data-i18n="candidature.labelTypePointVente">Type de point de vente envisagé</span> <span class="required">*</span></label>
               <select id="type_point_vente" name="type_point_vente" class="form-select" required>
-                <option value="" disabled selected>Sélectionnez une option</option>
-                <option value="boutique">Boutique existante</option>
-                <option value="stand">Stand / Corner</option>
-                <option value="marche">Marché / Foire</option>
-                <option value="tourisme">Lieu touristique</option>
-                <option value="evenementiel">Événementiel</option>
-                <option value="autre">Autre</option>
+                <option value="" disabled selected data-i18n="candidature.selectDefault">Sélectionnez une option</option>
+                <option value="boutique" data-i18n="candidature.optionBoutique">Boutique existante</option>
+                <option value="stand" data-i18n="candidature.optionStand">Stand / Corner</option>
+                <option value="marche" data-i18n="candidature.optionMarche">Marché / Foire</option>
+                <option value="tourisme" data-i18n="candidature.optionTourisme">Lieu touristique</option>
+                <option value="evenementiel" data-i18n="candidature.optionEvenementiel">Événementiel</option>
+                <option value="autre" data-i18n="candidature.optionAutre">Autre</option>
               </select>
             </div>
             
             <div class="form-group">
-              <label for="lieu_precisez" class="form-label">Précisez votre lieu d'implantation</label>
-              <input type="text" id="lieu_precisez" name="lieu_precisez" class="form-input" placeholder="Ex: Centre commercial, zone piétonne, camping...">
+              <label for="lieu_precisez" class="form-label" data-i18n="candidature.labelLieuPrecisez">Précisez votre lieu d'implantation</label>
+              <input type="text" id="lieu_precisez" name="lieu_precisez" class="form-input" data-i18n-placeholder="candidature.placeholderLieu" placeholder="Ex: Centre commercial, zone piétonne, camping...">
             </div>
             
             <div class="form-group">
-              <label for="disponibilite" class="form-label">Disponibilité prévue <span class="required">*</span></label>
+              <label for="disponibilite" class="form-label"><span data-i18n="candidature.labelDisponibilite">Disponibilité prévue</span> <span class="required">*</span></label>
               <select id="disponibilite" name="disponibilite" class="form-select" required>
-                <option value="" disabled selected>Sélectionnez une option</option>
-                <option value="temps_plein">Temps plein (toute l'année)</option>
-                <option value="saison">Activité saisonnière</option>
-                <option value="complement">En complément d'une autre activité</option>
-                <option value="weekend">Weekends et vacances uniquement</option>
+                <option value="" disabled selected data-i18n="candidature.selectDefault">Sélectionnez une option</option>
+                <option value="temps_plein" data-i18n="candidature.optionTempsPlein">Temps plein (toute l'année)</option>
+                <option value="saison" data-i18n="candidature.optionSaison">Activité saisonnière</option>
+                <option value="complement" data-i18n="candidature.optionComplement">En complément d'une autre activité</option>
+                <option value="weekend" data-i18n="candidature.optionWeekend">Weekends et vacances uniquement</option>
               </select>
             </div>
             
             <div class="form-group">
-              <label for="experience" class="form-label">Expérience en vente / relation client <span class="required">*</span></label>
+              <label for="experience" class="form-label"><span data-i18n="candidature.labelExperience">Expérience en vente / relation client</span> <span class="required">*</span></label>
               <select id="experience" name="experience" class="form-select" required>
-                <option value="" disabled selected>Sélectionnez une option</option>
-                <option value="aucune">Aucune expérience</option>
-                <option value="debutant">Quelques expériences</option>
-                <option value="confirme">Expérience confirmée</option>
-                <option value="expert">Expert (plusieurs années)</option>
+                <option value="" disabled selected data-i18n="candidature.selectDefault">Sélectionnez une option</option>
+                <option value="aucune" data-i18n="candidature.optionAucune">Aucune expérience</option>
+                <option value="debutant" data-i18n="candidature.optionDebutant">Quelques expériences</option>
+                <option value="confirme" data-i18n="candidature.optionConfirme">Expérience confirmée</option>
+                <option value="expert" data-i18n="candidature.optionExpert">Expert (plusieurs années)</option>
               </select>
             </div>
           </div>
@@ -204,33 +199,34 @@
           <div class="form-section">
             <h3 class="form-section-title">
               <span class="form-section-number">3</span>
-              Votre motivation
+              <span data-i18n="candidature.section3Title">Votre motivation</span>
             </h3>
             
             <div class="form-group">
               <label for="motivation" class="form-label">
-                Pourquoi souhaitez-vous proposer My Pretty Family ? <span class="required">*</span>
+                <span data-i18n="candidature.labelMotivation">Pourquoi souhaitez-vous proposer My Pretty Family ?</span> <span class="required">*</span>
               </label>
               <textarea 
                 id="motivation" 
                 name="motivation" 
                 class="form-textarea" 
                 rows="5" 
+                data-i18n-placeholder="candidature.placeholderMotivation"
                 placeholder="Parlez-nous de votre projet, de ce qui vous attire dans ce concept, de votre vision..."
                 required
               ></textarea>
-              <p class="form-hint">Minimum 100 caractères. Prenez le temps de bien vous présenter.</p>
+              <p class="form-hint" data-i18n="candidature.hintMotivation">Minimum 100 caractères. Prenez le temps de bien vous présenter.</p>
             </div>
             
             <div class="form-group">
-              <label for="decouverte" class="form-label">Comment avez-vous découvert My Pretty Family ?</label>
+              <label for="decouverte" class="form-label" data-i18n="candidature.labelDecouverte">Comment avez-vous découvert My Pretty Family ?</label>
               <select id="decouverte" name="decouverte" class="form-select">
-                <option value="" disabled selected>Sélectionnez une option</option>
-                <option value="google">Recherche Google</option>
-                <option value="reseaux">Réseaux sociaux</option>
-                <option value="bouche_oreille">Bouche à oreille</option>
-                <option value="vu_terrain">Vu sur un point de vente</option>
-                <option value="autre">Autre</option>
+                <option value="" disabled selected data-i18n="candidature.selectDefault">Sélectionnez une option</option>
+                <option value="google" data-i18n="candidature.optionGoogle">Recherche Google</option>
+                <option value="reseaux" data-i18n="candidature.optionReseaux">Réseaux sociaux</option>
+                <option value="bouche_oreille" data-i18n="candidature.optionBoucheOreille">Bouche à oreille</option>
+                <option value="vu_terrain" data-i18n="candidature.optionVuTerrain">Vu sur un point de vente</option>
+                <option value="autre" data-i18n="candidature.optionAutre">Autre</option>
               </select>
             </div>
           </div>
@@ -239,55 +235,52 @@
           <div class="form-section">
             <h3 class="form-section-title">
               <span class="form-section-number">4</span>
-              Budget & Engagement
+              <span data-i18n="candidature.section4Title">Budget & Engagement</span>
             </h3>
             
             <div class="form-group">
-              <label class="form-label">Êtes-vous prêt à investir dans ce projet ? <span class="required">*</span></label>
-              <!-- <p class="form-hint" style="margin-bottom: 12px;">
-                Droit d'entrée : 790 € + Abonnement mensuel : 69 € HT
-              </p> -->
+              <label class="form-label"><span data-i18n="candidature.labelBudgetPret">Êtes-vous prêt à investir dans ce projet ?</span> <span class="required">*</span></label>
               <div class="form-radio-group">
                 <label class="form-radio">
                   <input type="radio" name="budget_pret" value="oui" required>
                   <span class="radio-custom"></span>
-                  Oui, mon budget est prêt
+                  <span data-i18n="candidature.optionBudgetOui">Oui, mon budget est prêt</span>
                 </label>
                 <label class="form-radio">
                   <input type="radio" name="budget_pret" value="bientot" required>
                   <span class="radio-custom"></span>
-                  Bientôt (dans les 3 mois)
+                  <span data-i18n="candidature.optionBudgetBientot">Bientôt (dans les 3 mois)</span>
                 </label>
                 <label class="form-radio">
                   <input type="radio" name="budget_pret" value="non" required>
                   <span class="radio-custom"></span>
-                  Non, je me renseigne pour l'instant
+                  <span data-i18n="candidature.optionBudgetNon">Non, je me renseigne pour l'instant</span>
                 </label>
               </div>
             </div>
             
             <div class="form-group">
-              <label class="form-label">Quand souhaitez-vous démarrer ? <span class="required">*</span></label>
+              <label class="form-label"><span data-i18n="candidature.labelDemarrage">Quand souhaitez-vous démarrer ?</span> <span class="required">*</span></label>
               <div class="form-radio-group">
                 <label class="form-radio">
                   <input type="radio" name="demarrage" value="immediat" required>
                   <span class="radio-custom"></span>
-                  Dès que possible
+                  <span data-i18n="candidature.optionImmediat">Dès que possible</span>
                 </label>
                 <label class="form-radio">
                   <input type="radio" name="demarrage" value="3mois" required>
                   <span class="radio-custom"></span>
-                  Dans les 3 prochains mois
+                  <span data-i18n="candidature.option3mois">Dans les 3 prochains mois</span>
                 </label>
                 <label class="form-radio">
                   <input type="radio" name="demarrage" value="6mois" required>
                   <span class="radio-custom"></span>
-                  Dans les 6 prochains mois
+                  <span data-i18n="candidature.option6mois">Dans les 6 prochains mois</span>
                 </label>
                 <label class="form-radio">
                   <input type="radio" name="demarrage" value="plus_tard" required>
                   <span class="radio-custom"></span>
-                  Plus tard / Je ne sais pas encore
+                  <span data-i18n="candidature.optionPlusTard">Plus tard / Je ne sais pas encore</span>
                 </label>
               </div>
             </div>
@@ -297,10 +290,10 @@
           <div class="form-section form-section-validation">
             <h3 class="form-section-title">
               <span class="form-section-number">5</span>
-              Prise de connaissance
+              <span data-i18n="candidature.section5Title">Prise de connaissance</span>
             </h3>
             
-            <p class="validation-intro">
+            <p class="validation-intro" data-i18n="candidature.validationIntro">
               Merci de confirmer que vous avez bien compris les points suivants :
             </p>
             
@@ -309,8 +302,8 @@
                 <input type="checkbox" name="validation_1" required>
                 <span class="checkbox-custom"></span>
                 <span class="checkbox-text">
-                  Je comprends qu'aucun chiffre d'affaires n'est garanti et que les résultats 
-                  dépendent de mon implication et de mon emplacement. <span class="required">*</span>
+                  <span data-i18n="candidature.validation1">Je comprends qu'aucun chiffre d'affaires n'est garanti et que les résultats 
+                  dépendent de mon implication et de mon emplacement.</span> <span class="required">*</span>
                 </span>
               </label>
               
@@ -318,8 +311,8 @@
                 <input type="checkbox" name="validation_2" required>
                 <span class="checkbox-custom"></span>
                 <span class="checkbox-text">
-                  Je comprends que My Pretty Family est une activité terrain qui nécessite 
-                  un contact direct avec les clients. <span class="required">*</span>
+                  <span data-i18n="candidature.validation2">Je comprends que My Pretty Family est une activité terrain qui nécessite 
+                  un contact direct avec les clients.</span> <span class="required">*</span>
                 </span>
               </label>
               
@@ -327,8 +320,8 @@
                 <input type="checkbox" name="validation_3" required>
                 <span class="checkbox-custom"></span>
                 <span class="checkbox-text">
-                  Je comprends que le réseau est sélectif et que ma candidature sera étudiée 
-                  selon les critères actuels de My Pretty Family. <span class="required">*</span>
+                  <span data-i18n="candidature.validation3">Je comprends que le réseau est sélectif et que ma candidature sera étudiée 
+                  selon les critères actuels de My Pretty Family.</span> <span class="required">*</span>
                 </span>
               </label>
               
@@ -336,8 +329,8 @@
                 <input type="checkbox" name="validation_4" required>
                 <span class="checkbox-custom"></span>
                 <span class="checkbox-text">
-                  J'accepte d'être contacté par email ou téléphone uniquement si mon profil 
-                  correspond aux critères recherchés. <span class="required">*</span>
+                  <span data-i18n="candidature.validation4">J'accepte d'être contacté par email ou téléphone uniquement si mon profil 
+                  correspond aux critères recherchés.</span> <span class="required">*</span>
                 </span>
               </label>
             </div>
@@ -346,12 +339,12 @@
           <!-- Submit -->
           <div class="form-submit-section">
             <button type="submit" class="btn-primary btn-large form-submit">
-              <span class="submit-text">Envoyer ma candidature</span>
+              <span class="submit-text" data-i18n="candidature.btnSubmit">Envoyer ma candidature</span>
               <span class="submit-loading" style="display: none;">
-                <i class="fa-solid fa-spinner fa-spin"></i> Envoi en cours...
+                <i class="fa-solid fa-spinner fa-spin"></i> <span data-i18n="candidature.btnSubmitLoading">Envoi en cours...</span>
               </span>
             </button>
-            <p class="form-submit-note">
+            <p class="form-submit-note" data-i18n="candidature.submitNote">
               Nous étudions chaque candidature avec attention.<br>
               Vous recevrez une réponse sous 7 jours ouvrés si votre profil est retenu.
             </p>
@@ -364,8 +357,8 @@
       <div class="form-note-final">
         <i class="fa-solid fa-lock"></i>
         <p>
-          Vos données sont traitées de manière confidentielle et ne seront jamais partagées avec des tiers.
-          <a href="./confidentialite.html">Politique de confidentialité</a>
+          <span data-i18n="candidature.privacyNote">Vos données sont traitées de manière confidentielle et ne seront jamais partagées avec des tiers.</span>
+          <a href="./confidentialite.html" data-i18n="candidature.privacyLink">Politique de confidentialité</a>
         </p>
       </div>
 
@@ -377,7 +370,7 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <img src="./assets/logo_blue.png" alt="My Pretty Family" class="footer-logo">
-        <p class="footer-desc">
+        <p class="footer-desc" data-i18n="footer.desc">
           Expérience émotionnelle en point de vente.<br>
           Concept terrain depuis +10 ans.
         </p>
@@ -385,27 +378,31 @@
       
       <div class="footer-links">
         <div class="footer-column">
-          <h4 class="footer-column-title">Navigation</h4>
-          <a href="./concept.html" class="footer-link">Le Concept</a>
-          <a href="./fonctionnement.html" class="footer-link">Le Fonctionnement</a>
-          <a href="./configurateur.html" class="footer-link">L'Outil</a>
-          <a href="./nos-clients.html" class="footer-link">Nos Clients</a>
+          <h4 class="footer-column-title" data-i18n="footer.navigation">Navigation</h4>
+          <a href="./concept.html" class="footer-link" data-i18n="nav.concept">Le Concept</a>
+          <a href="./fonctionnement.html" class="footer-link" data-i18n="nav.fonctionnement">Le Fonctionnement</a>
+          <a href="./configurateur.html" class="footer-link" data-i18n="nav.outil">L'Outil</a>
+          <a href="./nos-clients.html" class="footer-link" data-i18n="nav.clients">Nos Clients</a>
         </div>
         <div class="footer-column">
-          <h4 class="footer-column-title">Légal</h4>
-          <a href="./mentions-legales.html" class="footer-link">Mentions légales</a>
-          <a href="./confidentialite.html" class="footer-link">Confidentialité</a>
+          <h4 class="footer-column-title" data-i18n="footer.legal">Légal</h4>
+          <a href="./mentions-legales.html" class="footer-link" data-i18n="footer.mentionsLegales">Mentions légales</a>
+          <a href="./confidentialite.html" class="footer-link" data-i18n="footer.confidentialite">Confidentialité</a>
         </div>
       </div>
     </div>
     
     <div class="footer-bottom">
-      <p class="footer-copyright">© 2025 My Pretty Family. Tous droits réservés.</p>
+      <p class="footer-copyright" data-i18n="footer.copyright">© 2025 My Pretty Family. Tous droits réservés.</p>
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="./translations.js"></script>
+  <!-- Scripts i18n -->
+  <script src="./i18n/modules/nav.js"></script>
+  <script src="./i18n/modules/footer.js"></script>
+  <script src="./i18n/modules/common.js"></script>
+  <script src="./i18n/modules/candidature.js"></script>
+  <script src="./i18n/translations.js"></script>
   <script src="./i18n.js"></script>
   <script src="./main.js"></script>
   <script src="./candidature.js"></script>
