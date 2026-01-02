@@ -29,6 +29,15 @@ const navTranslations = {
     de: "Das Tool",
     nl: "De tool"
   },
+  about: {
+    fr: "Qui sommes-nous ?",
+    en: "About Us",
+    it: "Chi siamo?",
+    es: "¿Quiénes somos?",
+    pt: "Quem somos?",
+    de: "Über uns",
+    nl: "Over ons"
+  },
   clients: {
     fr: "Nos Clients",
     en: "Our Clients",
