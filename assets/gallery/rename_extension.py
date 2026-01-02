@@ -10,7 +10,7 @@ for nom_fichier in os.listdir(DOSSIER):
 
     if os.path.isfile(ancien_chemin) and nom_fichier.lower().endswith(extensions_a_renommer):
         nom_sans_ext, _ = os.path.splitext(nom_fichier)
-        nouveau_nom = nom_sans_ext + ".jpg"
+        nouveau_nom = nom_sans_ext + ".webp"
         nouveau_chemin = os.path.join(DOSSIER, nouveau_nom)
 
         # Évite d’écraser un fichier existant
