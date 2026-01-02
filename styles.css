@@ -62,9 +62,39 @@ body {
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s;
+  position: relative;
+  padding-bottom: 4px;
 }
 
 .nav-link:hover {
+  color: #6A8FB9;
+}
+
+/* ==================== INDICATEUR PAGE ACTIVE ==================== */
+.nav-link.active {
+  color: #6A8FB9;
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #6A8FB9;
+  border-radius: 2px;
+}
+
+/* Mobile active state */
+.nav-mobile-link.active {
+  background: rgba(106, 143, 185, 0.08);
+  color: #6A8FB9;
+  font-weight: 600;
+}
+
+.nav-mobile-link.active i {
   color: #6A8FB9;
 }
 
@@ -110,8 +140,6 @@ body {
 }
 
 /* ==================== HERO ==================== */
-
-/* ==================== HERO - NOUVEAU DESIGN ==================== */
 
 /* Titre principal "My Pretty Family" */
 .hero-title {
