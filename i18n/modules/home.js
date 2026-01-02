@@ -83,7 +83,7 @@ const homeTranslations = {
     de: "Erfahren Sie, wie eine Begegnung zu einer unvergesslichen Erinnerung wird.",
     nl: "Ontdek hoe een ontmoeting een onvergetelijke herinnering wordt."
   },
-    proofLabel: {
+  proofLabel: {
     fr: "Sur le terrain, chaque jour",
     en: "On the ground, every day",
     it: "Sul campo, ogni giorno",
@@ -119,7 +119,117 @@ const homeTranslations = {
     de: "— Partner, J-Michel (Côte d'Azur, Frankreich)",
     nl: "— Partner, J-Michel (Côte d'Azur, Frankrijk)"
   },
-    conceptLabel: {
+  // ==================== TESTIMONIALS SECTION ====================
+  testimonialsLabel: {
+    fr: "Ce qu'ils en disent",
+    en: "What they say",
+    it: "Cosa dicono",
+    es: "Lo que dicen",
+    pt: "O que dizem",
+    de: "Was sie sagen",
+    nl: "Wat ze zeggen"
+  },
+  testimonialsTitle: {
+    fr: "Des moments qui marquent",
+    en: "Moments that matter",
+    it: "Momenti che contano",
+    es: "Momentos que importan",
+    pt: "Momentos que marcam",
+    de: "Momente, die zählen",
+    nl: "Momenten die ertoe doen"
+  },
+  testimonial1Text: {
+    fr: "Un cadeau inoubliable pour mes parents. Quand ils ont vu toute la famille réunie sur ce portrait, ils ont eu les larmes aux yeux.",
+    en: "An unforgettable gift for my parents. When they saw the whole family together in this portrait, they had tears in their eyes.",
+    it: "Un regalo indimenticabile per i miei genitori. Quando hanno visto tutta la famiglia riunita in questo ritratto, avevano le lacrime agli occhi.",
+    es: "Un regalo inolvidable para mis padres. Cuando vieron a toda la familia reunida en este retrato, se les llenaron los ojos de lágrimas.",
+    pt: "Um presente inesquecível para meus pais. Quando viram toda a família reunida neste retrato, ficaram com lágrimas nos olhos.",
+    de: "Ein unvergessliches Geschenk für meine Eltern. Als sie die ganze Familie auf diesem Porträt vereint sahen, hatten sie Tränen in den Augen.",
+    nl: "Een onvergetelijk cadeau voor mijn ouders. Toen ze de hele familie verenigd zagen op dit portret, hadden ze tranen in hun ogen."
+  },
+  testimonial1Name: {
+    fr: "Marie L.",
+    en: "Marie L.",
+    it: "Marie L.",
+    es: "Marie L.",
+    pt: "Marie L.",
+    de: "Marie L.",
+    nl: "Marie L."
+  },
+  testimonial1Location: {
+    fr: "Arcachon",
+    en: "Arcachon, France",
+    it: "Arcachon, Francia",
+    es: "Arcachon, Francia",
+    pt: "Arcachon, França",
+    de: "Arcachon, Frankreich",
+    nl: "Arcachon, Frankrijk"
+  },
+  testimonial2Text: {
+    fr: "On revient chaque année pour faire évoluer notre portrait. C'est devenu notre tradition de vacances !",
+    en: "We come back every year to update our portrait. It's become our holiday tradition!",
+    it: "Torniamo ogni anno per aggiornare il nostro ritratto. È diventata la nostra tradizione delle vacanze!",
+    es: "Volvemos cada año para actualizar nuestro retrato. ¡Se ha convertido en nuestra tradición de vacaciones!",
+    pt: "Voltamos todos os anos para atualizar nosso retrato. Tornou-se nossa tradição de férias!",
+    de: "Wir kommen jedes Jahr zurück, um unser Porträt zu aktualisieren. Es ist unsere Urlaubstradition geworden!",
+    nl: "We komen elk jaar terug om ons portret bij te werken. Het is onze vakantietraditie geworden!"
+  },
+  testimonial2Name: {
+    fr: "Thomas & Julie",
+    en: "Thomas & Julie",
+    it: "Thomas & Julie",
+    es: "Thomas & Julie",
+    pt: "Thomas & Julie",
+    de: "Thomas & Julie",
+    nl: "Thomas & Julie"
+  },
+  testimonial2Location: {
+    fr: "Paris",
+    en: "Paris, France",
+    it: "Parigi, Francia",
+    es: "París, Francia",
+    pt: "Paris, França",
+    de: "Paris, Frankreich",
+    nl: "Parijs, Frankrijk"
+  },
+  testimonial3Text: {
+    fr: "Les enfants étaient fascinés de voir leur portrait se créer. Un moment magique qu'on n'oubliera pas.",
+    en: "The kids were fascinated watching their portrait being created. A magical moment we won't forget.",
+    it: "I bambini erano affascinati nel vedere il loro ritratto prendere forma. Un momento magico che non dimenticheremo.",
+    es: "Los niños estaban fascinados viendo cómo se creaba su retrato. Un momento mágico que no olvidaremos.",
+    pt: "As crianças ficaram fascinadas ao ver seu retrato sendo criado. Um momento mágico que não esqueceremos.",
+    de: "Die Kinder waren fasziniert, ihr Porträt entstehen zu sehen. Ein magischer Moment, den wir nicht vergessen werden.",
+    nl: "De kinderen waren gefascineerd om hun portret te zien ontstaan. Een magisch moment dat we niet zullen vergeten."
+  },
+  testimonial3Name: {
+    fr: "Marc & Sandra",
+    en: "Marc & Sandra",
+    it: "Marc & Sandra",
+    es: "Marc & Sandra",
+    pt: "Marc & Sandra",
+    de: "Marc & Sandra",
+    nl: "Marc & Sandra"
+  },
+  testimonial3Location: {
+    fr: "Lille",
+    en: "Lille, France",
+    it: "Lille, Francia",
+    es: "Lille, Francia",
+    pt: "Lille, França",
+    de: "Lille, Frankreich",
+    nl: "Lille, Frankrijk"
+  },
+  btnMoreTestimonials: {
+    fr: "Voir plus de témoignages",
+    en: "See more testimonials",
+    it: "Vedi altre testimonianze",
+    es: "Ver más testimonios",
+    pt: "Ver mais depoimentos",
+    de: "Mehr Bewertungen ansehen",
+    nl: "Meer getuigenissen bekijken"
+  },
+  // ==================== CONCEPT SECTION ====================
+  conceptLabel: {
     fr: "Le concept",
     en: "The concept",
     it: "Il concetto",
@@ -138,15 +248,24 @@ const homeTranslations = {
     nl: "Meer dan een portret. Een ervaring."
   },
   conceptSubtitle: {
-    fr: "My Pretty Family transforme la création d'un portrait en un moment ludique et émotionnel.<br> Les clients participent, rient... et repartent avec un souvenir unique, imaginé ensemble.<br> Un concept visuel fort, centré sur l'émotion et le plaisir de partagé.",
-    en: "My Pretty Family transforms the creation of a portrait into a fun and emotional moment.<br> Customers participate, laugh... and leave with a unique memory, imagined together.<br> A strong visual concept, centered on emotion and the joy of sharing.",
-    it: "My Pretty Family trasforma la creazione di un ritratto in un momento divertente ed emozionante.<br> I clienti partecipano, ridono... e se ne vanno con un ricordo unico, immaginato insieme.<br> Un concetto visivo forte, incentrato sull'emozione e sulla gioia di condividere.",
-    es: "My Pretty Family transforma la creación de un retrato en un momento divertido y emocional.<br> Los clientes participan, ríen... y se van con un recuerdo único, imaginado juntos.<br> Un concepto visual fuerte, centrado en la emoción y la alegría de compartir.",
-    pt: "My Pretty Family transforma a criação de um retrato num momento divertido e emocional.<br> Os clientes participam, riem... e saem com uma lembrança única, imaginada em conjunto.<br> Um conceito visual forte, centrado na emoção e na alegria de partilhar.",
-    de: "My Pretty Family verwandelt die Erstellung eines Porträts in einen lustigen und emotionalen Moment.<br> Kunden nehmen teil, lachen... und gehen mit einer einzigartigen Erinnerung, die gemeinsam vorgestellt wurde.<br> Ein starkes visuelles Konzept, das sich auf Emotionen und die Freude am Teilen konzentriert.",
-    nl: "My Pretty Family transformeert het creëren van een portret in een leuk en emotioneel moment.<br> Klanten doen mee, lachen... en vertrekken met een unieke herinnering, samen bedacht.<br> Een sterk visueel concept, gericht op emotie en het plezier van delen."
+    fr: "My Pretty Family transforme la création d'un portrait en un moment ludique et émotionnel. Les clients participent, rient... et repartent avec un souvenir unique, imaginé ensemble.",
+    en: "My Pretty Family transforms the creation of a portrait into a fun and emotional moment. Customers participate, laugh... and leave with a unique memory, imagined together.",
+    it: "My Pretty Family trasforma la creazione di un ritratto in un momento divertente ed emozionante. I clienti partecipano, ridono... e se ne vanno con un ricordo unico, immaginato insieme.",
+    es: "My Pretty Family transforma la creación de un retrato en un momento divertido y emocional. Los clientes participan, ríen... y se van con un recuerdo único, imaginado juntos.",
+    pt: "My Pretty Family transforma a criação de um retrato num momento divertido e emocional. Os clientes participam, riem... e saem com uma lembrança única, imaginada em conjunto.",
+    de: "My Pretty Family verwandelt die Erstellung eines Porträts in einen lustigen und emotionalen Moment. Kunden nehmen teil, lachen... und gehen mit einer einzigartigen Erinnerung, die gemeinsam vorgestellt wurde.",
+    nl: "My Pretty Family transformeert het creëren van een portret in een leuk en emotioneel moment. Klanten doen mee, lachen... en vertrekken met een unieke herinnering, samen bedacht."
   },
-    featureSouvenir: {
+  conceptDesc2: {
+    fr: "Un concept visuel fort, centré sur l'émotion et le plaisir de partager.",
+    en: "A strong visual concept, centered on emotion and the joy of sharing.",
+    it: "Un concetto visivo forte, incentrato sull'emozione e sulla gioia di condividere.",
+    es: "Un concepto visual fuerte, centrado en la emoción y la alegría de compartir.",
+    pt: "Um conceito visual forte, centrado na emoção e na alegria de partilhar.",
+    de: "Ein starkes visuelles Konzept, das sich auf Emotionen und die Freude am Teilen konzentriert.",
+    nl: "Een sterk visueel concept, gericht op emotie en het plezier van delen."
+  },
+  featureSouvenir: {
     fr: "Souvenir émotionnel",
     en: "Emotional memory",
     it: "Ricordo emotivo",
@@ -156,13 +275,13 @@ const homeTranslations = {
     nl: "Emotionele herinnering"
   },
   featureSouvenirDesc: {
-    fr: "Un moment figé dans le temps, chargé d'émotion.",
-    en: "A moment frozen in time, filled with emotion.",
-    it: "Un momento congelato nel tempo, carico di emozione.",
-    es: "Un momento congelado en el tiempo, lleno de emoción.",
-    pt: "Um momento congelado no tempo, cheio de emoção.",
-    de: "Ein Moment, eingefroren in der Zeit, voller Emotionen.",
-    nl: "Een moment, bevroren in de tijd, vol emotie."
+    fr: "Un moment figé dans le temps",
+    en: "A moment frozen in time",
+    it: "Un momento congelato nel tempo",
+    es: "Un momento congelado en el tiempo",
+    pt: "Um momento congelado no tempo",
+    de: "Ein Moment, eingefroren in der Zeit",
+    nl: "Een moment, bevroren in de tijd"
   },
   featureInteraction: {
     fr: "Interaction humaine",
@@ -174,13 +293,13 @@ const homeTranslations = {
     nl: "Menselijke interactie"
   },
   featureInteractionDesc: {
-    fr: "Créé avec le client, pas pour lui.",
-    en: "Created with the customer, not for them.",
-    it: "Creato insieme al cliente, non per lui.",
-    es: "Creado junto al cliente, no para él.",
-    pt: "Criado junto com o cliente, não para ele.",
-    de: "Gemeinsam mit dem Kunden erstellt, nicht für ihn.",
-    nl: "Samen met de klant gemaakt, niet voor hem."
+    fr: "Créé avec le client, pas pour lui",
+    en: "Created with the customer, not for them",
+    it: "Creato insieme al cliente, non per lui",
+    es: "Creado junto al cliente, no para él",
+    pt: "Criado junto com o cliente, não para ele",
+    de: "Gemeinsam mit dem Kunden erstellt, nicht für ihn",
+    nl: "Samen met de klant gemaakt, niet voor hem"
   },
   featureImpulse: {
     fr: "Achat impulsif",
@@ -192,13 +311,13 @@ const homeTranslations = {
     nl: "Impulsaankoop"
   },
   featureImpulseDesc: {
-    fr: "Décision rapide, valeur perçue forte.",
-    en: "Quick decision, high perceived value.",
-    it: "Decisione rapida, alto valore percepito.",
-    es: "Decisión rápida, alto valor percibido.",
-    pt: "Decisão rápida, alto valor percebido.",
-    de: "Schnelle Entscheidung, hoher wahrgenommener Wert.",
-    nl: "Snelle beslissing, hoge waargenomen waarde."
+    fr: "Décision rapide, valeur perçue forte",
+    en: "Quick decision, high perceived value",
+    it: "Decisione rapida, alto valore percepito",
+    es: "Decisión rápida, alto valor percibido",
+    pt: "Decisão rápida, alto valor percebido",
+    de: "Schnelle Entscheidung, hoher wahrgenommener Wert",
+    nl: "Snelle beslissing, hoge waargenomen waarde"
   },
   featureNoSkill: {
     fr: "Zéro compétence artistique",
@@ -219,13 +338,13 @@ const homeTranslations = {
     nl: "De tool doet het werk voor je."
   },
   btnConceptDetail: {
-    fr: "Découvrir le concept en détail",
-    en: "Discover the concept in detail",
-    it: "Scopri il concetto nel dettaglio",
-    es: "Descubre el concepto en detalle",
-    pt: "Descubra o conceito em detalhe",
-    de: "Das Konzept im Detail entdecken",
-    nl: "Ontdek het concept in detail"
+    fr: "Découvrir le concept",
+    en: "Discover the concept",
+    it: "Scopri il concetto",
+    es: "Descubre el concepto",
+    pt: "Descubra o conceito",
+    de: "Das Konzept entdecken",
+    nl: "Ontdek het concept"
   },
   howItWorksLabel: {
     fr: "Simple. Rapide. Mémorable.",
