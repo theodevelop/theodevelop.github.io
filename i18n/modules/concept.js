@@ -477,13 +477,13 @@ const conceptTranslations = {
     nl: "Ideaal: Markten, festivals, evenementen"
   },
   starterInvest: {
-    fr: "Investissement : €",
-    en: "Investment: €",
-    it: "Investimento: €",
-    es: "Inversión: €",
-    pt: "Investimento: €",
-    de: "Investition: €",
-    nl: "Investering: €"
+    fr: "À partir de 2950€",
+    en: "From €2950",
+    it: "Da €2950",
+    es: "Desde €2950",
+    pt: "A partir de €2950",
+    de: "Ab €2950",
+    nl: "Vanaf €2950"
   },
   // Corner
   cornerTitle: {
@@ -532,13 +532,13 @@ const conceptTranslations = {
     nl: "Ideaal: Toeristische seizoenen, mobiliteit"
   },
   cornerInvest: {
-    fr: "Investissement : €€",
-    en: "Investment: €€",
-    it: "Investimento: €€",
-    es: "Inversión: €€",
-    pt: "Investimento: €€",
-    de: "Investition: €€",
-    nl: "Investering: €€"
+    fr: "À partir de 5700€",
+    en: "From €5700",
+    it: "Da €5700",
+    es: "Desde €5700",
+    pt: "A partir de €5700",
+    de: "Ab €5700",
+    nl: "Vanaf €5700"
   },
   // Shop
   shopPopular: {
@@ -596,13 +596,13 @@ const conceptTranslations = {
     nl: "Ideaal: Langetermijn vestiging, premium gebieden"
   },
   shopInvest: {
-    fr: "Investissement : €€€",
-    en: "Investment: €€€",
-    it: "Investimento: €€€",
-    es: "Inversión: €€€",
-    pt: "Investimento: €€€",
-    de: "Investition: €€€",
-    nl: "Investering: €€€"
+    fr: "À partir de 12800€",
+    en: "From €12800",
+    it: "Da €12800",
+    es: "Desde €12800",
+    pt: "A partir de €12800",
+    de: "Ab €12800",
+    nl: "Vanaf €12800"
   },
   // Travel
   travelTitle: {
@@ -651,13 +651,13 @@ const conceptTranslations = {
     nl: "Ideaal: Hotels, campings, resorts"
   },
   travelInvest: {
-    fr: "Investissement : €",
-    en: "Investment: €",
-    it: "Investimento: €",
-    es: "Inversión: €",
-    pt: "Investimento: €",
-    de: "Investition: €",
-    nl: "Investering: €"
+    fr: "Selon le projet",
+    en: "Depending on the project",
+    it: "Secondo il progetto",
+    es: "Según el proyecto",
+    pt: "Dependendo do projeto", 
+    de: "Abhängig vom Projekt",
+    nl: "Afhankelijk van het project"
   },
   // Tableau comparatif
   compareTitle: {
