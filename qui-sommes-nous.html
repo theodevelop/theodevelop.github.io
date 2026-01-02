@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qui sommes-nous ? - My Pretty Family</title>
+  <meta name="description" content="Découvrez l'histoire de My Pretty Family, un concept né sur le terrain il y a plus de 10 ans. Une aventure humaine portée par la passion de créer des souvenirs.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="./assets/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+  
+  <!-- SEO & Open Graph -->
+  <meta property="og:title" content="Qui sommes-nous ? - My Pretty Family">
+  <meta property="og:description" content="L'histoire de My Pretty Family, un concept né sur le terrain.">
+  <meta property="og:image" content="./assets/og-image.webp">
+  <meta property="og:type" content="website">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./qui-sommes-nous.css">
+  <link rel="stylesheet" href="./mobile-menu.css">
+  <link rel="stylesheet" href="./i18n.css">
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="./index.html" class="nav-logo">
+        <img src="./assets/logo_blue.png" alt="My Pretty Family">
+      </a>
+      
+      <div class="nav-links">
+        <a href="./concept.html" class="nav-link" data-i18n="nav.concept">Le Concept</a>
+        <a href="./configurateur.html" class="nav-link" data-i18n="nav.outil">L'Outil</a>
+        <a href="./qui-sommes-nous.html" class="nav-link active" data-i18n="nav.about">Qui sommes-nous ?</a>
+        <a href="./nos-clients.html" class="nav-link" data-i18n="nav.clients">Nos Clients</a>
+        <a href="./candidature.html" class="nav-cta" data-i18n="nav.candidater">Candidater</a>
+        <a href="https://shop.myprettyfamily.com/shopadmin/?url_demandee=shopadmin" class="nav-login" data-i18n-title="nav.espacePartenaire" title="Espace partenaire">
+          <i class="fa-solid fa-user"></i>
+        </a>
+      </div>
+      
+      <button class="nav-mobile-toggle" aria-label="Menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+    
+    <div class="nav-mobile">
+      <div class="nav-mobile-header">
+        <img src="./assets/logo_blue.png" alt="My Pretty Family" class="nav-mobile-logo">
+        <button class="nav-mobile-close" aria-label="Fermer le menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="nav-mobile-content">
+        <div class="nav-mobile-links">
+          <a href="./concept.html" class="nav-mobile-link">
+            <i class="fa-solid fa-lightbulb"></i>
+            <span data-i18n="nav.concept">Le Concept</span>
+          </a>
+          <a href="./configurateur.html" class="nav-mobile-link">
+            <i class="fa-solid fa-sliders"></i>
+            <span data-i18n="nav.outil">L'Outil</span>
+          </a>
+          <a href="./qui-sommes-nous.html" class="nav-mobile-link active">
+            <i class="fa-solid fa-heart"></i>
+            <span data-i18n="nav.about">Qui sommes-nous ?</span>
+          </a>
+          <a href="./nos-clients.html" class="nav-mobile-link">
+            <i class="fa-solid fa-users"></i>
+            <span data-i18n="nav.clients">Nos Clients</span>
+          </a>
+        </div>
+        <div class="nav-mobile-separator"></div>
+        <a href="https://shop.myprettyfamily.com/shopadmin/?url_demandee=shopadmin" class="nav-mobile-login">
+          <i class="fa-solid fa-user"></i>
+          <span data-i18n="nav.espacePartenaire">Espace partenaire</span>
+        </a>
+        <a href="./candidature.html" class="nav-mobile-cta">
+          <span data-i18n="nav.candidater">Candidater</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="about-hero">
+    <div class="about-hero-inner">
+      <p class="page-hero-label" data-i18n="about.heroLabel">Notre histoire</p>
+      <h1 class="page-hero-title" data-i18n="about.heroTitle">Une aventure née sur le terrain</h1>
+      <p class="page-hero-subtitle" data-i18n="about.heroSubtitle">
+        My Pretty Family n'est pas né dans un bureau. Il est né là où tout se joue : 
+        face aux familles, dans les marchés, sur les stands.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== L'ORIGINE ==================== -->
+  <section class="section" id="origine">
+    <div class="section-inner">
+      <div class="story-block">
+        <div class="story-content">
+          <p class="section-label" data-i18n="about.origineLabel">Les débuts</p>
+          <h2 class="section-title" data-i18n="about.origineTitle">Tout a commencé par une intuition</h2>
+          <p class="story-text" data-i18n="about.origineText1">
+            Il y a plus de 10 ans, Julien Irujo observe les familles sur les marchés et les lieux touristiques. 
+            Il remarque quelque chose : les gens achètent des souvenirs, mais ils cherchent bien plus qu'un objet. 
+            Ils cherchent une émotion, un moment à figer dans le temps.
+          </p>
+          <p class="story-text" data-i18n="about.origineText2">
+            L'idée germe : et si on pouvait créer un portrait de famille personnalisé, 
+            sur place, en quelques minutes ? Pas un dessin générique. Un vrai souvenir, 
+            imaginé avec le client, chargé d'émotion.
+          </p>
+        </div>
+        <div class="story-visual">
+          <div class="story-image-placeholder">
+            <img src="./assets/about/origine.webp" alt="Les débuts de My Pretty Family" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="story-mockup" style="display: none;">
+              <i class="fa-solid fa-image"></i>
+              <span>Photo des débuts</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TIMELINE / ÉVOLUTION ==================== -->
+  <section class="section section-alt" id="evolution">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="section-label" data-i18n="about.evolutionLabel">L'évolution</p>
+        <h2 class="section-title" data-i18n="about.evolutionTitle">10 ans de terrain, d'apprentissage et d'amélioration</h2>
+        <p class="section-subtitle" data-i18n="about.evolutionSubtitle">
+          Chaque année nous a appris quelque chose. Chaque client nous a fait grandir.
+        </p>
+      </div>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="timeline-year">2014</span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-image-placeholder">
+              <img src="./assets/about/timeline-2014.webp" alt="My Pretty Family en 2014" onerror="this.parentElement.classList.add('no-image');">
+            </div>
+            <h3 class="timeline-title" data-i18n="about.timeline2014Title">Les premiers pas</h3>
+            <p class="timeline-desc" data-i18n="about.timeline2014Desc">
+              Premier stand sur un marché du Sud-Ouest. 
+              Tout est artisanal, tout est à inventer. 
+              Les premiers clients sont conquis.
+            </p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="timeline-year">2016</span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-image-placeholder">
+              <img src="./assets/about/timeline-2016.webp" alt="My Pretty Family en 2016" onerror="this.parentElement.classList.add('no-image');">
+            </div>
+            <h3 class="timeline-title" data-i18n="about.timeline2016Title">L'outil prend forme</h3>
+            <p class="timeline-desc" data-i18n="about.timeline2016Desc">
+              Développement du premier configurateur numérique. 
+              Ce qui prenait 30 minutes en prend désormais 5. 
+              Le concept devient duplicable.
+            </p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="timeline-year">2018</span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-image-placeholder">
+              <img src="./assets/about/timeline-2018.webp" alt="My Pretty Family en 2018" onerror="this.parentElement.classList.add('no-image');">
+            </div>
+            <h3 class="timeline-title" data-i18n="about.timeline2018Title">Expansion nationale</h3>
+            <p class="timeline-desc" data-i18n="about.timeline2018Desc">
+              Le concept s'étend à d'autres régions. 
+              Premiers partenaires indépendants. 
+              Le réseau commence à se structurer.
+            </p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="timeline-year">2020</span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-image-placeholder">
+              <img src="./assets/about/timeline-2020.webp" alt="My Pretty Family en 2020" onerror="this.parentElement.classList.add('no-image');">
+            </div>
+            <h3 class="timeline-title" data-i18n="about.timeline2020Title">La résilience</h3>
+            <p class="timeline-desc" data-i18n="about.timeline2020Desc">
+              Année difficile, mais révélatrice. 
+              Le concept prouve sa solidité. 
+              Le lien avec les clients reste intact.
+            </p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="timeline-year">2024</span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-image-placeholder">
+              <img src="./assets/about/timeline-2024.webp" alt="My Pretty Family en 2024" onerror="this.parentElement.classList.add('no-image');">
+            </div>
+            <h3 class="timeline-title" data-i18n="about.timeline2024Title">Structuration du réseau</h3>
+            <p class="timeline-desc" data-i18n="about.timeline2024Desc">
+              Plus de 250 000 portraits réalisés. 
+              Un réseau de partenaires sélectifs. 
+              Un concept mature, prêt à grandir encore.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PHILOSOPHIE ==================== -->
+  <section class="section" id="philosophie">
+    <div class="section-inner section-narrow">
+      <div class="section-header">
+        <p class="section-label" data-i18n="about.philosophieLabel">Notre philosophie</p>
+        <h2 class="section-title" data-i18n="about.philosophieTitle">Ce en quoi nous croyons</h2>
+      </div>
+      
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <h3 class="value-title" data-i18n="about.value1Title">L'émotion avant tout</h3>
+          <p class="value-desc" data-i18n="about.value1Desc">
+            On ne vend pas des dessins. On crée des souvenirs. 
+            Chaque portrait raconte une histoire, celle d'une famille à un instant précis.
+          </p>
+        </div>
+        
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fa-solid fa-handshake"></i>
+          </div>
+          <h3 class="value-title" data-i18n="about.value2Title">Le terrain, toujours</h3>
+          <p class="value-desc" data-i18n="about.value2Desc">
+            My Pretty Family est né sur le terrain et y reste ancré. 
+            Pas de théorie, pas de promesses en l'air. Du concret, du vécu.
+          </p>
+        </div>
+        
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="value-title" data-i18n="about.value3Title">L'honnêteté comme règle</h3>
+          <p class="value-desc" data-i18n="about.value3Desc">
+            Pas de chiffres exagérés, pas de promesses de gains faciles. 
+            On dit ce qui est. On laisse les résultats parler.
+          </p>
+        </div>
+        
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+          <h3 class="value-title" data-i18n="about.value4Title">L'autonomie comme objectif</h3>
+          <p class="value-desc" data-i18n="about.value4Desc">
+            Nos partenaires ne sont pas dépendants de nous. 
+            On leur donne les outils, le cadre, et ils construisent leur propre succès.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LE FONDATEUR ==================== -->
+  <section class="section section-alt" id="fondateur">
+    <div class="section-inner">
+      <div class="founder-block">
+        <div class="founder-image">
+          <div class="founder-image-placeholder">
+            <img src="./assets/about/julien.webp" alt="Julien Irujo, fondateur de My Pretty Family" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="founder-mockup" style="display: none;">
+              <i class="fa-solid fa-user"></i>
+              <span>Photo du fondateur</span>
+            </div>
+          </div>
+        </div>
+        <div class="founder-content">
+          <p class="section-label" data-i18n="about.fondateurLabel">Le fondateur</p>
+          <h2 class="section-title" data-i18n="about.fondateurName">Julien Irujo</h2>
+          <p class="founder-text" data-i18n="about.fondateurText1">
+            Entrepreneur de terrain, Julien a passé plus de 10 ans à développer, tester et affiner 
+            le concept My Pretty Family. Pas derrière un écran, mais face aux clients, 
+            sur les marchés, dans les lieux touristiques.
+          </p>
+          <p class="founder-text" data-i18n="about.fondateurText2">
+            Son approche est simple : observer ce qui fonctionne, comprendre pourquoi, 
+            et le transmettre. Sans bullshit marketing, sans promesses irréalistes. 
+            Juste l'expérience du terrain et l'envie de partager un concept qui marche.
+          </p>
+          <div class="founder-quote">
+            <blockquote data-i18n="about.fondateurQuote">
+              "Je ne cherche pas des franchisés à qui vendre un rêve. 
+              Je cherche des partenaires qui comprennent la valeur de l'émotion 
+              et qui veulent construire quelque chose de solide."
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== GALERIE HISTORIQUE ==================== -->
+  <section class="section" id="galerie-historique">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="section-label" data-i18n="about.galerieLabel">En images</p>
+        <h2 class="section-title" data-i18n="about.galerieTitle">10 ans d'aventure</h2>
+        <p class="section-subtitle" data-i18n="about.galerieSubtitle">
+          Quelques photos qui racontent notre parcours.
+        </p>
+      </div>
+      
+      <div class="history-gallery">
+        <div class="history-gallery-item large">
+          <img src="./assets/about/gallery-1.webp" alt="Moment My Pretty Family" onerror="this.parentElement.classList.add('no-image');">
+        </div>
+        <div class="history-gallery-item">
+          <img src="./assets/about/gallery-2.webp" alt="Stand My Pretty Family" onerror="this.parentElement.classList.add('no-image');">
+        </div>
+        <div class="history-gallery-item">
+          <img src="./assets/about/gallery-3.webp" alt="Évolution du concept" onerror="this.parentElement.classList.add('no-image');">
+        </div>
+        <div class="history-gallery-item">
+          <img src="./assets/about/gallery-4.webp" alt="Clients satisfaits" onerror="this.parentElement.classList.add('no-image');">
+        </div>
+        <div class="history-gallery-item large">
+          <img src="./assets/about/gallery-5.webp" alt="L'équipe My Pretty Family" onerror="this.parentElement.classList.add('no-image');">
+        </div>
+        <div class="history-gallery-item">
+          <img src="./assets/about/gallery-6.webp" alt="Partenaires My Pretty Family" onerror="this.parentElement.classList.add('no-image');">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA ==================== -->
+  <section class="cta-final">
+    <div class="cta-final-inner">
+      <h2 class="cta-final-title" data-i18n="about.ctaTitle">Envie de rejoindre l'aventure ?</h2>
+      <p class="cta-final-text" data-i18n="about.ctaText">
+        Découvrez si le concept My Pretty Family est fait pour vous.
+      </p>
+      <a href="./candidature.html" class="btn-white btn-large">
+        <span data-i18n="about.ctaButton">Déposer ma candidature</span> <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="./assets/logo_blue.png" alt="My Pretty Family" class="footer-logo">
+        <p class="footer-desc" data-i18n="footer.desc">
+          Expérience émotionnelle en point de vente.<br>
+          Concept terrain depuis +10 ans.
+        </p>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4 class="footer-column-title" data-i18n="footer.navigation">Navigation</h4>
+          <a href="./concept.html" class="footer-link" data-i18n="nav.concept">Le Concept</a>
+          <a href="./configurateur.html" class="footer-link" data-i18n="nav.outil">L'Outil</a>
+          <a href="./qui-sommes-nous.html" class="footer-link" data-i18n="nav.about">Qui sommes-nous ?</a>
+          <a href="./nos-clients.html" class="footer-link" data-i18n="nav.clients">Nos Clients</a>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-column-title" data-i18n="footer.legal">Légal</h4>
+          <a href="./mentions-legales.html" class="footer-link" data-i18n="footer.mentionsLegales">Mentions légales</a>
+          <a href="./confidentialite.html" class="footer-link" data-i18n="footer.confidentialite">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="footer-copyright" data-i18n="footer.copyright">© 2025 My Pretty Family. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./i18n/modules/nav.js"></script>
+  <script src="./i18n/modules/footer.js"></script>
+  <script src="./i18n/modules/common.js"></script>
+  <script src="./i18n/modules/about.js"></script>
+  <script src="./i18n/translations.js"></script>
+  <script src="./i18n.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
