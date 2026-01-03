@@ -79,12 +79,13 @@ body {
 .nav-link.active::after {
   content: '';
   position: absolute;
-  bottom: -4px;
+  bottom: -1px;
   left: 0;
   right: 0;
   height: 2px;
   background: #6A8FB9;
   border-radius: 2px;
+  width: 35%;
 }
 
 /* Mobile active state */
