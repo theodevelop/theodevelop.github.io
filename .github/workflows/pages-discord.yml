@@ -1,21 +1,50 @@
-name: Notify Discord when Pages is deployed
+name: Notify Discord for Pages updates
 
 on:
+  # 1) Quand tu pushes sur la branche qui déclenche le déploiement
+  push:
+    branches:
+      - multi-pages
+
+  # 2) Quand le workflow auto "pages-build-deployment" se termine
   workflow_run:
     workflows: ["pages-build-deployment"]
     types:
       - completed
 
 jobs:
-  notify:
+  notify_start:
+    name: Notify update started
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
-
+    if: github.event_name == 'push'
     steps:
-      - name: Send Discord notification
+      - name: Send Discord notification (updating)
         run: |
           curl -H "Content-Type: application/json" \
           -d '{
-            "content": "🚀 **GitHub Pages est en ligne !**\n🌍 URL : https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+            "content": "⚙️ **Mise à jour du site en cours…**\n👤 `${{ github.actor }}`\n🧩 `${{ github.sha }}`\n📝 ${{ toJson(github.event.head_commit.message) }}"
+          }' \
+          ${{ secrets.DISCORD_WEBHOOK_URL }}
+
+  notify_done:
+    name: Notify deployment result
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_run'
+    steps:
+      - name: Send Discord notification (success)
+        if: ${{ github.event.workflow_run.conclusion == 'success' }}
+        run: |
+          curl -H "Content-Type: application/json" \
+          -d '{
+            "content": "🚀 **GitHub Pages est en ligne !**\n🌍 URL : https://${{ github.repository_owner }}.github.io/\n✅ Déploiement : `${{ github.event.workflow_run.conclusion }}`"
+          }' \
+          ${{ secrets.DISCORD_WEBHOOK_URL }}
+
+      - name: Send Discord notification (failure)
+        if: ${{ github.event.workflow_run.conclusion != 'success' }}
+        run: |
+          curl -H "Content-Type: application/json" \
+          -d '{
+            "content": "❌ **Déploiement GitHub Pages en échec**\n📦 Workflow : `${{ github.event.workflow_run.name }}`\n📌 Conclusion : `${{ github.event.workflow_run.conclusion }}`"
           }' \
           ${{ secrets.DISCORD_WEBHOOK_URL }}
