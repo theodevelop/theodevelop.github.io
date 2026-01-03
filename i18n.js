@@ -9,14 +9,14 @@
 
   // Configuration des langues supportées
   const SUPPORTED_LANGUAGES = {
-    fr: { name: 'Français', flag: '🇫🇷', code: 'fr' },
-    en: { name: 'English', flag: '🇬🇧', code: 'en' },
-    it: { name: 'Italiano', flag: '🇮🇹', code: 'it' },
-    es: { name: 'Español', flag: '🇪🇸', code: 'es' },
-    pt: { name: 'Português', flag: '🇵🇹', code: 'pt' },
-    de: { name: 'Deutsch', flag: '🇩🇪', code: 'de' },
-    nl: { name: 'Nederlands', flag: '🇳🇱', code: 'nl' }
-  };
+    fr: { name: 'Français', flag: '<img src="./assets/flags/fr.svg" alt="FR" class="flag-icon">', code: 'fr' },
+    en: { name: 'English', flag: '<img src="./assets/flags/gb.svg" alt="EN" class="flag-icon">', code: 'en' },
+    it: { name: 'Italiano', flag: '<img src="./assets/flags/it.svg" alt="IT" class="flag-icon">', code: 'it' },
+    es: { name: 'Español', flag: '<img src="./assets/flags/es.svg" alt="ES" class="flag-icon">', code: 'es' },
+    pt: { name: 'Português', flag: '<img src="./assets/flags/pt.svg" alt="PT" class="flag-icon">', code: 'pt' },
+    de: { name: 'Deutsch', flag: '<img src="./assets/flags/de.svg" alt="DE" class="flag-icon">', code: 'de' },
+    nl: { name: 'Nederlands', flag: '<img src="./assets/flags/nl.svg" alt="NL" class="flag-icon">', code: 'nl' }
+};
 
   const DEFAULT_LANGUAGE = 'fr';
   const STORAGE_KEY = 'mpf_language';
@@ -139,7 +139,7 @@
     // Desktop
     const currentFlag = document.querySelector('.lang-current-flag');
     const currentCode = document.querySelector('.lang-current-code');
-    if (currentFlag) currentFlag.textContent = langData.flag;
+    if (currentFlag) currentFlag.innerHTML = langData.flag;
     if (currentCode) currentCode.textContent = lang.toUpperCase();
 
     // Desktop dropdown
@@ -150,7 +150,7 @@
     // Mobile toggle button
     const mobileToggleFlag = document.querySelector('.lang-mobile-toggle .lang-flag');
     const mobileToggleCurrent = document.querySelector('.lang-mobile-toggle-current');
-    if (mobileToggleFlag) mobileToggleFlag.textContent = langData.flag;
+    if (mobileToggleFlag) mobileToggleFlag.innerHTML = langData.flag;
     if (mobileToggleCurrent) mobileToggleCurrent.textContent = langData.name;
 
     // Mobile popup
