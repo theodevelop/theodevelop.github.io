@@ -80,8 +80,8 @@ body {
   content: '';
   position: absolute;
   bottom: -1px;
-  left: 0;
-  right: 0;
+  /* left: 0;
+  right: 0; */
   height: 2px;
   background: #6A8FB9;
   border-radius: 2px;
@@ -875,7 +875,7 @@ body {
 }
 
 .configurator-content .section-title {
-  text-align: left;
+  text-align: right;
   margin-bottom: 16px;
 }
 
@@ -1174,6 +1174,7 @@ body {
   text-decoration: none;
   margin-bottom: 10px;
   transition: color 0.2s;
+  white-space: nowrap;
 }
 
 .footer-link:hover {
@@ -1295,4 +1296,30 @@ body {
   .cta-final {
     padding: 70px 24px;
   }
+}
+
+@media (min-width: 1025px) {
+    .configurator-content {
+        text-align: right;
+        /* Force le conteneur à prendre toute la largeur pour permettre l'alignement */
+        width: 100%; 
+        padding-right: 40px; /* Espace pour ne pas coller à la démo */
+    }
+
+    /* Aligner spécifiquement les éléments flex comme les listes d'avantages */
+    .configurator-features {
+        align-items: flex-end; /* Aligne les items à droite dans un container flex colonne */
+    }
+
+    /* Inverser la direction des items individuels pour que l'icône soit à droite */
+    .configurator-feature {
+        flex-direction: row-reverse;
+        text-align: right;
+    }
+    
+    /* Ajustement des marges pour le mode inversé */
+    .configurator-feature i {
+        margin-left: 16px;
+        margin-right: 0;
+    }
 }
