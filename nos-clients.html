@@ -485,5 +485,47 @@
   <script src="./main.js"></script>
   <script src="./video-player.js"></script>
   <script src="./modern-effects.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const stats = document.querySelectorAll('.stat-value');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const target = entry.target;
+            const content = target.innerText;
+            // Nettoyage pour garder les chiffres (ex: "30 000+" -> 30000)
+            const value = parseInt(content.replace(/\D/g, '')); 
+            // On garde le suffixe (ex: "30 000+" -> " +") ou le préfixe
+            const suffix = content.replace(/[0-9\s]/g, ''); 
+            
+            if (isNaN(value)) return;
+            
+            let current = 0;
+            const duration = 2000;
+            // Calcul du pas pour que ça tienne en 2s
+            const stepTime = Math.max(Math.floor(duration / (value > 100 ? 100 : value)), 20);
+            const increment = Math.ceil(value / 100); // Pour les gros chiffres, on saute des étapes
+            
+            const timer = setInterval(() => {
+              current += increment;
+              if (current >= value) {
+                current = value;
+                clearInterval(timer);
+                target.innerText = content; // Remet le format exact original
+              } else {
+                // Formatage simple pour l'animation
+                target.innerText = current + (suffix ? suffix : '');
+              }
+            }, stepTime);
+            
+            observer.unobserve(target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      stats.forEach(stat => observer.observe(stat));
+    });
+  </script>
 </body>
 </html>

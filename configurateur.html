@@ -143,18 +143,31 @@
             pour l'interaction avec le client.
           </p>
         </div>
-        <div class="config-intro-visual">
-          <div class="config-mockup-large">
-            <div class="mockup-screen">
-              <div class="mockup-header">
-                <span class="mockup-dot"></span>
-                <span class="mockup-dot"></span>
-                <span class="mockup-dot"></span>
+        <div class="config-demo-wrapper" style="box-shadow: 0 40px 100px rgba(106, 143, 185, 0.25); border: 1px solid rgba(255,255,255,0.5);">
+          <div class="config-sidebar">
+            <div class="config-tool active"></div>
+            <div class="config-tool"></div>
+            <div class="config-tool"></div>
+            <div class="config-tool"></div>
+          </div>
+          
+          <div class="config-preview">
+            <div class="poster-canvas">
+              <div class="poster-header"></div>
+              <div class="poster-family">
+                <div class="poster-char char-1"></div>
+                <div class="poster-char char-2"></div>
+                <div class="poster-char char-3"></div>
               </div>
-              <div class="mockup-content">
-                <i class="fa-solid fa-sliders"></i>
-                <span data-i18n="common.mockupConfigurator">Interface du configurateur</span>
-              </div>
+              <div class="poster-footer"></div>
+            </div>
+            
+            <div class="ghost-cursor">
+              <i class="fa-solid fa-arrow-pointer"></i>
+            </div>
+            
+            <div class="demo-badge">
+              <i class="fa-solid fa-bolt"></i> Temps réel
             </div>
           </div>
         </div>
@@ -471,5 +484,41 @@
   <script src="./main.js"></script>
   
   <script src="./modern-effects.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const stats = document.querySelectorAll('.stat-value');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const target = entry.target;
+            // On récupère la valeur (ex: "5 min" -> 5)
+            const content = target.innerText;
+            const value = parseInt(content.replace(/\D/g, '')); // Garde que les chiffres
+            const suffix = content.replace(/[0-9]/g, ''); // Garde le texte (min, +, etc.)
+            
+            if (isNaN(value)) return; // Si c'est l'infini (∞), on touche pas
+            
+            let current = 0;
+            const duration = 2000; // 2 secondes
+            const stepTime = Math.max(Math.floor(duration / value), 50);
+            
+            const timer = setInterval(() => {
+              current += 1;
+              target.innerText = current + suffix;
+              if (current >= value) {
+                clearInterval(timer);
+                target.innerText = content; // Remet la valeur exacte originale pour être sûr
+              }
+            }, stepTime);
+            
+            observer.unobserve(target); // On le joue qu'une fois
+          }
+        });
+      }, { threshold: 0.5 });
+
+      stats.forEach(stat => observer.observe(stat));
+    });
+  </script>
 </body>
 </html>
