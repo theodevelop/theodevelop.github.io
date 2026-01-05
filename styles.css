@@ -80,8 +80,8 @@ body {
   content: '';
   position: absolute;
   bottom: -1px;
-  left: 0;
-  right: 0;
+  /* left: 0;
+  right: 0; */
   height: 2px;
   background: #6A8FB9;
   border-radius: 2px;
@@ -1174,6 +1174,7 @@ body {
   text-decoration: none;
   margin-bottom: 10px;
   transition: color 0.2s;
+  white-space: nowrap;
 }
 
 .footer-link:hover {

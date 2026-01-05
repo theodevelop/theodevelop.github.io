@@ -1,0 +1,766 @@
+/* ==========================================
+   MY PRETTY FAMILY - Modern UI Effects
+   Animations, transitions, micro-interactions
+   ========================================== */
+
+/* ==================== CSS VARIABLES ==================== */
+:root {
+  --primary: #6A8FB9;
+  --primary-dark: #5a7fa9;
+  --primary-light: #8bb0d4;
+  --gradient-primary: linear-gradient(135deg, #6A8FB9 0%, #8bb0d4 50%, #6A8FB9 100%);
+  --gradient-animated: linear-gradient(90deg, #6A8FB9, #8bb0d4, #a8c5e0, #8bb0d4, #6A8FB9);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --shadow-soft: 0 4px 20px rgba(106, 143, 185, 0.15);
+  --shadow-medium: 0 8px 30px rgba(106, 143, 185, 0.2);
+  --shadow-strong: 0 12px 40px rgba(106, 143, 185, 0.25);
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-medium: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* ==================== BOUTONS MODERNES (PILL STYLE) ==================== */
+.btn-primary,
+.btn-secondary,
+.btn-outline,
+.btn-white {
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-medium);
+  transform: translateY(0);
+}
+
+/* Effet de brillance au hover */
+.btn-primary::before,
+.btn-white::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before,
+.btn-white:hover::before {
+  left: 100%;
+}
+
+/* Gradient animé sur btn-primary */
+.btn-primary {
+  background: var(--gradient-animated);
+  background-size: 200% auto;
+  animation: gradientShift 3s ease infinite;
+  animation-play-state: paused;
+}
+
+.btn-primary:hover {
+  animation-play-state: running;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-strong);
+}
+
+/* Micro-animation au clic */
+.btn-primary:active,
+.btn-secondary:active,
+.btn-outline:active,
+.btn-white:active {
+  transform: scale(0.96);
+  transition: transform 0.1s ease;
+}
+
+/* Bouton outline avec bordure gradient */
+.btn-outline {
+  background: transparent;
+  border: 2px solid transparent;
+  background-image: linear-gradient(white, white), var(--gradient-primary);
+  background-origin: padding-box, border-box;
+  background-clip: padding-box, border-box;
+  color: var(--primary);
+}
+
+.btn-outline:hover {
+  background-image: var(--gradient-primary), var(--gradient-primary);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Bouton primary hero - bien arrondi */
+.hero-buttons .btn-primary {
+  border-radius: 50px;
+  padding: 16px 36px;
+}
+
+/* Bouton secondary (hero) - transparent avec bordure blanche */
+.hero-buttons .btn-secondary {
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  color: white;
+}
+
+.hero-buttons .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: white;
+  transform: translateY(-3px);
+  color: white;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+/* ==================== NAV LINK ANIMATED UNDERLINE ==================== */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  transition: all var(--transition-medium);
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active::after {
+  width: 100%;
+  background: var(--primary);
+}
+
+/* ==================== HERO ENHANCEMENTS ==================== */
+/* Formes géométriques flottantes */
+.hero {
+  overflow: hidden;
+}
+
+.hero-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  animation: float 20s ease-in-out infinite;
+}
+
+.hero-shape:nth-child(1) {
+  width: 300px;
+  height: 300px;
+  top: 10%;
+  left: -5%;
+  animation-delay: 0s;
+}
+
+.hero-shape:nth-child(2) {
+  width: 200px;
+  height: 200px;
+  top: 60%;
+  right: -3%;
+  animation-delay: -5s;
+}
+
+.hero-shape:nth-child(3) {
+  width: 150px;
+  height: 150px;
+  bottom: 10%;
+  left: 20%;
+  animation-delay: -10s;
+}
+
+.hero-shape:nth-child(4) {
+  width: 100px;
+  height: 100px;
+  top: 20%;
+  right: 15%;
+  animation-delay: -15s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.5;
+  }
+  25% {
+    transform: translateY(-20px) rotate(5deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateY(20px) rotate(-5deg);
+    opacity: 0.7;
+  }
+}
+
+/* Text reveal animation */
+.hero-title {
+  opacity: 0;
+  animation: revealUp 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.hero-tagline {
+  opacity: 0;
+  animation: revealUp 1s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.hero-subtitle-title {
+  opacity: 0;
+  animation: revealUp 1s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.hero-subtitle {
+  opacity: 0;
+  animation: revealUp 1s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.hero-buttons {
+  opacity: 0;
+  animation: revealUp 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.hero-label {
+  display: inline-block;
+  padding: 10px 24px;
+  background: rgba(142, 191, 248, 0.486);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: white;
+  margin-bottom: 24px;
+}
+
+@keyframes revealUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Parallax effect on hero background */
+.hero {
+  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+  }
+}
+
+/* ==================== SCROLL REVEAL ANIMATIONS ==================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger effect pour les enfants */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-stagger.revealed > *:nth-child(1) { transition-delay: 0.1s; }
+.reveal-stagger.revealed > *:nth-child(2) { transition-delay: 0.2s; }
+.reveal-stagger.revealed > *:nth-child(3) { transition-delay: 0.3s; }
+.reveal-stagger.revealed > *:nth-child(4) { transition-delay: 0.4s; }
+.reveal-stagger.revealed > *:nth-child(5) { transition-delay: 0.5s; }
+.reveal-stagger.revealed > *:nth-child(6) { transition-delay: 0.6s; }
+
+.reveal-stagger.revealed > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reveal from left/right */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-left.revealed,
+.reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scale reveal */
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-scale.revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ==================== CARDS MODERN EFFECTS ==================== */
+/* Lift effect au hover */
+.home-testimonial-card,
+.feature-card,
+.profile-card,
+.value-card,
+.reason-card,
+.inclus-item {
+  transition: all var(--transition-medium);
+}
+
+.home-testimonial-card:hover,
+.feature-card:hover,
+.value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-strong);
+}
+
+/* Glassmorphism sur les cartes de témoignages */
+.home-testimonial-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+}
+
+/* Bordure gradient animée au hover */
+.home-testimonial-card {
+  position: relative;
+  background-clip: padding-box;
+}
+
+.home-testimonial-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 2px;
+  background: linear-gradient(135deg, transparent 0%, transparent 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--transition-medium);
+}
+
+.home-testimonial-card:hover::before {
+  background: var(--gradient-primary);
+  opacity: 1;
+}
+
+/* ==================== CONCEPT & CONFIGURATOR BLOCKS ==================== */
+.concept-feature,
+.configurator-feature {
+  transition: all var(--transition-medium);
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin: -12px -16px;
+}
+
+.concept-feature:hover,
+.configurator-feature:hover {
+  background: rgba(106, 143, 185, 0.08);
+  transform: translateX(8px);
+}
+
+.concept-feature i,
+.configurator-feature i {
+  transition: all var(--transition-bounce);
+}
+
+.concept-feature:hover i,
+.configurator-feature:hover i {
+  transform: scale(1.2) rotate(-5deg);
+  color: var(--primary-dark);
+}
+
+/* ==================== PROFILE CARDS ==================== */
+.profile-card {
+  transition: all var(--transition-medium);
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+
+.profile-card-positive:hover {
+  box-shadow: 0 12px 40px rgba(106, 143, 185, 0.2);
+}
+
+.profile-card-negative:hover {
+  box-shadow: 0 12px 40px rgba(180, 100, 100, 0.15);
+}
+
+.profile-list li {
+  transition: all var(--transition-fast);
+  padding: 8px 12px;
+  margin: -8px -12px;
+  border-radius: 8px;
+}
+
+.profile-list li:hover {
+  background: rgba(0, 0, 0, 0.03);
+  transform: translateX(5px);
+}
+
+/* ==================== ICONS ANIMATIONS ==================== */
+.profile-header i,
+.value-icon i,
+.inclus-item i {
+  transition: all var(--transition-bounce);
+}
+
+.profile-card:hover .profile-header i {
+  transform: scale(1.15);
+}
+
+.value-card:hover .value-icon i {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.inclus-item:hover i {
+  transform: scale(1.2);
+}
+
+/* ==================== GALLERY ENHANCEMENTS ==================== */
+.gallery-item {
+  transition: all var(--transition-medium);
+  overflow: hidden;
+}
+
+.gallery-item img {
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: var(--shadow-medium);
+  z-index: 10;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Smooth pause animation */
+.gallery-track {
+  transition: animation-play-state 0.3s ease;
+}
+
+/* ==================== VIDEO WRAPPER ==================== */
+.video-wrapper {
+  transition: all var(--transition-medium);
+}
+
+.video-wrapper:hover {
+  transform: scale(1.01);
+  box-shadow: 0 25px 70px rgba(106, 143, 185, 0.2);
+}
+
+/* ==================== TESTIMONIAL QUOTE ==================== */
+.testimonial-quote::before {
+  transition: all var(--transition-medium);
+}
+
+.testimonial:hover .testimonial-quote::before {
+  transform: scale(1.2);
+  color: var(--primary-dark);
+}
+
+/* ==================== PARTNER INCLUS ==================== */
+.inclus-item {
+  transition: all var(--transition-medium);
+  border: 1px solid transparent;
+}
+
+.inclus-item:hover {
+  transform: translateY(-3px) scale(1.02);
+  background: white;
+  border-color: rgba(106, 143, 185, 0.2);
+  box-shadow: var(--shadow-soft);
+}
+
+/* ==================== CTA FINAL ==================== */
+.cta-final {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-final::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 60%
+  );
+  animation: rotateBg 20s linear infinite;
+}
+
+@keyframes rotateBg {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.cta-final-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-final-title {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+
+/* ==================== STARS ANIMATION ==================== */
+.home-testimonial-stars i {
+  transition: all var(--transition-bounce);
+  display: inline-block;
+}
+
+.home-testimonial-card:hover .home-testimonial-stars i:nth-child(1) {
+  animation: starBounce 0.4s ease forwards;
+  animation-delay: 0s;
+}
+.home-testimonial-card:hover .home-testimonial-stars i:nth-child(2) {
+  animation: starBounce 0.4s ease forwards;
+  animation-delay: 0.05s;
+}
+.home-testimonial-card:hover .home-testimonial-stars i:nth-child(3) {
+  animation: starBounce 0.4s ease forwards;
+  animation-delay: 0.1s;
+}
+.home-testimonial-card:hover .home-testimonial-stars i:nth-child(4) {
+  animation: starBounce 0.4s ease forwards;
+  animation-delay: 0.15s;
+}
+.home-testimonial-card:hover .home-testimonial-stars i:nth-child(5) {
+  animation: starBounce 0.4s ease forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes starBounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+/* ==================== SECTION HEADERS ==================== */
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-label {
+  display: inline-block;
+  position: relative;
+  padding: 8px 20px;
+  background: rgba(106, 143, 185, 0.1);
+  border-radius: 50px;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+}
+
+/* ==================== COUNTER ANIMATION ==================== */
+.counter-animated {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ==================== SMOOTH SCROLL INDICATOR ==================== */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.scroll-indicator a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color var(--transition-fast);
+}
+
+.scroll-indicator a:hover {
+  color: white;
+}
+
+.scroll-indicator i {
+  font-size: 24px;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+/* ==================== NAV CTA PULSE ==================== */
+.nav-cta {
+  position: relative;
+  border-radius: 50px;
+}
+
+.nav-cta::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50px;
+  background: var(--primary);
+  opacity: 0;
+  z-index: -1;
+  animation: ctaPulse 2s ease-in-out infinite;
+}
+
+@keyframes ctaPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.3;
+  }
+}
+
+/* ==================== FOOTER LINKS ==================== */
+/* .footer-link {
+  position: relative;
+  display: inline-block;
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  transition: width var(--transition-medium);
+}
+
+.footer-link:hover::after {
+  width: 100%;
+} */
+
+/* ==================== REDUCED MOTION ==================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .hero {
+    background-attachment: scroll;
+  }
+  
+  .gallery-track {
+    animation: none;
+  }
+  
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .reveal-stagger > * {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ==================== LOADING STATE ==================== */
+.page-loading .hero-content > * {
+  opacity: 0;
+}
+
+body:not(.page-loading) .hero-content > * {
+  opacity: 1;
+}
