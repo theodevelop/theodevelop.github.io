@@ -256,7 +256,7 @@
 .hero-label {
   display: inline-block;
   padding: 10px 24px;
-  background: rgba(142, 191, 248, 0.486);
+  background: rgba(142, 191, 248, 0.25);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: 50px;
