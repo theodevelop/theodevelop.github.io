@@ -493,31 +493,57 @@
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const target = entry.target;
-            const content = target.innerText;
-            // Nettoyage pour garder les chiffres (ex: "30 000+" -> 30000)
-            const value = parseInt(content.replace(/\D/g, '')); 
-            // On garde le suffixe (ex: "30 000+" -> " +") ou le préfixe
-            const suffix = content.replace(/[0-9\s]/g, ''); 
+            const originalText = target.innerText; // Ex: "4.9/5" ou "30 000+"
             
-            if (isNaN(value)) return;
+            // On cherche le nombre principal (avec ou sans décimale)
+            // Cette regex capture "4.9", "30000", "4,9"
+            const match = originalText.match(/(\d+[.,]?\d*)/);
             
-            let current = 0;
-            const duration = 2000;
-            // Calcul du pas pour que ça tienne en 2s
-            const stepTime = Math.max(Math.floor(duration / (value > 100 ? 100 : value)), 20);
-            const increment = Math.ceil(value / 100); // Pour les gros chiffres, on saute des étapes
-            
-            const timer = setInterval(() => {
-              current += increment;
-              if (current >= value) {
-                current = value;
-                clearInterval(timer);
-                target.innerText = content; // Remet le format exact original
-              } else {
-                // Formatage simple pour l'animation
-                target.innerText = current + (suffix ? suffix : '');
-              }
-            }, stepTime);
+            if (match) {
+              const numberString = match[0].replace(',', '.'); // Normalise en format JS
+              const finalValue = parseFloat(numberString);
+              const isFloat = numberString.includes('.'); // Est-ce un nombre à virgule ?
+              
+              // On sépare le texte pour garder le suffixe (ex: "/5" ou "+")
+              const parts = originalText.split(match[0]);
+              const prefix = parts[0] || '';
+              const suffix = parts[1] || '';
+              
+              let startTimestamp = null;
+              const duration = 2000; // 2 secondes d'animation
+
+              const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                
+                // Calcul de la valeur courante
+                const currentValue = progress * finalValue;
+                
+                // Formatage
+                let displayValue;
+                if (isFloat) {
+                  // Si c'était un décimal (4.9), on force "x.x" (1 chiffre après virgule)
+                  displayValue = currentValue.toFixed(1); 
+                } else {
+                  // Sinon entier (30000)
+                  displayValue = Math.floor(currentValue);
+                  // Optionnel : ajouter des espaces pour les milliers si le nombre est grand
+                  if (displayValue > 999) displayValue = displayValue.toLocaleString('fr-FR');
+                }
+                
+                // Réassemblage : prefixe + nombre + suffixe
+                target.innerText = prefix + displayValue + suffix;
+
+                if (progress < 1) {
+                  window.requestAnimationFrame(step);
+                } else {
+                  // À la fin, on remet le texte original exact pour éviter tout micro-décalage
+                  target.innerText = originalText;
+                }
+              };
+              
+              window.requestAnimationFrame(step);
+            }
             
             observer.unobserve(target);
           }
