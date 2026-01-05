@@ -349,6 +349,7 @@
 }
 
 /* ==================== PRODUCTS GRID ==================== */
+
 .products-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -363,10 +364,10 @@
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.product-card:hover {
+/* .product-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 16px 48px rgba(106, 143, 185, 0.15);
-}
+} */
 
 .product-card-featured {
   border: 2px solid #6A8FB9;
@@ -374,15 +375,47 @@
 
 .product-image {
   position: relative;
-  height: 220px;
-  background: #e8eef4;
-  overflow: hidden;
+  height: 280px; /* Un peu plus d'espace en hauteur */
+  background: linear-gradient(135deg, #f0f4f8 0%, #eef2f7 100%); /* Fond subtil */
+  padding: 40px; /* L'espace qui crée la "marge" autour de ton image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible; /* Important pour laisser l'ombre dépasser si besoin */
+  z-index: 1;
+}
+
+.product-image::before {
+  content: '';
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.5;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image::before {
+  transform: translate(-50%, -50%) scale(1.2);
 }
 
 .product-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* LA CLÉ : On affiche tout le produit sans le couper */
+  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.12)); /* Ombre portée réaliste */
+  transform: rotate(-3deg) scale(0.95); /* Petit effet "posé de travers" dynamique */
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); /* Animation rebondie */
+}
+
+.product-card:hover .product-image img {
+  transform: rotate(0deg) scale(1.05) translateY(-5px); /* Il se redresse et flotte */
+  filter: drop-shadow(0 25px 35px rgba(106, 143, 185, 0.25)); /* L'ombre grandit */
 }
 
 .product-badge {
@@ -874,8 +907,15 @@
 
 @media (max-width: 768px) {
   .page-hero {
-    padding: 120px 24px 60px;
-  }
+  padding: 140px 48px 80px;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(106, 143, 185, 0.05) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(106, 143, 185, 0.05) 0%, transparent 20%),
+    linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
   
   .page-hero::before,
   .page-hero::after {

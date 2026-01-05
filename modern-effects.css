@@ -430,6 +430,190 @@
   color: var(--primary-dark);
 }
 
+/* ==================== DEMO CONFIGURATEUR (PURE CSS) ==================== */
+.config-demo-wrapper {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(106, 143, 185, 0.2);
+  display: flex;
+  overflow: hidden;
+  border: 1px solid rgba(106, 143, 185, 0.2);
+  position: relative;
+}
+
+/* Sidebar (Outils) */
+.config-sidebar {
+  width: 60px;
+  background: #f8fafc;
+  border-right: 1px solid #eef2f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  gap: 16px;
+}
+
+.config-tool {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #dbe4ef;
+  transition: all 0.3s ease;
+}
+
+/* Animation des outils qui s'activent */
+.config-tool:nth-child(1) { animation: toolActive 8s infinite; }
+.config-tool:nth-child(2) { animation: toolActive 8s infinite 2s; }
+.config-tool:nth-child(3) { animation: toolActive 8s infinite 4s; }
+
+@keyframes toolActive {
+  0%, 20% { background: #dbe4ef; } /* Inactif */
+  25%, 45% { background: #6A8FB9; box-shadow: 0 4px 12px rgba(106, 143, 185, 0.4); } /* Actif */
+  50%, 100% { background: #dbe4ef; }
+}
+
+/* Zone Principale */
+.config-preview {
+  flex: 1;
+  background: #f0f4f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Le "Poster" au centre */
+.poster-canvas {
+  width: 65%;
+  aspect-ratio: 3/4;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border-radius: 4px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.5s ease;
+}
+
+/* Éléments du poster */
+.poster-header {
+  height: 10%;
+  background: #eee;
+  border-radius: 4px;
+  width: 80%;
+  margin: 0 auto;
+  animation: headerChange 8s infinite;
+}
+
+.poster-footer {
+  height: 8%;
+  background: #eee;
+  border-radius: 4px;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: auto;
+}
+
+.poster-family {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 8px;
+  padding-bottom: 10px;
+}
+
+.poster-char {
+  width: 25%;
+  background: #e0e0e0;
+  border-radius: 20px 20px 0 0;
+  transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  height: 0; /* Départ invisible */
+}
+
+/* Animation des personnages (apparition progressive) */
+.char-1 { animation: charGrow 8s infinite 2.2s; background: #8bb0d4; }
+.char-2 { animation: charGrow 8s infinite 4.2s; background: #6A8FB9; }
+.char-3 { animation: charGrow 8s infinite 0.2s; background: #a8c5e0; }
+
+@keyframes charGrow {
+  0% { height: 0; opacity: 0; }
+  10% { height: 60%; opacity: 1; } /* Apparition */
+  90% { height: 60%; opacity: 1; }
+  100% { height: 0; opacity: 0; } /* Reset fin de boucle */
+}
+
+@keyframes headerChange {
+  0%, 60% { background: #eee; width: 80%; }
+  65%, 95% { background: #6A8FB9; width: 90%; } /* Changement titre */
+  100% { background: #eee; width: 80%; }
+}
+
+/* Curseur Fantôme */
+.ghost-cursor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 24px;
+  color: #333;
+  pointer-events: none;
+  z-index: 10;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+  animation: cursorMove 8s infinite;
+}
+
+@keyframes cursorMove {
+  0% { top: 110%; left: 100%; opacity: 0; }
+  10% { top: 80%; left: 80%; opacity: 1; }
+  
+  /* --- Clic Outil 1 (Recalibré) --- */
+  /* Le centre du 1er bouton est plus bas (environ 36-38px du haut) */
+  20% { top: 38px; left: 30px; transform: scale(1); }
+  22% { transform: scale(0.8); } /* Effet de clic */
+  25% { transform: scale(1); }
+  
+  /* --- Clic Outil 2 (Recalibré) --- */
+  /* 38px + 32px (hauteur bouton) + 16px (gap) = ~86px */
+  40% { top: 86px; left: 30px; }
+  42% { transform: scale(0.8); }
+  45% { transform: scale(1); }
+  
+  /* --- Clic Outil 3 (Recalibré) --- */
+  /* 86px + 32px + 16px = ~134px */
+  60% { top: 134px; left: 30px; }
+  62% { transform: scale(0.8); }
+  65% { transform: scale(1); }
+  
+  /* Clic Preview (Changer couleur/titre) */
+  80% { top: 30%; left: 60%; }
+  100% { top: 110%; left: 100%; opacity: 0; }
+}
+
+/* Badge "Temps réel" */
+.demo-badge {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255,255,255,0.9);
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #6A8FB9;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  animation: fadeIn 1s ease 1s backwards;
+}
+
+@media (max-width: 768px) {
+  .config-demo-wrapper { aspect-ratio: 1; }
+}
+
 /* ==================== PROFILE CARDS ==================== */
 .profile-card {
   transition: all var(--transition-medium);
